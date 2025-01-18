@@ -6,7 +6,10 @@ import Image from 'next/image';
 export const Menu = () => {
   return (
     <div className={classes.mainBlock}>
-      <Link href={'news'} className={classes.menuItem}>
+      <Link
+        href={'news'}
+        className={classes.menuItem + ' ' + classes.hoverItem}
+      >
         Разряды{' '}
         <Image
           src={arrowDown}
