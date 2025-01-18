@@ -2,6 +2,7 @@ import Link from 'next/link';
 import classes from './Menu.module.css';
 import arrowDown from '../../../img/header/IconDown.svg';
 import Image from 'next/image';
+import secondMenuItemImg from '../../../img/header/Icon_container.svg';
 
 export const Menu = () => {
   return (
@@ -11,7 +12,7 @@ export const Menu = () => {
           href={'news'}
           className={classes.menuItem + ' ' + classes.hoverItem}
         >
-          Разряды{' '}
+          Разряды
           <Image
             src={arrowDown}
             className={classes.arrowDown}
@@ -19,18 +20,35 @@ export const Menu = () => {
             width={16}
             height={15}
           />
+          <div className={classes.containerSecondMenu}>
+            <div className={classes.mainBlockSecondMenu}>
+              <Link href={'services'} className={classes.menuItemSecondMenu}>
+                <Image
+                  src={secondMenuItemImg}
+                  alt="secondMenuItemImg"
+                  className={classes.secondMenuItemImg}
+                ></Image>
+                Высший мужской разряд
+              </Link>
+              <Link href={'news'} className={classes.menuItemSecondMenu}>
+                <Image
+                  src={secondMenuItemImg}
+                  alt="secondMenuItemImg"
+                  className={classes.secondMenuItemImg}
+                ></Image>
+                Мужской разряд
+              </Link>
+              <Link href={'news'} className={classes.menuItemSecondMenu}>
+                <Image
+                  src={secondMenuItemImg}
+                  alt="secondMenuItemImg"
+                  className={classes.secondMenuItemImg}
+                ></Image>
+                Женский разряд
+              </Link>
+            </div>
+          </div>
         </Link>
-        <div className={classes.mainBlockSecondMenu}>
-          <Link href={'news'} className={classes.menuItemSecondMenu}>
-            Высший мужской разряд
-          </Link>
-          <Link href={'news'} className={classes.menuItemSecondMenu}>
-            Мужской разряд
-          </Link>
-          <Link href={'news'} className={classes.menuItemSecondMenu}>
-            Женский разряд
-          </Link>
-        </div>
         <Link href={'news'} className={classes.menuItem}>
           VIP-Кабинеты
         </Link>
