@@ -7,8 +7,8 @@ export const ContactsZone = () => {
   return (
     <div className={classes.mainBlock}>
       <div className={classes.phoneNumber}>
-        <Image src={icon} alt="Иконка телефона" width={24} height={24} />+ 7 495
-        678 10 01
+        <Image src={icon} alt="Иконка телефона" width={24} height={24} />
+        <span className={classes.span}>+7 495 678 10 01</span>
       </div>
       <div className={classes.geoPoint}>
         <Image src={geoIcon} alt="Геоточка" width={24} height={24} />
