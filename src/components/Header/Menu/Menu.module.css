@@ -39,7 +39,7 @@
 }
 
 .hoverItem:hover {
-    margin-right: 116px;
+    padding-right: 124px;
 }
 
 .hoverItem:hover>img {
@@ -72,7 +72,7 @@
 
 .mainBlockSecondMenu {
     width: 236px;
-    padding: 20px;
+    padding: 20px 0 20px 11px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,10 +102,9 @@
     pointer-events: all;
 }
 
-
 .secondMenuItemImg {
     transition: 0.2s ease;
-    margin-right: 4px;
+    margin-right: 7px;
     margin-bottom: 2px;
     width: 18px;
     height: 18px;
