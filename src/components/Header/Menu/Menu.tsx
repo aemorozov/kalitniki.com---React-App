@@ -28,7 +28,10 @@ export const Menu = () => {
           onMouseLeave={() => handleMouseLeave('')}
         >
           <div className={classes.mainBlockSecondMenu}>
-            <Link href={'services'} className={classes.menuItemSecondMenu}>
+            <Link
+              href={'vysshiy-muzhskoy-razryad'}
+              className={classes.menuItemSecondMenu}
+            >
               <Image
                 src={secondMenuItemImg}
                 alt="secondMenuItemImg"
@@ -36,7 +39,10 @@ export const Menu = () => {
               ></Image>
               Высший мужской разряд
             </Link>
-            <Link href={'news'} className={classes.menuItemSecondMenu}>
+            <Link
+              href={'muzhskoy-razryad'}
+              className={classes.menuItemSecondMenu}
+            >
               <Image
                 src={secondMenuItemImg}
                 alt="secondMenuItemImg"
@@ -44,7 +50,10 @@ export const Menu = () => {
               ></Image>
               Мужской разряд
             </Link>
-            <Link href={'news'} className={classes.menuItemSecondMenu}>
+            <Link
+              href={'zhenskiy-razryad'}
+              className={classes.menuItemSecondMenu}
+            >
               <Image
                 src={secondMenuItemImg}
                 alt="secondMenuItemImg"
@@ -69,19 +78,19 @@ export const Menu = () => {
             height={15}
           />
         </Link>
-        <Link href={'news'} className={classes.menuItem}>
+        <Link href={'vip-kabinety'} className={classes.menuItem}>
           VIP-Кабинеты
         </Link>
-        <Link href={'news'} className={classes.menuItem}>
+        <Link href={'uslugi'} className={classes.menuItem}>
           Услуги
         </Link>
-        <Link href={'news'} className={classes.menuItem}>
+        <Link href={'novosti-i-aktsii'} className={classes.menuItem}>
           Новости и акции
         </Link>
-        <Link href={'news'} className={classes.menuItem}>
+        <Link href={'kukhnya-i-bar'} className={classes.menuItem}>
           Кухня и бар
         </Link>
-        <Link href={'services'} className={classes.menuItem}>
+        <Link href={'kontakty'} className={classes.menuItem}>
           Контакты
         </Link>
       </div>
