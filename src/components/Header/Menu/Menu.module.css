@@ -38,17 +38,14 @@
     transition: 0.2s ease;
 }
 
-.hoverItem:hover {
+.hoverFirstItem {
+    color: var(--beige-5);
     padding-right: 124px;
 }
 
-.hoverItem:hover>img {
+.hoverFirstItem>img {
     transform: translate(5px, 0px) rotate(180deg);
     filter: brightness(0) saturate(100%) invert(34%) sepia(37%) saturate(866%) hue-rotate(341deg) brightness(97%) contrast(91%);
-}
-
-.hoverItem:active>img {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(57%) saturate(785%) hue-rotate(342deg) brightness(90%) contrast(106%);
 }
 
 .containerSecondMenu {
@@ -62,7 +59,7 @@
     left: 0;
 }
 
-.hoverItem:hover .containerSecondMenu {
+.containerSecondMenuOpen {
     opacity: 1;
     pointer-events: all;
     z-index: 1;
@@ -97,9 +94,17 @@
 
 .menuItemSecondMenu:hover {
     color: var(--beige-5);
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: all;
+}
+
+/* 
+.containerSecondMenu:hover~.hoverItem {
+    padding-right: 124px;
+    color: var(--beige-5);
+} */
+
+.containerSecondMenu:hover~.hoverItem>img {
+    transform: translate(5px, 0px) rotate(180deg);
+    filter: brightness(0) saturate(100%) invert(34%) sepia(37%) saturate(866%) hue-rotate(341deg) brightness(97%) contrast(91%);
 }
 
 .secondMenuItemImg {
@@ -113,13 +118,4 @@
 
 .menuItemSecondMenu:hover>.secondMenuItemImg {
     opacity: 1;
-}
-
-.menuItem:active,
-.menuItemSecondMenu:active {
-    color: var(--beige-6);
-}
-
-.menuItemSecondMenu:active>.secondMenuItemImg {
-    filter: brightness(0.9);
 }
