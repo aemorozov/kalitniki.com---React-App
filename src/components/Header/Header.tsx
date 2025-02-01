@@ -12,8 +12,8 @@ export const Header = () => {
         <Image
           src={logo}
           alt="Калитниковские бани лого"
-          width={74}
-          height={44}
+          priority={true}
+          className={classes.logo}
         />
       </Link>
       <Menu />

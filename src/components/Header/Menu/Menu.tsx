@@ -31,7 +31,7 @@ export const Menu = () => {
       const divisionsWidth =
         divisionsRef.current?.getBoundingClientRect().width || 0;
 
-      const shift = 50;
+      const shift = 30;
 
       setDivisionsPadding(subMenuWidth - divisionsWidth - shift);
     } else {
@@ -129,7 +129,11 @@ export const Menu = () => {
 
 const items: Array<{ url: string; name: string }> = [
   { url: '/razriady', name: 'Разряды' },
-  { url: '/vip-kabinety', name: 'VIP-Кабинеты' }
+  { url: '/vip-kabinety', name: 'VIP-Кабинеты' },
+  { url: '/uslugi', name: 'Услуги' },
+  { url: '/novosti-i-aktcii', name: 'Новости и акции' },
+  { url: '/kyhnya-i-bar', name: 'Кухня и бар' },
+  { url: '/contacts', name: 'Контакты' }
 ];
 
 {
