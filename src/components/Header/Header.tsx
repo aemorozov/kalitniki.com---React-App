@@ -3,16 +3,19 @@ import { Menu } from './Menu/Menu';
 import { ContactsZone } from './ContactsZone/ContactsZone';
 import logo from '../../img/header/Logo.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Header = () => {
   return (
     <div className={classes.header}>
-      <Image
-        src={logo}
-        alt="Калитниковские бани лого"
-        width={73.33}
-        height={43.98}
-      />
+      <Link href={'/'}>
+        <Image
+          src={logo}
+          alt="Калитниковские бани лого"
+          // className={classes.mainLogo}
+          priority
+        />
+      </Link>
       <Menu />
       <ContactsZone />
     </div>

@@ -48,7 +48,7 @@ export const Menu = () => {
         // Если есть у пункта меню есть субменю, делаем особые стили и галочку
         if (el.children) {
           return (
-            <div>
+            <div key={el.title}>
               <li
                 className={classNames(
                   classes.menuItem,
@@ -84,6 +84,7 @@ export const Menu = () => {
                   {el.children.map((el) => {
                     return (
                       <Link
+                        key={el.title}
                         href={el.url}
                         className={classNames(
                           classes.menuItemSecondMenu,
@@ -110,7 +111,7 @@ export const Menu = () => {
         }
 
         return (
-          <li className={classes.li}>
+          <li className={classes.li} key={el.title}>
             <Link
               href={el.url}
               className={classNames(
