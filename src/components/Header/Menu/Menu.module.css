@@ -116,6 +116,11 @@
     opacity: 0;
 }
 
+.activeSecondMenuItemImg {
+    opacity: 1;
+    filter: contrast(40%);
+}
+
 .menuItemSecondMenu:hover>.secondMenuItemImg {
     opacity: 1;
 }

@@ -3,7 +3,7 @@ import classes from './Menu.module.css';
 import arrowDown from '../../../img/header/IconDown.svg';
 import Image from 'next/image';
 import secondMenuItemImg from '../../../img/header/Icon_container.svg';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 
@@ -12,13 +12,14 @@ export const Menu = () => {
 
   const [openSubMenu, isOpenSubMenu] = useState('');
   const [addWidthMainItem, isAddWidthMainItem] = useState('');
-  // const [active, setActive] = useState(false);
 
+  // Наведение курсора на пункт меню
   const handleMouseEnter = (e: string) => {
     isOpenSubMenu(e);
     isAddWidthMainItem(classes.hoverFirstItem);
   };
 
+  // Убираем курсор с пункта меню
   const handleMouseLeave = (e: string) => {
     isOpenSubMenu(e);
     isAddWidthMainItem('');
@@ -44,6 +45,7 @@ export const Menu = () => {
   return (
     <ul className={classes.mainBlock}>
       {pages.map((el) => {
+        // Если есть у пункта меню есть субменю, делаем особые стили и галочку
         if (el.children) {
           return (
             <div>
@@ -51,8 +53,11 @@ export const Menu = () => {
                 className={classNames(
                   classes.menuItem,
                   addWidthMainItem,
+
+                  // Сравниваем путь для подсветки пункта меню
                   router.pathname === '/' + el.url && classes.activeItem
                 )}
+                // Открываем субменю
                 onMouseEnter={() =>
                   handleMouseEnter(classes.containerSecondMenuOpen)
                 }
@@ -65,6 +70,8 @@ export const Menu = () => {
                   alt="Arrow down"
                 />
               </li>
+
+              {/* Субменю  */}
               <div
                 className={classes.containerSecondMenu + ' ' + openSubMenu}
                 onMouseEnter={() =>
@@ -73,6 +80,7 @@ export const Menu = () => {
                 onMouseLeave={() => handleMouseLeave('')}
               >
                 <div className={classes.mainBlockSecondMenu}>
+                  {/* Проходим по пунктам субменю */}
                   {el.children.map((el) => {
                     return (
                       <Link
@@ -85,7 +93,11 @@ export const Menu = () => {
                         <Image
                           src={secondMenuItemImg}
                           alt="secondMenuItemImg"
-                          className={classes.secondMenuItemImg}
+                          className={classNames(
+                            classes.secondMenuItemImg,
+                            router.pathname === '/' + el.url &&
+                              classes.activeSecondMenuItemImg
+                          )}
                         ></Image>
                         {el.title}
                       </Link>
