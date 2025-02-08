@@ -48,27 +48,33 @@ export const Menu = () => {
         // Если есть у пункта меню есть субменю, делаем особые стили и галочку
         if (el.children) {
           return (
-            <div key={el.title}>
-              <li
-                className={classNames(
-                  classes.menuItem,
-                  addWidthMainItem,
+            <>
+              <li className={classes.li} key={el.title}>
+                <Link
+                  href={el.url}
+                  className={classNames(
+                    classes.menuItem,
+                    addWidthMainItem,
 
-                  // Сравниваем путь для подсветки пункта меню
-                  router.pathname === '/' + el.url && classes.activeItem
-                )}
-                // Открываем субменю
-                onMouseEnter={() =>
-                  handleMouseEnter(classes.containerSecondMenuOpen)
-                }
-                onMouseLeave={() => handleMouseLeave('')}
-              >
-                {el.title}
-                <Image
-                  src={arrowDown}
-                  className={classes.arrowDown}
-                  alt="Arrow down"
-                />
+                    // Сравниваем путь для подсветки пункта меню
+                    router.pathname === '/' + el.url && classes.activeItem
+                  )}
+                  // Открываем субменю
+                  onMouseEnter={() =>
+                    handleMouseEnter(classes.containerSecondMenuOpen)
+                  }
+                  onMouseLeave={() => handleMouseLeave('')}
+                >
+                  {el.title}
+                  <Image
+                    src={arrowDown}
+                    className={classNames(
+                      classes.arrowDown,
+                      router.pathname === '/' + el.url && classes.arrowActive
+                    )}
+                    alt="Arrow down"
+                  />
+                </Link>
               </li>
 
               {/* Субменю  */}
@@ -106,7 +112,7 @@ export const Menu = () => {
                   })}
                 </div>
               </div>
-            </div>
+            </>
           );
         }
 

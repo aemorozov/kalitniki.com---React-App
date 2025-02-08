@@ -54,6 +54,10 @@
     filter: brightness(0) saturate(100%) invert(34%) sepia(37%) saturate(866%) hue-rotate(341deg) brightness(97%) contrast(91%);
 }
 
+.arrowActive {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(37%) saturate(866%) hue-rotate(341deg) brightness(97%) contrast(91%);
+}
+
 .containerSecondMenu {
     position: absolute;
     z-index: 1;
