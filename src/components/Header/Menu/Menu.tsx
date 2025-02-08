@@ -3,11 +3,16 @@ import classes from './Menu.module.css';
 import arrowDown from '../../../img/header/IconDown.svg';
 import Image from 'next/image';
 import secondMenuItemImg from '../../../img/header/Icon_container.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import classNames from 'classnames';
 
 export const Menu = () => {
+  const router = useRouter();
+
   const [openSubMenu, isOpenSubMenu] = useState('');
   const [addWidthMainItem, isAddWidthMainItem] = useState('');
+  // const [active, setActive] = useState(false);
 
   const handleMouseEnter = (e: string) => {
     isOpenSubMenu(e);
@@ -19,81 +24,93 @@ export const Menu = () => {
     isAddWidthMainItem('');
   };
 
+  const pages = [
+    {
+      title: 'Разряды',
+      url: 'razryadi',
+      children: [
+        { title: 'Высший мужской разряд', url: 'vysshiy-muzhskoy-razryad' },
+        { title: 'Мужской разряд', url: 'muzhskoy-razryad' },
+        { title: 'Женский разряд', url: 'zhenskiy-razryad' }
+      ]
+    },
+    { title: 'VIP-Кабинеты', url: 'vip-kabinety' },
+    { title: 'Услуги', url: 'uslugi' },
+    { title: 'Новости и акции', url: 'novosti-i-aktsii' },
+    { title: 'Кухня и бар', url: 'kukhnya-i-bar' },
+    { title: 'Контакты', url: 'kontakty' }
+  ];
+
   return (
-    <>
-      <div className={classes.mainBlock}>
-        <div
-          className={classes.containerSecondMenu + ' ' + openSubMenu}
-          onMouseEnter={() => handleMouseEnter(classes.containerSecondMenuOpen)}
-          onMouseLeave={() => handleMouseLeave('')}
-        >
-          <div className={classes.mainBlockSecondMenu}>
+    <ul className={classes.mainBlock}>
+      {pages.map((el) => {
+        if (el.children) {
+          return (
+            <div>
+              <li
+                className={classNames(
+                  classes.menuItem,
+                  addWidthMainItem,
+                  router.pathname === '/' + el.url && classes.activeItem
+                )}
+                onMouseEnter={() =>
+                  handleMouseEnter(classes.containerSecondMenuOpen)
+                }
+                onMouseLeave={() => handleMouseLeave('')}
+              >
+                {el.title}
+                <Image
+                  src={arrowDown}
+                  className={classes.arrowDown}
+                  alt="Arrow down"
+                />
+              </li>
+              <div
+                className={classes.containerSecondMenu + ' ' + openSubMenu}
+                onMouseEnter={() =>
+                  handleMouseEnter(classes.containerSecondMenuOpen)
+                }
+                onMouseLeave={() => handleMouseLeave('')}
+              >
+                <div className={classes.mainBlockSecondMenu}>
+                  {el.children.map((el) => {
+                    return (
+                      <Link
+                        href={el.url}
+                        className={classNames(
+                          classes.menuItemSecondMenu,
+                          router.pathname === '/' + el.url && classes.activeItem
+                        )}
+                      >
+                        <Image
+                          src={secondMenuItemImg}
+                          alt="secondMenuItemImg"
+                          className={classes.secondMenuItemImg}
+                        ></Image>
+                        {el.title}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <li className={classes.li}>
             <Link
-              href={'vysshiy-muzhskoy-razryad'}
-              className={classes.menuItemSecondMenu}
+              href={el.url}
+              className={classNames(
+                classes.menuItem,
+                router.pathname === '/' + el.url && classes.activeItem
+              )}
             >
-              <Image
-                src={secondMenuItemImg}
-                alt="secondMenuItemImg"
-                className={classes.secondMenuItemImg}
-              ></Image>
-              Высший мужской разряд
+              {el.title}
             </Link>
-            <Link
-              href={'muzhskoy-razryad'}
-              className={classes.menuItemSecondMenu}
-            >
-              <Image
-                src={secondMenuItemImg}
-                alt="secondMenuItemImg"
-                className={classes.secondMenuItemImg}
-              ></Image>
-              Мужской разряд
-            </Link>
-            <Link
-              href={'zhenskiy-razryad'}
-              className={classes.menuItemSecondMenu}
-            >
-              <Image
-                src={secondMenuItemImg}
-                alt="secondMenuItemImg"
-                className={classes.secondMenuItemImg}
-              ></Image>
-              Женский разряд
-            </Link>
-          </div>
-        </div>
-        <Link
-          href={'news'}
-          className={classes.menuItem + ' ' + addWidthMainItem}
-          onMouseEnter={() => handleMouseEnter(classes.containerSecondMenuOpen)}
-          onMouseLeave={() => handleMouseLeave('')}
-        >
-          Разряды
-          <Image
-            src={arrowDown}
-            className={classes.arrowDown}
-            alt="Arrow down"
-            width={16}
-            height={15}
-          />
-        </Link>
-        <Link href={'vip-kabinety'} className={classes.menuItem}>
-          VIP-Кабинеты
-        </Link>
-        <Link href={'uslugi'} className={classes.menuItem}>
-          Услуги
-        </Link>
-        <Link href={'novosti-i-aktsii'} className={classes.menuItem}>
-          Новости и акции
-        </Link>
-        <Link href={'kukhnya-i-bar'} className={classes.menuItem}>
-          Кухня и бар
-        </Link>
-        <Link href={'kontakty'} className={classes.menuItem}>
-          Контакты
-        </Link>
-      </div>
-    </>
+          </li>
+        );
+      })}
+    </ul>
   );
 };

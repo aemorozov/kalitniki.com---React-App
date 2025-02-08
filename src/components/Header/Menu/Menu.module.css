@@ -1,10 +1,15 @@
+.li {
+    list-style-type: none;
+    text-decoration: none;
+    color: none;
+}
+
 .mainBlock {
     width: 100%;
     padding-left: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 1px;
     background-color: var(--beige-1);
     position: relative;
 }
@@ -20,6 +25,7 @@
     transition: 0.2s ease;
     height: 80px;
     align-items: center;
+    cursor: pointer;
 }
 
 .menuItemList::after {
@@ -96,12 +102,6 @@
     color: var(--beige-5);
 }
 
-/* 
-.containerSecondMenu:hover~.hoverItem {
-    padding-right: 124px;
-    color: var(--beige-5);
-} */
-
 .containerSecondMenu:hover~.hoverItem>img {
     transform: translate(5px, 0px) rotate(180deg);
     filter: brightness(0) saturate(100%) invert(34%) sepia(37%) saturate(866%) hue-rotate(341deg) brightness(97%) contrast(91%);
@@ -118,4 +118,8 @@
 
 .menuItemSecondMenu:hover>.secondMenuItemImg {
     opacity: 1;
+}
+
+.activeItem {
+    color: var(--beige-4);
 }
