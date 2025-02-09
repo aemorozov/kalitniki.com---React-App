@@ -42,14 +42,20 @@ export const Menu = () => {
     { title: 'Контакты', url: 'kontakty' }
   ];
 
+  // function active(el:Object) {
+  //   const active = false
+  //   if(router.pathname === '/' + el.url
+  //     || router.pathname === '/' + el.url )
+  // }
+
   return (
     <ul className={classes.mainBlock}>
       {pages.map((el) => {
         // Если есть у пункта меню есть субменю, делаем особые стили и галочку
         if (el.children) {
           return (
-            <>
-              <li className={classes.li} key={el.title}>
+            <div key={el.title}>
+              <li className={classes.li}>
                 <Link
                   href={el.url}
                   className={classNames(
@@ -57,7 +63,10 @@ export const Menu = () => {
                     addWidthMainItem,
 
                     // Сравниваем путь для подсветки пункта меню
-                    router.pathname === '/' + el.url && classes.activeItem
+                    router.pathname === '/' + el.url && classes.activeItem,
+                    el.children.find(
+                      (el) => '/' + el.url === router.pathname
+                    ) && classes.arrowActive
                   )}
                   // Открываем субменю
                   onMouseEnter={() =>
@@ -70,10 +79,13 @@ export const Menu = () => {
                     src={arrowDown}
                     className={classNames(
                       classes.arrowDown,
-                      router.pathname === '/' + el.url && classes.arrowActive
+                      router.pathname === '/' + el.url && classes.arrowActive,
+                      el.children.find(
+                        (el) => '/' + el.url === router.pathname
+                      ) && classes.arrowActive
                     )}
                     alt="Arrow down"
-                  />
+                  ></Image>
                 </Link>
               </li>
 
@@ -112,7 +124,7 @@ export const Menu = () => {
                   })}
                 </div>
               </div>
-            </>
+            </div>
           );
         }
 
