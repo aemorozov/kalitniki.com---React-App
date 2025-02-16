@@ -42,12 +42,6 @@ export const Menu = () => {
     { title: 'Контакты', url: 'kontakty' }
   ];
 
-  // function active(el:Object) {
-  //   const active = false
-  //   if(router.pathname === '/' + el.url
-  //     || router.pathname === '/' + el.url )
-  // }
-
   return (
     <ul className={classes.mainBlock}>
       {pages.map((el) => {
@@ -68,7 +62,7 @@ export const Menu = () => {
                       (el) => '/' + el.url === router.pathname
                     ) && classes.arrowActive
                   )}
-                  // Открываем субменю
+                  // Открываем и закрываем субменю
                   onMouseEnter={() =>
                     handleMouseEnter(classes.containerSecondMenuOpen)
                   }
