@@ -1,9 +1,17 @@
 @font-face {
+    font-family: "Unbounded";
+    src: url("../fonts/Unbounded-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
     font-family: "Lato";
     src: url("../fonts/LatoRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+
 
 body {
     margin: 0;

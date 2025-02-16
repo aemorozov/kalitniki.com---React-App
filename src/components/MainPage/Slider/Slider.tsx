@@ -39,7 +39,20 @@ export const Slider = () => {
           </div>
         ))}
 
-        <div className={classes.textAria}>Текст</div>
+        <div className={classes.textAria}>
+          <h1 className={classes.textAriaH1}>Банный комплекс Калитники</h1>
+          <h2 className={classes.textAriaH2}>
+            Погрузитесь в атмосферу традиционного банного парения и
+            гостеприимства, мягкого пара в центре Москвы
+          </h2>
+          <button className={classes.button}>Связаться с нами</button>
+          <div className={classes.textAriaPBlock}>
+            <h3 className={classes.textAriaP}>Москва,</h3>
+            <h3 className={classes.textAriaP}>
+              Большая Калитниковская, дом 42
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   );
