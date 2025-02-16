@@ -34,7 +34,8 @@ export const Slider = () => {
               className={classNames(classes.image, imageClasses[index])}
               alt={`main photo ${index + 1}`}
               priority={index === activeIndex}
-            />
+            ></Image>
+            <div className={classes.gradient}></div>
           </div>
         ))}
 
