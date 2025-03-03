@@ -54,7 +54,7 @@
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 80%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.1) 80%);
 }
 
 .textAria {
@@ -105,10 +105,11 @@
     border-radius: 16px;
     box-sizing: border-box;
     font-family: "Lato", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
     color: var(--black);
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .textAriaPBlock {
