@@ -9,6 +9,7 @@
     width: 96%;
     height: 1400px;
     margin: 0 auto;
+    max-width: 1385px;
 }
 
 .headers {
@@ -37,4 +38,17 @@
     font-family: 'Unbounded';
     margin: 10px 5px;
     letter-spacing: 0.06rem;
+}
+
+.bottomDescription {
+    width: 700px;
+    margin: 38px auto;
+    text-align: center;
+    font-size: 26px;
+    font-family: "Unbounded", serif;
+    color: var(--black);
+}
+
+.bottomDescriptionSpan {
+    color: var(--green-2);
 }

@@ -11,6 +11,15 @@ export function ClassicBlock() {
           <h3 className={classes.headerH3}>Общественные разряды</h3>
         </div>
         <ThreeColumns />
+        <div className={classes.bottomDescription}>
+          <p>
+            Cвежий пар{' '}
+            <span className={classes.bottomDescriptionSpan}>на травах</span>{' '}
+            каждые{' '}
+            <span className={classes.bottomDescriptionSpan}>40 минут</span> для
+            всех гостей наших бань!
+          </p>
+        </div>
       </div>
     </div>
   );
