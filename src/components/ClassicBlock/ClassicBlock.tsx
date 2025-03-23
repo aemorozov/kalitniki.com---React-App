@@ -3,6 +3,7 @@ import Image from 'next/image';
 import classes from './ClassicBlock.module.css';
 import { ThreeColumns } from './ThreeColumns/ThreeColumns';
 import vipBackImg from '../../img/mainPage/vip/d4d5a7239e7aac5883c5d8bea7488137.png';
+import { VIPSlider } from './VIPSlider/VIPSlider';
 
 const blocksData = [
   {
@@ -15,7 +16,7 @@ const blocksData = [
   {
     headerH2: 'VIP-кабинеты',
     headerH3: 'Для отдыха <br /> в компании близких',
-    content: '',
+    content: <VIPSlider />,
     backgroundImage: vipBackImg,
     backgroundImageAlt: 'Woman'
   }
@@ -25,11 +26,16 @@ export function ClassicBlock() {
   return blocksData.map((block, i) => {
     return (
       <div className={classes.classicBlock} key={i}>
-        <Image
-          src={block.backgroundImage}
-          alt={block.backgroundImageAlt}
-          className={classes.backgroundImageVIP}
-        ></Image>
+        {block.backgroundImage ? (
+          <Image
+            src={block.backgroundImage}
+            alt={block.backgroundImageAlt}
+            className={classes.backgroundImageVIP}
+          ></Image>
+        ) : (
+          ''
+        )}
+
         <div className={classes.contentBlock}>
           <div className={classes.headers}>
             <h2 className={classes.headerH2}>{block.headerH2}</h2>

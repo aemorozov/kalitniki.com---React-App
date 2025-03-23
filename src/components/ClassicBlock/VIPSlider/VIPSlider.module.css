@@ -1,0 +1,50 @@
+.contentBlock {
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    width: 1054px;
+    background-color: var(--beige-2);
+    border-radius: 20px;
+    margin: 50px 0 5px 0;
+}
+
+.names {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    width: 100%;
+    padding: 5px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.name {
+    height: 56px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-family: 'Lato', serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    padding: 0px 45px;
+    cursor: pointer;
+}
+
+.name:hover,
+.nameActive {
+    background-color: #fff;
+}
+
+
+
+.leaf {
+    width: 18px;
+    height: 18px;
+    transform: scale(1.4) translateY(-1px);
+    margin-right: 10px;
+}
