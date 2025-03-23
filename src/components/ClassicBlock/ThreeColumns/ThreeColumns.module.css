@@ -94,3 +94,16 @@
     margin-top: 10px;
     margin-bottom: 25px;
 }
+
+.bottomDescription {
+    width: 700px;
+    margin: 38px auto;
+    text-align: center;
+    font-size: 26px;
+    font-family: "Unbounded", serif;
+    color: var(--black);
+}
+
+.bottomDescriptionSpan {
+    color: var(--green-2);
+}
