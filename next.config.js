@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const withLinaria = require('next-linaria');
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  output: 'export',
+  distDir: 'dist',
+  images: { unoptimized: true }
+};
 
-// module.exports = withLinaria({});
-
-module.exports = {
-    compiler: {
-        // Enables the styled-components SWC transform
-        styledComponents: true
-    }
-}
+module.exports = nextConfig;

@@ -1,0 +1,113 @@
+import classes from './VIPSlider.module.css';
+
+export function VIPSlider() {
+  return (
+    <div className={classes.contentBlock}>
+      <ul className={classes.names}>
+        <li className={classes.name + ' ' + classes.nameActive}>
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Турин
+        </li>
+        <li className={classes.name}>
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Комфорт
+        </li>
+        <li className={classes.name}>
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Римский
+        </li>
+        <li className={classes.name}>
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Большой
+        </li>
+        <li className={classes.name}>
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Малый
+        </li>
+      </ul>
+      <div className={classes.slides}>
+        <div className={classes.slidesBlock}>
+          <img
+            src="/img/mainPage/vip/543150a55361764f23d8a1494d0cb30e.jpeg"
+            alt="Турин"
+            className={classes.image}
+          />
+          <div className={classes.textBlock}>
+            <h3 className={classes.header}>Турин</h3>
+            <p className={classes.text}>
+              Находится в высшем мужском разряде. Лучшее место для встречи с
+              друзьями и близкими между парениями. Небольшой и уютный уголок для
+              отдыха и релакса...
+            </p>
+            <div className={classes.labels}>
+              <div className={classes.label}>Для встреч с друзьями</div>
+              <div className={classes.label}>Обслуживание по меню</div>
+              <div className={classes.label}>Спутниковое TV</div>
+              <div className={classes.label}>Label</div>
+              <div className={classes.label}>Label</div>
+            </div>
+            <ul className={classes.plusses}>
+              <li className={classes.plus}>
+                <img
+                  src="/img/mainPage/vip/Bullet.svg"
+                  className={classes.list}
+                  alt="list element"
+                />
+                Вместимость до 6 гостей
+              </li>
+              <li className={classes.plus}>
+                <img
+                  src="/img/mainPage/vip/Bullet.svg"
+                  className={classes.list}
+                  alt="list element"
+                />
+                Общая площадь 12 м2
+              </li>
+              <li className={classes.plus}>
+                <img
+                  src="/img/mainPage/vip/Bullet.svg"
+                  className={classes.list}
+                  alt="list element"
+                />
+                Минимальная аренда — 2 часа
+              </li>
+            </ul>
+            <p className={classes.price}>2500 Р/2 часа</p>
+            <p className={classes.description}>
+              Оплачивается дополнительно к входному билету
+              <br />
+              После 2 часов действует поминутная тарификация
+            </p>
+            <button className={classes.button}>Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div className={classes.bottomDescription}>
+        <p>
+          Кабинеты находятся в мужском и высшем мужском разрядах. Каждый кабинет
+          готовится специально к вашему визиту с заботой и вниманием к деталям
+        </p>
+      </div>
+    </div>
+  );
+}
