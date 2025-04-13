@@ -1,10 +1,10 @@
-import classes from './Slider.module.css';
+import classNames from 'classnames';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import heroBlock1 from '../../../img/mainPage/slider/HeroBlock1.jpeg';
 import heroBlock2 from '../../../img/mainPage/slider/HeroBlock2.jpeg';
 import heroBlock3 from '../../../img/mainPage/slider/HeroBlock3.jpeg';
-import classNames from 'classnames';
-import { useState, useEffect } from 'react';
+import classes from './Slider.module.css';
 
 export const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,7 +17,7 @@ export const Slider = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className={classes.mainBlock}>

@@ -1,7 +1,8 @@
-export default () => {
+const Contacts = () => {
   return (
     <>
       <>Контакты</>
     </>
   );
 };
+export default Contacts;

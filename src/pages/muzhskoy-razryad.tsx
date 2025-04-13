@@ -1,7 +1,9 @@
-export default () => {
+const MansBath = () => {
   return (
     <>
       <>Мужской разряд</>
     </>
   );
 };
+
+export default MansBath;

@@ -1,7 +1,9 @@
-export default () => {
+const Baths = () => {
   return (
     <>
       <>Разряды</>
     </>
   );
 };
+
+export default Baths;

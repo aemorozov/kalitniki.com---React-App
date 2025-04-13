@@ -1,9 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
-import classes from './VIPSlider.module.css';
 import leaf from '../../../img/header/Icon_container.svg';
 import turinImg from '../../../img/mainPage/vip/543150a55361764f23d8a1494d0cb30e.jpeg';
 import listItem from '../../../img/mainPage/vip/Bullet.svg';
+import classes from './VIPSlider.module.css';
 
 export function VIPSlider() {
   return (
@@ -31,9 +30,9 @@ export function VIPSlider() {
           <div className={classes.textBlock}>
             <h3 className={classes.header}>Турин</h3>
             <p className={classes.text}>
-              Находится в высшем мужском разряде. Лучшее место для встречи
-              с друзьями и близкими между парениями. Небольшой и уютный уголок
-              для отдыха и релакса...
+              Находится в высшем мужском разряде. Лучшее место для встречи с
+              друзьями и близкими между парениями. Небольшой и уютный уголок для
+              отдыха и релакса...
             </p>
             <div className={classes.labels}>
               <div className={classes.label}>Для встреч с друзьями</div>
@@ -81,7 +80,7 @@ export function VIPSlider() {
       <div className={classes.bottomDescription}>
         <p>
           Кабинеты находятся в мужском и высшем мужском разрядах. Каждый кабинет
-          готовится специально к вашему визиту с заботой и вниманием к деталям
+          готовится специально к вашему визиту с заботой и вниманием к деталям
         </p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { Slider } from '../components/MainPage/Slider/Slider';
 import { ClassicBlock } from './../components/ClassicBlock/ClassicBlock';
 
-export default () => {
+const Home = () => {
   return (
     <>
       <Slider />
@@ -9,3 +9,5 @@ export default () => {
     </>
   );
 };
+
+export default Home;

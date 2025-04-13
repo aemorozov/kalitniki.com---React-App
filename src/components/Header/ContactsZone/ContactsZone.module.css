@@ -1,35 +1,35 @@
 .mainBlock {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .phoneNumber,
 .geoPoint {
-    height: 44px;
-    background-color: var(--green-2);
-    border-radius: 12px;
-    color: var(--white);
-    display: flex;
-    align-items: center;
+  height: 44px;
+  background-color: var(--green-2);
+  border-radius: 12px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
 }
 
 .phoneNumber {
-    width: 182px;
+  width: 182px;
 }
 
-.phoneNumber> :first-child {
-    margin-right: 6px;
-    margin-left: 10px;
+.phoneNumber > :first-child {
+  margin-right: 6px;
+  margin-left: 10px;
 }
 
 .geoPoint {
-    margin-left: 8px;
-    width: 44px;
-    justify-content: center;
+  margin-left: 8px;
+  width: 44px;
+  justify-content: center;
 }
 
 .span {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 2px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 2px;
 }

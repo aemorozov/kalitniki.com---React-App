@@ -1,209 +1,202 @@
 .contentBlock {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 50px 0 5px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0 5px;
 }
 
 .names {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--beige-2);
-    border-radius: 20px;
-    height: 67px;
-    width: 1054px;
-    padding: 5px;
-    justify-content: space-between;
-    box-sizing: border-box;
-    margin: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--beige-2);
+  border-radius: 20px;
+  height: 67px;
+  width: 1054px;
+  padding: 5px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .name {
-    height: 56px;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    font-family: 'Lato', serif;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-    padding: 0px 45px;
-    cursor: pointer;
+  height: 56px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-family: Lato, serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  padding: 0 45px;
+  cursor: pointer;
 }
 
 .name:hover,
 .nameActive {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .leaf {
-    width: 18px;
-    height: 18px;
-    transform: scale(1.4) translateY(-1px);
-    margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  transform: scale(1.4) translateY(-1px);
+  margin-right: 10px;
 }
 
 .slides {
-    height: 620px;
-    width: 100%;
-    /* background-color: bisque; */
-    margin-top: 20px;
-    position: relative;
-    box-sizing: border-box;
+  height: 620px;
+  width: 100%;
+
+  /* background-color: bisque; */
+  margin-top: 20px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .slidesBlock {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: #fff;
-    transition: 0.3s ease;
-    opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: 0.3s ease;
+  opacity: 1;
 }
 
 .slidesBlockLeft {
-    transform: translateX(-130%);
-    opacity: 0;
+  transform: translateX(-130%);
+  opacity: 0;
 }
 
 .slidesBlockRight {
-    transform: translateX(130%);
-    opacity: 0;
+  transform: translateX(130%);
+  opacity: 0;
 }
 
 .image {
-    position: absolute;
-    width: 55%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 20px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
 }
 
 .textBlock {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    border-radius: 20px;
-    background-color: #fff;
-    padding: 42px;
-    box-sizing: border-box;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 42px;
+  box-sizing: border-box;
 }
 
-.textBlock>* {
-    margin: 0;
+.textBlock > * {
+  margin: 0;
 }
 
 .header {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    letter-spacing: 0%;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0%;
 }
 
 .text {
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0%;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
 }
 
 .labels {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 450px;
-    margin-top: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 450px;
+  margin-top: 16px;
 }
 
 .label {
-    height: 34px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    padding-top: 6px;
-    padding-right: 12px;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    background-color: var(--gray-1);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-right: 4px;
-    margin-bottom: 10px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+  height: 34px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 6px 12px;
+  background-color: var(--gray-1);
+  display: flex;
+  place-content: center center;
+  flex-wrap: wrap;
+  margin-right: 4px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .plusses {
-    margin-top: 14px;
-    padding-left: 0;
+  margin-top: 14px;
+  padding-left: 0;
 }
 
 .plus {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 8px;
-    list-style: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  list-style: none;
 }
 
 .list {
-    margin: 0 10px 3px 0;
+  margin: 0 10px 3px 0;
 }
 
 .price {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    color: var(--green-2);
-    margin-top: 25px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--green-2);
+  margin-top: 25px;
 }
 
 .description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--gray-8);
-    margin-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--gray-8);
+  margin-top: 8px;
 }
 
 .button {
-    width: 180px;
-    height: 56px;
-    border-radius: 16px;
-    padding-top: 16px;
-    padding-right: 20px;
-    padding-bottom: 16px;
-    padding-left: 20px;
-    background-color: var(--cherry-red-1);
-    color: #fff;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    margin-top: 20px;
+  width: 180px;
+  height: 56px;
+  border-radius: 16px;
+  padding: 16px 20px;
+  background-color: var(--cherry-red-1);
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .bottomDescription {
-    width: 900px;
-    margin: 26px auto;
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
+  width: 900px;
+  margin: 26px auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 .bottomDescriptionSpan {
-    color: var(--green-2);
+  color: var(--green-2);
 }

@@ -1,27 +1,7 @@
+/** @type {import('stylelint').Config} */
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-styled-components'],
-  processors: [
-    [
-      'stylelint-processor-styled-components',
-      {
-        parserPlugins: [
-          'jsx',
-          'objectRestSpread',
-          ['decorators', { decoratorsBeforeExport: true }],
-          'classProperties',
-          'exportExtensions',
-          'asyncGenerators',
-          'functionBind',
-          'functionSent',
-          'dynamicImport',
-          'optionalCatchBinding',
-          'optionalChaining',
-          'nullishCoalescingOperator'
-        ]
-      }
-    ]
-  ],
+  extends: 'stylelint-config-standard',
   rules: {
-    'declaration-colon-newline-after': null
+    'selector-class-pattern': null
   }
 };

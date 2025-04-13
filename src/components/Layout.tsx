@@ -1,12 +1,11 @@
-import { FC } from 'react';
-import { Menu } from './Header/Menu/Menu';
+import { FC, ReactNode } from 'react';
 import { Header } from './Header/Header';
 
-export const Layout: FC = (props) => {
+export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       <Header />
-      {props.children}
+      {children}
     </>
   );
 };
