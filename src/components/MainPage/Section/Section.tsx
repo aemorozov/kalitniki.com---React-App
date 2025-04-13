@@ -4,8 +4,8 @@ import classes from './Section.module.css';
 type SectionProps = {
   children: ReactNode;
   backgroundImage?: string;
-  title: string;
-  subTitle: string;
+  title: ReactNode;
+  subTitle: ReactNode;
 };
 
 export const Section: FC<SectionProps> = ({
