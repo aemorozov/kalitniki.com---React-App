@@ -1,14 +1,16 @@
+'use client';
 import classNames from 'classnames';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import heroBlock1 from '../../../img/mainPage/slider/HeroBlock1.jpeg';
-import heroBlock2 from '../../../img/mainPage/slider/HeroBlock2.jpeg';
-import heroBlock3 from '../../../img/mainPage/slider/HeroBlock3.jpeg';
+
 import classes from './Slider.module.css';
 
 export const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const images = [heroBlock1, heroBlock2, heroBlock3];
+  const images = [
+    '/img/mainPage/slider/HeroBlock1.jpeg',
+    '/img/mainPage/slider/HeroBlock2.jpeg',
+    '/img/mainPage/slider/HeroBlock3.jpeg'
+  ];
   const imageClasses = [classes.firstImg, classes.secondImg, classes.thirdImg];
 
   useEffect(() => {
@@ -29,12 +31,11 @@ export const Slider = () => {
               [classes.opacity1]: index === activeIndex
             })}
           >
-            <Image
+            <img
               src={image}
               className={classNames(classes.image, imageClasses[index])}
               alt={`main photo ${index + 1}`}
-              priority={index === activeIndex}
-            ></Image>
+            />
             <div className={classes.gradient}></div>
           </div>
         ))}

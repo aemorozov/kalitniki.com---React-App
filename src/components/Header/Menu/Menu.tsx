@@ -1,14 +1,13 @@
-import Link from 'next/link';
-import classes from './Menu.module.css';
-import arrowDown from '../../../img/header/IconDown.svg';
-import Image from 'next/image';
-import secondMenuItemImg from '../../../img/header/Icon_container.svg';
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+'use client';
 import classNames from 'classnames';
+import { Link } from 'next-view-transitions';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+
+import classes from './Menu.module.css';
 
 export const Menu = () => {
-  const router = useRouter();
+  const pathname = usePathname();
 
   const [openSubMenu, isOpenSubMenu] = useState('');
   const [addWidthMainItem, isAddWidthMainItem] = useState('');
@@ -57,10 +56,9 @@ export const Menu = () => {
                     addWidthMainItem,
 
                     // Сравниваем путь для подсветки пункта меню
-                    router.pathname === '/' + el.url && classes.activeItem,
-                    el.children.find(
-                      (el) => '/' + el.url === router.pathname
-                    ) && classes.arrowActive
+                    pathname === '/' + el.url && classes.activeItem,
+                    el.children.find((el) => '/' + el.url === pathname) &&
+                      classes.arrowActive
                   )}
                   // Открываем и закрываем субменю
                   onMouseEnter={() =>
@@ -69,17 +67,16 @@ export const Menu = () => {
                   onMouseLeave={() => handleMouseLeave('')}
                 >
                   {el.title}
-                  <Image
-                    src={arrowDown}
+                  <img
+                    src="/img/header/IconDown.svg"
                     className={classNames(
                       classes.arrowDown,
-                      router.pathname === '/' + el.url && classes.arrowActive,
-                      el.children.find(
-                        (el) => '/' + el.url === router.pathname
-                      ) && classes.arrowActive
+                      pathname === '/' + el.url && classes.arrowActive,
+                      el.children.find((el) => '/' + el.url === pathname) &&
+                        classes.arrowActive
                     )}
-                    alt="Arrow down"
-                  ></Image>
+                    alt="Открыть подменю"
+                  />
                 </Link>
               </li>
 
@@ -100,18 +97,19 @@ export const Menu = () => {
                         href={el.url}
                         className={classNames(
                           classes.menuItemSecondMenu,
-                          router.pathname === '/' + el.url && classes.activeItem
+                          pathname === '/' + el.url && classes.activeItem
                         )}
                       >
-                        <Image
-                          src={secondMenuItemImg}
-                          alt="secondMenuItemImg"
+                        <img
+                          // Это тоже надо вынести в стиле, не надо эта картинка сюда пихать. Это бэкграунд внутри контейнера с названием страницы.
+                          src="/img/header/Icon_container.svg"
+                          alt=""
                           className={classNames(
                             classes.secondMenuItemImg,
-                            router.pathname === '/' + el.url &&
+                            pathname === '/' + el.url &&
                               classes.activeSecondMenuItemImg
                           )}
-                        ></Image>
+                        ></img>
                         {el.title}
                       </Link>
                     );
@@ -128,7 +126,7 @@ export const Menu = () => {
               href={el.url}
               className={classNames(
                 classes.menuItem,
-                router.pathname === '/' + el.url && classes.activeItem
+                pathname === '/' + el.url && classes.activeItem
               )}
             >
               {el.title}

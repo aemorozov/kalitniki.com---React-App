@@ -1,7 +1,3 @@
-import Image from 'next/image';
-import leaf from '../../../img/header/Icon_container.svg';
-import turinImg from '../../../img/mainPage/vip/543150a55361764f23d8a1494d0cb30e.jpeg';
-import listItem from '../../../img/mainPage/vip/Bullet.svg';
 import classes from './VIPSlider.module.css';
 
 export function VIPSlider() {
@@ -9,24 +5,53 @@ export function VIPSlider() {
     <div className={classes.contentBlock}>
       <ul className={classes.names}>
         <li className={classes.name + ' ' + classes.nameActive}>
-          <Image src={leaf} alt="text" className={classes.leaf} /> Турин
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Турин
         </li>
         <li className={classes.name}>
-          <Image src={leaf} alt="text" className={classes.leaf} /> Комфорт
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Комфорт
         </li>
         <li className={classes.name}>
-          <Image src={leaf} alt="text" className={classes.leaf} /> Римский
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Римский
         </li>
         <li className={classes.name}>
-          <Image src={leaf} alt="text" className={classes.leaf} /> Большой
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Большой
         </li>
         <li className={classes.name}>
-          <Image src={leaf} alt="text" className={classes.leaf} /> Малый
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="text"
+            className={classes.leaf}
+          />{' '}
+          Малый
         </li>
       </ul>
       <div className={classes.slides}>
         <div className={classes.slidesBlock}>
-          <Image src={turinImg} alt="Turin" className={classes.image}></Image>
+          <img
+            src="/img/mainPage/vip/543150a55361764f23d8a1494d0cb30e.jpeg"
+            alt="Турин"
+            className={classes.image}
+          />
           <div className={classes.textBlock}>
             <h3 className={classes.header}>Турин</h3>
             <p className={classes.text}>
@@ -43,27 +68,27 @@ export function VIPSlider() {
             </div>
             <ul className={classes.plusses}>
               <li className={classes.plus}>
-                <Image
-                  src={listItem}
+                <img
+                  src="/img/mainPage/vip/Bullet.svg"
                   className={classes.list}
                   alt="list element"
-                ></Image>
+                />
                 Вместимость до 6 гостей
               </li>
               <li className={classes.plus}>
-                <Image
-                  src={listItem}
+                <img
+                  src="/img/mainPage/vip/Bullet.svg"
                   className={classes.list}
                   alt="list element"
-                ></Image>
+                />
                 Общая площадь 12 м2
               </li>
               <li className={classes.plus}>
-                <Image
-                  src={listItem}
+                <img
+                  src="/img/mainPage/vip/Bullet.svg"
                   className={classes.list}
                   alt="list element"
-                ></Image>
+                />
                 Минимальная аренда — 2 часа
               </li>
             </ul>

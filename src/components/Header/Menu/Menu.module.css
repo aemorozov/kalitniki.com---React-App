@@ -28,7 +28,7 @@
 }
 
 .menuItemList::after {
-  content: url('../../../img/header/IconDown.svg');
+  content: url('/img/header/IconDown.svg');
 }
 
 .menuItem:hover {
