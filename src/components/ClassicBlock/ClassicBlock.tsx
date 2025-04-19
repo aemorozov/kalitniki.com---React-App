@@ -23,34 +23,38 @@ const blocksData = [
 ];
 
 export function ClassicBlock() {
-  return blocksData.map((block, i) => {
-    return (
-      <div className={classes.classicBlock} key={i}>
-        {block.backgroundImage ? (
-          <Image
-            src={block.backgroundImage}
-            alt={block.backgroundImageAlt}
-            className={classes.backgroundImageVIP}
-          ></Image>
-        ) : (
-          ''
-        )}
+  return (
+    <>
+      {blocksData.map((block, i) => {
+        return (
+          <div className={classes.classicBlock} key={i}>
+            {block.backgroundImage ? (
+              <Image
+                src={block.backgroundImage}
+                alt={block.backgroundImageAlt}
+                className={classes.backgroundImageVIP}
+              ></Image>
+            ) : (
+              ''
+            )}
 
-        <div className={classes.contentBlock}>
-          <div className={classes.headers}>
-            <h2 className={classes.headerH2}>{block.headerH2}</h2>
-            <h3 className={classes.headerH3}>
-              {block.headerH3.split('<br />').map((line, i) => (
-                <React.Fragment key={i}>
-                  {i > 0 && <br />}
-                  {line}
-                </React.Fragment>
-              ))}
-            </h3>
+            <div className={classes.contentBlock}>
+              <div className={classes.headers}>
+                <h2 className={classes.headerH2}>{block.headerH2}</h2>
+                <h3 className={classes.headerH3}>
+                  {block.headerH3.split('<br />').map((line, i) => (
+                    <React.Fragment key={i}>
+                      {i > 0 && <br />}
+                      {line}
+                    </React.Fragment>
+                  ))}
+                </h3>
+              </div>
+              {block.content}
+            </div>
           </div>
-          {block.content}
-        </div>
-      </div>
-    );
-  });
+        );
+      })}
+    </>
+  );
 }

@@ -31,12 +31,12 @@ export function VIPSlider() {
           <div className={classes.textBlock}>
             <h3 className={classes.header}>Турин</h3>
             <p className={classes.text}>
-              Находится в высшем мужском разряде. Лучшее место для встречи
-              с друзьями и близкими между парениями. Небольшой и уютный уголок
-              для отдыха и релакса...
+              Находится в высшем мужском разряде. Лучшее место для встречи c
+              друзьями и близкими между парениями. Небольшой и уютный уголок для
+              отдыха и релакса...
             </p>
             <div className={classes.labels}>
-              <div className={classes.label}>Для встреч с друзьями</div>
+              <div className={classes.label}>Для встреч c друзьями</div>
               <div className={classes.label}>Обслуживание по меню</div>
               <div className={classes.label}>Спутниковое TV</div>
               <div className={classes.label}>Label</div>
@@ -68,7 +68,7 @@ export function VIPSlider() {
                 Минимальная аренда — 2 часа
               </li>
             </ul>
-            <p className={classes.price}>2500 Р/2 часа</p>
+            <p className={classes.price}>2500 P/2 часа</p>
             <p className={classes.description}>
               Оплачивается дополнительно к входному билету
               <br />
@@ -81,7 +81,7 @@ export function VIPSlider() {
       <div className={classes.bottomDescription}>
         <p>
           Кабинеты находятся в мужском и высшем мужском разрядах. Каждый кабинет
-          готовится специально к вашему визиту с заботой и вниманием к деталям
+          готовится специально к вашему визиту c заботой и вниманием к деталям
         </p>
       </div>
     </div>
