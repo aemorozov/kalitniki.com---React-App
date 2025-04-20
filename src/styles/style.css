@@ -143,7 +143,7 @@ body {
 }
 
 .reverse {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse !important;
 }
 
 .image {
@@ -171,6 +171,7 @@ body {
     box-sizing: border-box;
     min-width: 50%;
     transform: translateX(10%);
+    position: relative;
 }
 
 .textBlock>* {
@@ -274,7 +275,7 @@ body {
 
 .bottomDescription {
     width: 950px;
-    margin: 26px auto;
+    margin: 35px auto;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
@@ -288,11 +289,11 @@ body {
 /* Кухня - после ароматной парилки */
 
 .kyhnya {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .threeColumns {
-    margin-top: 30px;
+    margin-top: 35px;
     width: 100%;
     height: 550px;
     display: flex;
@@ -314,10 +315,21 @@ body {
     height: 110%;
     width: auto;
     object-fit: cover;
-    transform: translateX(-30%) translateY(-10%);
+    transform: translateX(-30%) translateY(-8%);
 }
 
 .littleTextBlock {
     width: 100%;
     transform: none;
+}
+
+/* Новости и акции */
+
+.novosti {
+    margin-top: 80px;
+}
+
+.novostiImgFix {
+    height: 150%;
+    transform: translateX(0%) translateY(-8%);
 }
