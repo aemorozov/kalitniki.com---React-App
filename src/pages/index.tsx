@@ -7,13 +7,17 @@ import uslugiImg2 from '../img/mainPage/uslugi/img2.jpeg';
 import uslugiImg3 from '../img/mainPage/uslugi/img3.jpeg';
 import novostiImg1 from '../img/mainPage/novosti/img1.jpeg';
 import novostiImg2 from '../img/mainPage/novosti/img2.jpeg';
+import logo from '/public/img/mainPage/promo/logo.svg';
+import promo from '/public/img/mainPage/promo/promo.jpg';
 
 export default () => {
   return (
     <>
       <Slider />
       <ClassicBlock />
-      <div className={'classicBlock  Uslugi - Dlya zdorovya i vosstanovleniya'}>
+      <section
+        className={'classicBlock  Uslugi - Dlya zdorovya i vosstanovleniya'}
+      >
         <div className={'contentBlock'}>
           <div className={'headers'}>
             <h2 className={'headerH2'}>Услуги</h2>
@@ -81,8 +85,8 @@ export default () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className={'classicBlock  kyhnya - Posle aromatnoi parilki'}>
+      </section>
+      <section className={'classicBlock  kyhnya - Posle aromatnoi parilki'}>
         <div className={'contentBlock'}>
           <div className={'headers'}>
             <h2 className={'headerH2'}>Кухня</h2>
@@ -168,8 +172,8 @@ export default () => {
             процедур, посмотреть спортивные матчи
           </p>
         </div>
-      </div>
-      <div className={'classicBlock  novosti i akcii'}>
+      </section>
+      <section className={'classicBlock  novosti i akcii'}>
         <div className={'contentBlock'}>
           <div className={'headers'}>
             <h2 className={'headerH2'}>Новости и акции</h2>
@@ -249,7 +253,27 @@ export default () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section className="promo">
+        <div className="promo-content">
+          <h2>
+            Пространство для <span>отдыха</span>
+            <br />с высоким <span>качеством</span> сервиса
+          </h2>
+        </div>
+        <div className="promo-banner">
+          <div className="promo-overlay">
+            <Image src={promo} alt="Калитники фон" className="promo-bg" />
+            <div className="promo-text">
+              <Image src={logo} alt="Калитники" className="promo-logo" />
+              <p>
+                Мягким паром, раскалённым жаром, чудесным ароматом трав
+                <br /> пахнут настоящие Калитники!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

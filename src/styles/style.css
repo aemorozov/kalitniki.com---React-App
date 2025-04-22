@@ -333,3 +333,57 @@ body {
     height: 150%;
     transform: translateX(0%) translateY(-8%);
 }
+
+/* Промо блок */
+
+.promo {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.promo-content h2 {
+    font-family: "Unbounded", serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    color: var(--black);
+}
+
+.promo-content h2 span {
+    color: var(--green-2);
+    /* Цвет под второй цвет текста */
+}
+
+.promo-banner {
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    height: 360px;
+}
+
+.promo-bg {
+    width: 150%;
+    height: auto;
+    display: block;
+    transform: translateX(-20%) translateY(-70%);
+}
+
+.promo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.promo-logo {
+    margin-bottom: 0px;
+    max-width: 180px;
+}
