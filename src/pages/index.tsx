@@ -320,7 +320,7 @@ export default () => {
                       <Image
                         src={otzuv001}
                         alt="otzuv001"
-                        className={'otzuv-photo'}
+                        className={'otzuv-photo not-border'}
                       ></Image>
                       <div className={'otzuv-nameAndDate'}>
                         <div className={'otzuv-name'}>Максим К.</div>
@@ -353,7 +353,7 @@ export default () => {
                       <Image
                         src={otzuv002}
                         alt="otzuv002"
-                        className={'otzuv-photo'}
+                        className={'otzuv-photo not-border'}
                       ></Image>
                       <div className={'otzuv-nameAndDate'}>
                         <div className={'otzuv-name'}>Sneg S.</div>
@@ -391,7 +391,7 @@ export default () => {
                       <Image
                         src={otzuv003}
                         alt="otzuv003"
-                        className={'otzuv-photo'}
+                        className={'otzuv-photo  not-border'}
                       ></Image>
                       <div className={'otzuv-nameAndDate'}>
                         <div className={'otzuv-name'}>Илья А.</div>
@@ -423,7 +423,7 @@ export default () => {
                       <Image
                         src={otzuv001}
                         alt="otzuv001"
-                        className={'otzuv-photo'}
+                        className={'otzuv-photo not-border'}
                       ></Image>
                       <div className={'otzuv-nameAndDate'}>
                         <div className={'otzuv-name'}>Максим К.</div>
@@ -456,7 +456,7 @@ export default () => {
                       <Image
                         src={otzuv001}
                         alt="otzuv001"
-                        className={'otzuv-photo'}
+                        className={'otzuv-photo not-border'}
                       ></Image>
                       <div className={'otzuv-nameAndDate'}>
                         <div className={'otzuv-name'}>Максим К.</div>
@@ -489,7 +489,7 @@ export default () => {
                       <Image
                         src={otzuv001}
                         alt="otzuv001"
-                        className={'otzuv-photo'}
+                        className={'otzuv-photo not-border'}
                       ></Image>
                       <div className={'otzuv-nameAndDate'}>
                         <div className={'otzuv-name'}>Максим К.</div>
