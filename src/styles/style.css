@@ -6,11 +6,19 @@
 }
 
 @font-face {
+    font-family: "Lato-medium-italic";
+    src: url("../fonts/latomediumitalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
     font-family: "Lato";
     src: url("../fonts/LatoRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
+
 
 html {
     overflow-x: hidden;
@@ -337,7 +345,7 @@ body {
 /* Промо блок */
 
 .promo {
-    padding: 120px 0;
+    padding: 120px 0 0 0;
     text-align: center;
 }
 
@@ -376,14 +384,239 @@ body {
     color: white;
     text-align: center;
     font-family: Lato;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     line-height: 26px;
     letter-spacing: 0%;
     text-align: center;
+    padding-top: 20px;
 }
 
 .promo-logo {
     margin-bottom: 0px;
     max-width: 180px;
+}
+
+.promo-p {
+    margin-top: 16px;
+}
+
+/* Отзывы */
+
+.background-otzuvu {
+    background-color: var(--beige-2);
+}
+
+.otzuvu {
+    padding-top: 85px;
+    height: 954px;
+    box-sizing: border-box;
+    background-color: var(--beige-2);
+    width: 100%;
+}
+
+.otzuvu-slider {
+    width: 100%;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    transform: translateY(-70px);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 55px;
+}
+
+.left-button,
+.right-button {
+    width: 56px;
+    height: 56px;
+    background-color: #ffffff99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 16px;
+    font-size: 32px;
+    color: var(--black);
+}
+
+.toRight {
+    transform: rotate(180deg);
+}
+
+.otzuvu-blocks {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.otzuv {
+    background-color: #fff;
+    width: 448px;
+    height: fit-content;
+    min-height: 380px;
+    max-height: 600px;
+    margin: 110px 10px 0 5px;
+    border-radius: 20px;
+    padding: 42px;
+    box-sizing: border-box;
+}
+
+.otzuv-title {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.otzuv-photoNameAndDate {
+    display: flex;
+    flex-direction: row;
+}
+
+.otzuv-photo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+}
+
+.otzuv-nameAndDate {
+    margin: 0 0 0px 12px;
+}
+
+.otzuv-name {
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    color: var(--black);
+}
+
+.otzuv-date {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: var(--gray-8);
+    margin-top: 8px;
+}
+
+.otzuv-zvezdu {
+    margin-top: 22px;
+}
+
+.otzuv-zvezdu>* {
+    margin-right: 4px;
+}
+
+.otzuv-text {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: var(--black);
+    max-height: 160px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.otzuv-text>* {
+    margin: 8px 0 0 0;
+}
+
+.otzuv-button {
+    width: 141px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--green-2);
+    color: #fff;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.after-slider {
+    margin: 50px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.textLeft {
+    font-family: Lato-medium-italic;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0%;
+    width: 582px;
+    color: #24282E;
+}
+
+.textLeftSpan {
+    color: var(--green-2);
+}
+
+.photos {
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+}
+
+.otzuv-photo-el {
+    width: 34px;
+}
+
+.count {
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: var(--beige-6);
+}
+
+.link {
+    font-family: Lato-medium-italic;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    color: var(--beige-6);
+}
+
+.after-slider p {
+    margin: 0;
+}
+
+.count p,
+.link p {
+    margin-top: 5px;
 }
