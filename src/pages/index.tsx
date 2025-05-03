@@ -1,5 +1,8 @@
 import { Slider } from '../components/MainPage/Slider/Slider';
 import { ClassicBlock } from './../components/ClassicBlock/ClassicBlock';
+import FAQ from '../components/MainPage/FAQ/FAQ';
+import Location from '../components/MainPage/Location/Location';
+import Footer from '../components/Footer/Footer';
 import Image from 'next/image';
 import listItem from '../img/mainPage/vip/Bullet.svg';
 import uslugiImg1 from '../img/mainPage/uslugi/img1.jpeg';
@@ -17,9 +20,12 @@ import otzuv004 from '/public/img/mainPage/otzuvu/otzuv004.png';
 import otzuv005 from '/public/img/mainPage/otzuvu/otzuv005.png';
 import otzuv006 from '/public/img/mainPage/otzuvu/otzuv006.png';
 import otzuv007 from '/public/img/mainPage/otzuvu/otzuv007.png';
-import otzuv008 from '/public/img/mainPage/otzuvu/otzuv008.png';
 import star from '/public/img/mainPage/otzuvu/star.svg';
 import chevron from '/public/img/mainPage/otzuvu/chevron.svg';
+import galaryImg1 from '/public/img/mainPage/fotogalereya/img1.jpg';
+import galaryImg2 from '/public/img/mainPage/fotogalereya/img2.jpg';
+import galaryImg3 from '/public/img/mainPage/fotogalereya/img3.jpg';
+import galaryImg4 from '/public/img/mainPage/fotogalereya/img4.jpg';
 
 export default () => {
   return (
@@ -577,6 +583,63 @@ export default () => {
           </div>
         </div>
       </section>
+      <FAQ />
+      <Location />
+      <section className={'background-do-vsctrechi'}>
+        <div className={'classicBlock do-vsctrechi'}>
+          <div className={'contentBlock'}>
+            <div className={'headers'}>
+              <h2 className={'headerH2'}>Фотогалерея</h2>
+              <h3 className={'headerH3'}>
+                До встречи
+                <br />в Калитниках
+              </h3>
+            </div>
+            <div className={'do-vsctrechi-slider'}>
+              <div className={'buttons'}>
+                <div className={'left-button'}>
+                  <Image
+                    src={chevron}
+                    alt="chevron"
+                    className={'toLeft'}
+                  ></Image>
+                </div>
+                <div className={'right-button'}>
+                  {' '}
+                  <Image
+                    src={chevron}
+                    alt="chevron"
+                    className={'toRight'}
+                  ></Image>
+                </div>
+              </div>
+              <div className={'do-vsctrechi-blocks'}>
+                <div className={'otzuv galary'}>
+                  <Image src={galaryImg1} alt="img1"></Image>
+                </div>
+                <div className={'otzuv galary'}>
+                  <Image src={galaryImg2} alt="img2"></Image>
+                </div>
+                <div className={'otzuv galary'}>
+                  <Image src={galaryImg3} alt="img3"></Image>
+                </div>
+                <div className={'otzuv galary'}>
+                  <Image src={galaryImg4} alt="img4"></Image>
+                </div>
+              </div>
+              <div className={'bottomDescription correction'}>
+                <p>
+                  Просторные{' '}
+                  <span className={'bottomDescriptionSpan'}>парилки</span>,
+                  хамам, купель — <br /> наслаждайтесь пространством и высоким
+                  качеством пара!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 };
