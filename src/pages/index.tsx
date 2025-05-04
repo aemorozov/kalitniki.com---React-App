@@ -2,7 +2,6 @@ import { Slider } from '../components/MainPage/Slider/Slider';
 import { ClassicBlock } from './../components/ClassicBlock/ClassicBlock';
 import FAQ from '../components/MainPage/FAQ/FAQ';
 import Location from '../components/MainPage/Location/Location';
-import Footer from '../components/Footer/Footer';
 import Image from 'next/image';
 import listItem from '../img/mainPage/vip/Bullet.svg';
 import uslugiImg1 from '../img/mainPage/uslugi/img1.jpeg';
@@ -639,7 +638,6 @@ export default () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
