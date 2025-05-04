@@ -2,15 +2,15 @@ import { Slider } from '../components/MainPage/Slider/Slider';
 import { Razryady } from '../components/MainPage/Razryady/Razryady';
 import { PhotoGallery } from '../components/MainPage/PhotoGallery/PhotoGallery';
 import { VIP } from '../components/MainPage/VIP/VIP';
+import { Uslugi } from '../components/MainPage/Uslugi/Uslugi';
 import FAQ from '../components/MainPage/FAQ/FAQ';
 import Location from '../components/MainPage/Location/Location';
 import Image from 'next/image';
 
 import chevron from '/public/img/mainPage/otzuvu/chevron.svg';
-import listItem from '../img/mainPage/vip/Bullet.svg';
 import uslugiImg1 from '../img/mainPage/uslugi/img1.jpeg';
 import uslugiImg2 from '../img/mainPage/uslugi/img2.jpeg';
-import uslugiImg3 from '../img/mainPage/uslugi/img3.jpeg';
+import listItem from '../img/mainPage/vip/Bullet.svg';
 import novostiImg1 from '../img/mainPage/novosti/img1.jpeg';
 import novostiImg2 from '../img/mainPage/novosti/img2.jpeg';
 import logo from '/public/img/mainPage/promo/logo.svg';
@@ -31,77 +31,7 @@ export default () => {
       <Slider />
       <Razryady />
       <VIP />
-      <section
-        className={'classicBlock  Uslugi - Dlya zdorovya i vosstanovleniya'}
-      >
-        <div className={'contentBlock'}>
-          <div className={'headers'}>
-            <h2 className={'headerH2'}>Услуги</h2>
-            <h3 className={'headerH3'}>
-              Для здоровья <br />и восстановления
-            </h3>
-          </div>
-          <div className={'slides'}>
-            <div className={'slidesBlock reverse'}>
-              <Image src={uslugiImg3} alt="Turin" className={'image2'}></Image>
-              <div className={'textBlock'}>
-                <h3 className={'header'}>Услуги для тела</h3>
-                <p className={'text'}>
-                  Мы разработали программы, позволяющие восстановить здоровье
-                  тела, не выбиваясь из плотного графика города. У нас работают
-                  профессиональные пармейстеры — банщики и мастера массажа
-                </p>
-                <div className={'labels'}>
-                  <div className={'label'}>Индивидуально</div>
-                  <div className={'label'}>Профессионально</div>
-                  <div className={'label'}>С любовью</div>
-                  <div className={'label'}>Мягкий пар</div>
-                  <div className={'label'}>Ароматы трав</div>
-                  <div className={'label'}>Забота рук</div>
-                </div>
-                <ul className={'plusses'}>
-                  <li className={'plus'}>
-                    <Image
-                      src={listItem}
-                      className={'list'}
-                      alt="list element"
-                    ></Image>
-                    Фирменное контрастное парение
-                  </li>
-                  <li className={'plus'}>
-                    <Image
-                      src={listItem}
-                      className={'list'}
-                      alt="list element"
-                    ></Image>
-                    Оздоровительные процедуры
-                  </li>
-                  <li className={'plus'}>
-                    <Image
-                      src={listItem}
-                      className={'list'}
-                      alt="list element"
-                    ></Image>
-                    Уход по телу
-                  </li>
-                </ul>
-                <p className={'price'}>От 1500 P/2 часа</p>
-                <p className={'description'}>
-                  Прогреваем и наполняем жизненной энергией, снимаем напряжение
-                </p>
-                <button className={'button'}>Все услуги</button>
-              </div>
-            </div>
-          </div>
-          <div className={'bottomDescription'}>
-            <p>
-              У нас работают профессиональные пармейстеры — банщики и мастера
-              массажа, которые сделают отдых не только приятным, но и
-              оздоравливающим!
-            </p>
-          </div>
-        </div>
-      </section>
+      <Uslugi />
       <section className={'classicBlock  kyhnya - Posle aromatnoi parilki'}>
         <div className={'contentBlock'}>
           <div className={'headers'}>
