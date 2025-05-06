@@ -6,8 +6,11 @@
   background-color: var(--beige-1);
   padding: 0 32px;
   z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.logo {
-  transform: translateY(2px);
+.mainLogo {
+  width: 73px;
+
 }

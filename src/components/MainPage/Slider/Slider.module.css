@@ -1,0 +1,127 @@
+.mainBlock {
+    width: 100%;
+    height: 660px;
+    background: var(--green-2);
+    position: sticky;
+}
+
+.addLine {
+    width: 100%;
+    height: 640px;
+    margin: 0;
+    background: var(--green-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+
+.firstImg {
+    transform: translateY(-170px);
+}
+
+.secondImg {
+    transform: translateY(-50px);
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 1.5s ease-out;
+}
+
+.opacity1 {
+    opacity: 1;
+}
+
+
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.1) 80%);
+}
+
+.textAria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    color: aliceblue;
+    font-family: "Unbounded", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.textAriaH1 {
+    font-weight: 500;
+    font-size: 64px;
+    display: block;
+    width: 732px;
+    text-align: center;
+    color: var(--beige-1);
+    margin-top: 162px;
+    line-height: 62px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.textAriaH2 {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+    width: 550px;
+    text-align: center;
+    color: var(--beige-1);
+}
+
+.button {
+    width: 183px;
+    height: 56px;
+    background-color: var(--beige-1);
+    border: 0;
+    border-radius: 16px;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--black);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.textAriaPBlock {
+    width: 550px;
+    margin-top: 45px;
+}
+
+.textAriaP {
+    font-family: "Lato", serif;
+    font-weight: 200;
+    font-size: 18px;
+    text-align: center;
+    color: var(--beige-1);
+    margin: 1px;
+}

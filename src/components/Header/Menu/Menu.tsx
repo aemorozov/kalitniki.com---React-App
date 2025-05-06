@@ -4,173 +4,140 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import secondMenuItemImg from '../../../img/header/Icon_container.svg';
-import arrowDown from '../../../img/header/IconDown.svg';
-import { useSwitcher } from '../../../utils';
-import classes from './Menu.module.css';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import classNames from 'classnames';
 
 export const Menu = () => {
-  const pathname = usePathname();
+  const router = useRouter();
 
-  const [
-    isDivisionsHovered,
-    ,
-    setDivisionsHovered,
-    setDivisionsNotHovered
-  ] = useSwitcher(false);
+  const [openSubMenu, isOpenSubMenu] = useState('');
+  const [addWidthMainItem, isAddWidthMainItem] = useState('');
 
-  const [divisionsPadding, setDivisionsPadding] = useState(0);
+  // Наведение курсора на пункт меню
+  const handleMouseEnter = (e: string) => {
+    isOpenSubMenu(e);
+    isAddWidthMainItem(classes.hoverFirstItem);
+  };
 
-  const subMenuRef = useRef<HTMLDivElement>(null);
-  const divisionsRef = useRef<HTMLAnchorElement>(null);
+  // Убираем курсор с пункта меню
+  const handleMouseLeave = (e: string) => {
+    isOpenSubMenu(e);
+    isAddWidthMainItem('');
+  };
 
-  useEffect(() => {
-    if (isDivisionsHovered) {
-      const subMenuWidth =
-        subMenuRef.current?.getBoundingClientRect().width || 0;
 
-      const divisionsWidth =
-        divisionsRef.current?.getBoundingClientRect().width || 0;
-
-      const shift = 30;
-
-      setDivisionsPadding(subMenuWidth - divisionsWidth - shift);
-    } else {
-      setDivisionsPadding(0);
-    }
-  }, [isDivisionsHovered]);
+  const pages = [
+    {
+      title: 'Разряды',
+      url: 'razryadi',
+      children: [
+        { title: 'Высший мужской разряд', url: 'vysshiy-muzhskoy-razryad' },
+        { title: 'Мужской разряд', url: 'muzhskoy-razryad' },
+        { title: 'Женский разряд', url: 'zhenskiy-razryad' }
+      ]
+    },
+    { title: 'VIP-Кабинеты', url: 'vip-kabinety' },
+    { title: 'Услуги', url: 'uslugi' },
+    { title: 'Новости и акции', url: 'novosti-i-aktsii' },
+    { title: 'Кухня и бар', url: 'kukhnya-i-bar' },
+    { title: 'Контакты', url: 'kontakty' }
+  ];
 
   return (
-    <>
-      <div className={classes.mainBlock}>
-        <div
-          className={classnames(
-            classes.containerSecondMenu,
-            isDivisionsHovered && classes.containerSecondMenuOpen
-          )}
-          onMouseEnter={setDivisionsHovered}
-          onMouseLeave={setDivisionsNotHovered}
-          ref={subMenuRef}
-        >
-          <Link
-            href={'vysshiy-muzhskoy-razryad'}
-            className={classes.menuItemSecondMenu}
-          >
-            <Image
-              src={secondMenuItemImg}
-              alt="secondMenuItemImg"
-              className={classes.secondMenuItemImg}
-            ></Image>
-            Высший мужской разряд
-          </Link>
-          <Link
-            href={'muzhskoy-razryad'}
-            className={classes.menuItemSecondMenu}
-          >
-            <Image
-              src={secondMenuItemImg}
-              alt="secondMenuItemImg"
-              className={classes.secondMenuItemImg}
-            ></Image>
-            Мужской разряд
-          </Link>
-          <Link
-            href={'zhenskiy-razryad'}
-            className={classes.menuItemSecondMenu}
-          >
-            <Image
-              src={secondMenuItemImg}
-              alt="secondMenuItemImg"
-              className={classes.secondMenuItemImg}
-            ></Image>
-            Женский разряд
-          </Link>
-        </div>
-
-        {items.map(({ name, url }) => {
-          const isDivisions = name === items[0].name;
-
+    <ul className={classes.mainBlock}>
+      {pages.map((el) => {
+        // Если есть у пункта меню есть субменю, делаем особые стили и галочку
+        if (el.children) {
           return (
-            <Link
-              key={name}
-              href={url}
-              className={classnames(
-                classes.menuItem,
-                pathname === url && classes.menuActive,
-                isDivisions && isDivisionsHovered && classes.hoverFirstItem
-              )}
-              style={
-                divisionsPadding
-                  ? { paddingRight: `${divisionsPadding}px` }
-                  : {}
-              }
-              {...(isDivisions && {
-                onMouseEnter: setDivisionsHovered,
-                onMouseLeave: setDivisionsNotHovered,
-                ref: divisionsRef
-              })}
-            >
-              {name}
-              {isDivisions && (
-                <Image
-                  src={arrowDown}
-                  className={classes.arrowDown}
-                  alt="Arrow down"
-                  width={16}
-                  height={15}
-                />
-              )}
-            </Link>
+            <div key={el.title}>
+              <li className={classes.li}>
+                <Link
+                  href={el.url}
+                  className={classNames(
+                    classes.menuItem,
+                    addWidthMainItem,
+
+                    // Сравниваем путь для подсветки пункта меню
+                    router.pathname === '/' + el.url && classes.activeItem,
+                    el.children.find(
+                      (el) => '/' + el.url === router.pathname
+                    ) && classes.arrowActive
+                  )}
+                  // Открываем и закрываем субменю
+                  onMouseEnter={() =>
+                    handleMouseEnter(classes.containerSecondMenuOpen)
+                  }
+                  onMouseLeave={() => handleMouseLeave('')}
+                >
+                  {el.title}
+                  <Image
+                    src={arrowDown}
+                    className={classNames(
+                      classes.arrowDown,
+                      router.pathname === '/' + el.url && classes.arrowActive,
+                      el.children.find(
+                        (el) => '/' + el.url === router.pathname
+                      ) && classes.arrowActive
+                    )}
+                    alt="Arrow down"
+                  ></Image>
+                </Link>
+              </li>
+
+              {/* Субменю  */}
+              <div
+                className={classes.containerSecondMenu + ' ' + openSubMenu}
+                onMouseEnter={() =>
+                  handleMouseEnter(classes.containerSecondMenuOpen)
+                }
+                onMouseLeave={() => handleMouseLeave('')}
+              >
+                <div className={classes.mainBlockSecondMenu}>
+                  {/* Проходим по пунктам субменю */}
+                  {el.children.map((el) => {
+                    return (
+                      <Link
+                        key={el.title}
+                        href={el.url}
+                        className={classNames(
+                          classes.menuItemSecondMenu,
+                          router.pathname === '/' + el.url && classes.activeItem
+                        )}
+                      >
+                        <Image
+                          src={secondMenuItemImg}
+                          alt="secondMenuItemImg"
+                          className={classNames(
+                            classes.secondMenuItemImg,
+                            router.pathname === '/' + el.url &&
+                              classes.activeSecondMenuItemImg
+                          )}
+                        ></Image>
+                        {el.title}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           );
-        })}
-      </div>
-    </>
+        }
+
+        return (
+          <li className={classes.li} key={el.title}>
+            <Link
+              href={el.url}
+              className={classNames(
+                classes.menuItem,
+                router.pathname === '/' + el.url && classes.activeItem
+              )}
+            >
+              {el.title}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
-
-const items: Array<{ url: string; name: string }> = [
-  { url: '/razriady', name: 'Разряды' },
-  { url: '/vip-kabinety', name: 'VIP-Кабинеты' },
-  { url: '/uslugi', name: 'Услуги' },
-  { url: '/novosti-i-aktcii', name: 'Новости и акции' },
-  { url: '/kyhnya-i-bar', name: 'Кухня и бар' },
-  { url: '/contacts', name: 'Контакты' }
-];
-
-{
-  /* <Link
-          href={'news'}
-          className={classes.menuItem + ' ' + addWidthMainItem}
-          onMouseEnter={() => handleMouseEnter(classes.containerSecondMenuOpen)}
-          onMouseLeave={() => handleMouseLeave('')}
-        >
-          Разряды
-          <Image
-            src={arrowDown}
-            className={classes.arrowDown}
-            alt="Arrow down"
-            width={16}
-            height={15}
-          />
-        </Link>
-        <Link href={'vip-kabinety'} className={classes.menuItem}>
-          VIP-Кабинеты
-        </Link>
-        <Link href={'uslugi'} className={classes.menuItem}>
-          Услуги
-        </Link>
-        <Link href={'novosti-i-aktsii'} className={classes.menuItem}>
-          Новости и акции
-        </Link>
-        <Link href={'kukhnya-i-bar'} className={classes.menuItem}>
-          Кухня и бар
-        </Link>
-        <Link
-          href={'kontakty'}
-          className={classnames(
-            classes.menuItem,
-            pathname === '/kontakty' && classes.menuActive
-          )}
-        >
-          Контакты
-        </Link> */
-}
