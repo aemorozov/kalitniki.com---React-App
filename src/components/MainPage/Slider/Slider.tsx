@@ -17,7 +17,7 @@ export const Slider = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className={classes.mainBlock}>
