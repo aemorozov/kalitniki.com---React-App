@@ -1,7 +1,8 @@
-import Link from 'next/link';
-import classes from './Menu.module.css';
-import arrowDown from '../../../img/header/IconDown.svg';
+import classnames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 import secondMenuItemImg from '../../../img/header/Icon_container.svg';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -24,6 +25,7 @@ export const Menu = () => {
     isOpenSubMenu(e);
     isAddWidthMainItem('');
   };
+
 
   const pages = [
     {
