@@ -1,9 +1,7 @@
-const Vip = () => {
+export const Vip = () => {
   return (
     <>
       <>VIP-кабинеты</>
     </>
   );
 };
-
-export default Vip;

@@ -1,10 +1,7 @@
-const Uslugi = () => {
-
+export const Uslugi = () => {
   return (
     <>
       <>Услуги</>
     </>
   );
 };
-
-export default Uslugi;

@@ -1,9 +1,7 @@
-const Razryadi = () => {
+export const Razryadi = () => {
   return (
     <>
       <>Разряды 2</>
     </>
   );
 };
-
-export default Razryadi;
