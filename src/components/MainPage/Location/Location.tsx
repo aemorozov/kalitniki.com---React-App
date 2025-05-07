@@ -13,53 +13,6 @@ const Location = () => {
           <h2 className={'headerH2'}>Карта</h2>
           <h3 className={'headerH3'}>Как нас найти</h3>
         </div>
-        {/* <div className={classes.container}>
-          <div className={classes.content}>
-            <div className={classes.info}>
-              <h3 className={classes.address}>Большая Калитниковская, дом 42</h3>
-              <p className={classes.description}>
-                Удобно добираться на личном и общественном транспорте, мы
-                находимся между садовым кольцом и ТТК, рядом 2 станции метро и 2
-                диаметра...
-              </p>
-
-              <div className={classes.tags}>
-                <span>Бесплатная парковка</span>
-                <span>Рядом с центром</span>
-                <span>Ежедневно</span>
-              </div>
-
-              <ul className={classes.metroList}>
-                <li>
-                  <span className={`${classes.circle} ${classes.red}`}></span>{' '}
-                  Пролетарская, 21 мин
-                </li>
-                <li>
-                  <span className={`${classes.circle} ${classes.orange}`}></span>{' '}
-                  Марксистская, 23 мин
-                </li>
-                <li>
-                  <span className={`${classes.circle} ${classes.purple}`}></span>{' '}
-                  Таганская, 21 мин
-                </li>
-                <li>
-                  <span className={`${classes.circle} ${classes.pink}`}></span>{' '}
-                  Платформа Калитники, 13 мин
-                </li>
-              </ul>
-
-              <p className={classes.tip}>
-                Откройте ваш навигатор и найдите оптимальный для вас маршрут
-              </p>
-
-              <button className={classes.button}>Проложить маршрут</button>
-            </div>
-
-            <div className={classes.map}>
-              <Image src={map} alt="Карта" />
-            </div>
-          </div>
-        </div> */}
         <div className={classes.slides}>
           <div className={classes.slidesBlock}>
             <Image src={map} alt="map" className={classes.image}></Image>

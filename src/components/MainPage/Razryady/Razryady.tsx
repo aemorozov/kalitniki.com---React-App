@@ -2,13 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import classes from './Razryady.module.css';
 
-import vipBackImg from '/public/img/mainPage/vip/d4d5a7239e7aac5883c5d8bea7488137.png';
 import img1 from '/public/img/mainPage/razryadi/624a058fadac0d6ba512a126c6bcab3b.jpeg';
 import img2 from '/public/img/mainPage/razryadi/a4e7f235808aafac4df84c7ed14fb90a.jpeg';
 import img3 from '/public/img/mainPage/razryadi/088edf0157c22276f535233deb19efd5.jpeg';
-import leaf from '/public/img/header/Icon_container.svg';
-import turinImg from '/public/img/mainPage/vip/543150a55361764f23d8a1494d0cb30e.jpeg';
-import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 export const Razryady = () => {
   return (
