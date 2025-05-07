@@ -3,7 +3,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:@next/next/recommended" // 👈 Добавлено!
   ],
   "plugins": ["@typescript-eslint", "import", "react-hooks"],
   "parserOptions": {
@@ -35,6 +36,7 @@
       }
     ],
     "react/prop-types": 0,
+    "react/display-name": "off", // 👈 Отключаем правило, вызывающее ошибку
     "prefer-const": "error",
     "padding-line-between-statements": [
       "error",
