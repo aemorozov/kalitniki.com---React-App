@@ -69,6 +69,7 @@
     "ts-nameof": "^5.0.0"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^15.3.2",
     "classnames": "^2.5.1",
     "linaria": "^4.1.11",
     "react": "^19.0.0",
