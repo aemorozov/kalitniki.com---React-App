@@ -25,7 +25,7 @@ import otzuv006 from '/public/img/mainPage/otzuvu/otzuv006.png';
 import otzuv007 from '/public/img/mainPage/otzuvu/otzuv007.png';
 import star from '/public/img/mainPage/otzuvu/star.svg';
 
-export const Index = () => {
+const Index = () => {
   return (
     <>
       <Slider />
@@ -517,3 +517,5 @@ export const Index = () => {
     </>
   );
 };
+
+export default Index;

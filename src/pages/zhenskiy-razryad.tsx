@@ -1,7 +1,9 @@
-export const Zhenskiy = () => {
+const Zhenskiy = () => {
   return (
     <>
       <>Женский разряд</>
     </>
   );
 };
+
+export default Zhenskiy;

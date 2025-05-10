@@ -1,7 +1,9 @@
-export const Vysshiy = () => {
+const Vysshiy = () => {
   return (
     <>
       <>Высший мужской разряд</>
     </>
   );
 };
+
+export default Vysshiy;
