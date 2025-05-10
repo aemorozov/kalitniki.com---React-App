@@ -5,7 +5,7 @@ import map from '/public/img/mainPage/map/map.png';
 import Image from 'next/image';
 import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
-const Location = () => {
+export const Location = () => {
   return (
     <section className={'classicBlock' + ' ' + classes.mapBlock}>
       <div className={'contentBlock'}>
@@ -81,5 +81,3 @@ const Location = () => {
     </section>
   );
 };
-
-export default Location;

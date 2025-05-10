@@ -8,11 +8,11 @@ import img3 from '/public/img/mainPage/razryadi/088edf0157c22276f535233deb19efd5
 
 export const Razryady = () => {
   return (
-    <div className={classes.classicBlock}>
-      <div className={classes.contentBlock}>
-        <div className={classes.headers}>
-          <h2 className={classes.headerH2}>Калитниковские бани</h2>
-          <h3 className={classes.headerH3}>Общественные разряды</h3>
+    <div className={'classicBlock'}>
+      <div className={'contentBlock'}>
+        <div className={'headers'}>
+          <h2 className={'headerH2'}>Калитниковские бани</h2>
+          <h3 className={'headerH3'}>Общественные разряды</h3>
         </div>
         <div className={classes.mainBlock}>
           <div className={classes.block}>
@@ -22,15 +22,15 @@ export const Razryady = () => {
             <div className={classes.descriptionBlock}>
               <div>
                 <h2 className={classes.header}>Мужской разряд</h2>
-                <div className={classes.tags}>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Русская парная</p>
+                <div className={'tags'}>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Русская парная</p>
                   </div>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Бассейн</p>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Бассейн</p>
                   </div>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Хамам</p>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Хамам</p>
                   </div>
                 </div>
                 <div className={classes.scheduleBlock}>
@@ -66,13 +66,10 @@ export const Razryady = () => {
               </div>
               <div>
                 <div className={classes.priceBlock}>
-                  <p className={classes.price}>От 1950 &#8381;/2 часа</p>
-                  <p className={classes.priceDescription}>
-                    После 2х часов действует поминутная тарификация
-                  </p>
+                  <p className={classes.price}>От 1950 &#8381; / 2 часа</p>
                 </div>
                 <div className={classes.moreButtonBlock}>
-                  <button className={classes.moreButton}>Подробнее</button>
+                  <button className={'moreButton'}>Подробнее</button>
                 </div>
               </div>
             </div>
@@ -84,15 +81,15 @@ export const Razryady = () => {
             <div className={classes.descriptionBlock}>
               <div>
                 <h2 className={classes.header}>Высший мужской разряд</h2>
-                <div className={classes.tags}>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Русская парная</p>
+                <div className={'tags'}>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Русская парная</p>
                   </div>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Бассейн</p>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Бассейн</p>
                   </div>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Купель</p>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Купель</p>
                   </div>
                 </div>
                 <div className={classes.scheduleBlock}>
@@ -120,13 +117,10 @@ export const Razryady = () => {
               </div>
               <div>
                 <div className={classes.priceBlock}>
-                  <p className={classes.price}>От 2500 &#8381;/2 часа</p>
-                  <p className={classes.priceDescription}>
-                    После 2х часов действует поминутная тарификация
-                  </p>
+                  <p className={classes.price}>От 2500 &#8381; / 2 часа</p>
                 </div>
                 <div className={classes.moreButtonBlock}>
-                  <button className={classes.moreButton}>Подробнее</button>
+                  <button className={'moreButton'}>Подробнее</button>
                 </div>
               </div>
             </div>
@@ -138,15 +132,15 @@ export const Razryady = () => {
             <div className={classes.descriptionBlock}>
               <div>
                 <h2 className={classes.header}>Женский разряд</h2>
-                <div className={classes.tags}>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Русская парная</p>
+                <div className={'tags'}>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Русская парная</p>
                   </div>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Бассейн</p>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Бассейн</p>
                   </div>
-                  <div className={classes.tag}>
-                    <p className={classes.tagP}>Хамам</p>
+                  <div className={'tag'}>
+                    <p className={'tagP'}>Хамам</p>
                   </div>
                 </div>
                 <div className={classes.scheduleBlock}>
@@ -162,13 +156,10 @@ export const Razryady = () => {
               </div>
               <div>
                 <div className={classes.priceBlock}>
-                  <p className={classes.price}>От 1950 &#8381;/3 часа</p>
-                  <p className={classes.priceDescription}>
-                    После 2х часов действует поминутная тарификация
-                  </p>
+                  <p className={classes.price}>От 1950 &#8381; / 3 часа</p>
                 </div>
                 <div className={classes.moreButtonBlock}>
-                  <button className={classes.moreButton}>Подробнее</button>
+                  <button className={'moreButton'}>Подробнее</button>
                 </div>
               </div>
             </div>

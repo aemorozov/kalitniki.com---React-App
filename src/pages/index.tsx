@@ -5,11 +5,10 @@ import { VIP } from '../components/MainPage/VIP/VIP';
 import { Uslugi } from '../components/MainPage/Uslugi/Uslugi';
 import { Kyhnya } from '../components/MainPage/Kyhnya/Kyhnya';
 import { Novosti } from '../components/MainPage/Novosti/Novosti';
-import FAQ from '../components/MainPage/FAQ/FAQ';
-import Location from '../components/MainPage/Location/Location';
-
 import { Promo } from '../components/MainPage/Promo/Promo';
 import { Otzuvu } from '../components/MainPage/Otzuvu/Otzuvu';
+import { FAQ } from '../components/MainPage/FAQ/FAQ';
+import { Location } from '../components/MainPage/Location/Location';
 
 const Index = () => {
   return (

@@ -1,4 +1,3 @@
-// components/FAQ.tsx
 import React from 'react';
 import styles from './FAQ.module.css';
 import FAQItem from './FAQItem';
@@ -11,7 +10,7 @@ const faqData = [
   'Что входит в стоимость входного билета?'
 ];
 
-const FAQ = () => (
+export const FAQ = () => (
   <section className={'classicBlock'}>
     <div className={'contentBlock'}>
       <div className={'headers'}>
@@ -28,5 +27,3 @@ const FAQ = () => (
     </div>
   </section>
 );
-
-export default FAQ;

@@ -98,7 +98,6 @@
 }
 
 .button {
-    width: 183px;
     height: 56px;
     background-color: var(--beige-1);
     border: 0;
@@ -106,10 +105,11 @@
     box-sizing: border-box;
     font-family: "Lato", serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--black);
     margin-top: 15px;
     cursor: pointer;
+    padding: 0 20px;
 }
 
 .textAriaPBlock {

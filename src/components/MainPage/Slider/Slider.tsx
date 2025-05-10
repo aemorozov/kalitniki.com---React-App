@@ -47,10 +47,9 @@ export const Slider = () => {
           </h2>
           <button className={classes.button}>Связаться с нами</button>
           <div className={classes.textAriaPBlock}>
-            <h3 className={classes.textAriaP}>Москва,</h3>
-            <h3 className={classes.textAriaP}>
-              Большая Калитниковская, дом 42
-            </h3>
+            <p className={classes.textAriaP}>
+              Москва, Большая Калитниковская, дом 42
+            </p>
           </div>
         </div>
       </div>
