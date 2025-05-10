@@ -47,7 +47,7 @@ body {
 .classicBlock {
     width: 100%;
     background-color: var(--beige-1);
-    padding: 85px 0 0px 0;
+    padding: 81px 0 0px 0px;
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
@@ -55,13 +55,17 @@ body {
 
 .headers {
     width: fit-content;
+
 }
 
 .headerH2 {
+    font-family: Lato;
+    font-weight: 600;
     font-size: 24px;
-    margin: 0;
-    letter-spacing: 0.61px;
+    line-height: 28px;
+    letter-spacing: 0%;
     color: var(--black);
+    margin: 0;
 }
 
 .headerH2::before {
@@ -77,16 +81,17 @@ body {
     font-size: 48px;
     color: var(--black);
     font-family: 'Unbounded';
-    margin: 10px 5px;
+    margin: 11px 0px;
     letter-spacing: 0.06rem;
     line-height: 55px;
 }
 
 .contentBlock {
-    display: flex;
-    flex-direction: column;
     width: 96%;
     margin: 0 auto;
+    max-width: 1385px;
+    z-index: 1;
+    position: inherit;
 }
 
 .names {
@@ -661,4 +666,44 @@ body {
     justify-content: flex-end;
     align-items: center;
     background-color: var(--beige-2);
+}
+
+/* Универсальные стили после ревизии */
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 0px 8px 0 0;
+    color: var(--gray-8);
+    background-color: var(--gray-1);
+    padding: 8px 13px;
+    border-radius: 12px;
+}
+
+.tagP {
+    margin: 0;
+}
+
+.moreButton {
+    width: 180px;
+    height: 56px;
+    border-radius: 16px;
+    border: 0;
+    background: var(--cherry-red-1);
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
 }
