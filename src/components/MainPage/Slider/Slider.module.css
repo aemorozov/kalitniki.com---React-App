@@ -3,6 +3,8 @@
     height: 660px;
     background: var(--green-2);
     position: sticky;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .addLine {
