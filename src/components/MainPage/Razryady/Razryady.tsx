@@ -6,6 +6,50 @@ import img1 from '/public/img/mainPage/razryadi/624a058fadac0d6ba512a126c6bcab3b
 import img2 from '/public/img/mainPage/razryadi/a4e7f235808aafac4df84c7ed14fb90a.jpeg';
 import img3 from '/public/img/mainPage/razryadi/088edf0157c22276f535233deb19efd5.jpeg';
 
+const razryadyData = [
+  {
+    img: img1,
+    header: 'Мужской разряд',
+    tags: ['Русская парная', 'Бассейн', 'Хамам'],
+    schedule: [
+      ['Понедельник', '11:00 — 23:00'],
+      ['Вторник', '13:00 — 23:00'],
+      ['Среда', '11:00 — 23:00'],
+      ['Четверг', '11:00 — 23:00'],
+      ['Пятница', '11:00 — 23:00'],
+      ['Суббота', '09:00 — 23:00'],
+      ['Воскресенье', '09:00 — 23:00']
+    ],
+    price: 'От 1950 Р / 2 часа',
+    moreButton: ''
+  },
+  {
+    img: img2,
+    header: 'Высший мужской разряд',
+    tags: ['Русская парная', 'Бассейн', 'Купель'],
+    schedule: [
+      ['Среда', '11:00 — 23:00'],
+      ['Четверг', '11:00 — 23:00'],
+      ['Пятница', '11:00 — 23:00'],
+      ['Суббота', '09:00 — 23:00'],
+      ['Воскресенье', '09:00 — 23:00']
+    ],
+    price: 'От 2500 Р / 2 часа',
+    moreButton: ''
+  },
+  {
+    img: img3,
+    header: 'Женский разряд',
+    tags: ['Русская парная', 'Бассейн', 'Хамам'],
+    schedule: [
+      ['Понедельник', '13:00 — 23:00'],
+      ['Вторник', '11:00 — 23:00']
+    ],
+    price: 'От 1950 Р / 3 часа',
+    moreButton: ''
+  }
+];
+
 export const Razryady = () => {
   return (
     <div className={'classicBlock'}>
@@ -15,155 +59,53 @@ export const Razryady = () => {
           <h3 className={'headerH3'}>Общественные разряды</h3>
         </div>
         <div className={classes.mainBlock}>
-          <div className={classes.block}>
-            <div className={classes.divForImg}>
-              <Image src={img1} className={classes.img} alt="" title="" fill />
-            </div>
-            <div className={classes.descriptionBlock}>
-              <div>
-                <h2 className={classes.header}>Мужской разряд</h2>
-                <div className={'tags'}>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Русская парная</p>
-                  </div>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Бассейн</p>
-                  </div>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Хамам</p>
-                  </div>
+          {razryadyData.map((razryad) => {
+            return (
+              <div className={classes.block} key={razryad.header}>
+                <div className={classes.divForImg}>
+                  <Image
+                    src={razryad.img}
+                    className={classes.img}
+                    alt={razryad.header}
+                    title={razryad.header}
+                    fill
+                  />
                 </div>
-                <div className={classes.scheduleBlock}>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Понедельник</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
+                <div className={classes.descriptionBlock}>
+                  <div>
+                    <h2 className={classes.header}>{razryad.header}</h2>
+                    <div className={'tags'}>
+                      {razryad.tags.map((tag) => {
+                        return (
+                          <div className={'tag'} key={tag}>
+                            <p className={'tagP'}>{tag}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className={classes.scheduleBlock}>
+                      {razryad.schedule.map((day) => {
+                        return (
+                          <div className={classes.row} key={day[0]}>
+                            <p className={classes.scheduleDay}>{day[0]}</p>
+                            <p className={classes.scheduleTime}>{day[1]}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Вторник</p>
-                    <p className={classes.scheduleTime}>13:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Среда</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Четверг</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Пятница</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Суббота</p>
-                    <p className={classes.scheduleTime}>09:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Воскресенье</p>
-                    <p className={classes.scheduleTime}>09:00 — 23:00</p>
+                  <div>
+                    <div className={classes.priceBlock}>
+                      <p className={classes.price}>{razryad.price}</p>
+                    </div>
+                    <div className={classes.moreButtonBlock}>
+                      <button className={'moreButton'}>Подробнее</button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <div className={classes.priceBlock}>
-                  <p className={classes.price}>От 1950 &#8381; / 2 часа</p>
-                </div>
-                <div className={classes.moreButtonBlock}>
-                  <button className={'moreButton'}>Подробнее</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={classes.block}>
-            <div className={classes.divForImg}>
-              <Image src={img2} className={classes.img} alt="" title="" fill />
-            </div>
-            <div className={classes.descriptionBlock}>
-              <div>
-                <h2 className={classes.header}>Высший мужской разряд</h2>
-                <div className={'tags'}>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Русская парная</p>
-                  </div>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Бассейн</p>
-                  </div>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Купель</p>
-                  </div>
-                </div>
-                <div className={classes.scheduleBlock}>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Среда</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Четверг</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Пятница</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Суббота</p>
-                    <p className={classes.scheduleTime}>09:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Воскресенье</p>
-                    <p className={classes.scheduleTime}>09:00 — 23:00</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className={classes.priceBlock}>
-                  <p className={classes.price}>От 2500 &#8381; / 2 часа</p>
-                </div>
-                <div className={classes.moreButtonBlock}>
-                  <button className={'moreButton'}>Подробнее</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={classes.block}>
-            <div className={classes.divForImg}>
-              <Image src={img3} className={classes.img} alt="" title="" fill />
-            </div>
-            <div className={classes.descriptionBlock}>
-              <div>
-                <h2 className={classes.header}>Женский разряд</h2>
-                <div className={'tags'}>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Русская парная</p>
-                  </div>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Бассейн</p>
-                  </div>
-                  <div className={'tag'}>
-                    <p className={'tagP'}>Хамам</p>
-                  </div>
-                </div>
-                <div className={classes.scheduleBlock}>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Понедельник</p>
-                    <p className={classes.scheduleTime}>13:00 — 23:00</p>
-                  </div>
-                  <div className={classes.row}>
-                    <p className={classes.scheduleDay}>Вторник</p>
-                    <p className={classes.scheduleTime}>11:00 — 23:00</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className={classes.priceBlock}>
-                  <p className={classes.price}>От 1950 &#8381; / 3 часа</p>
-                </div>
-                <div className={classes.moreButtonBlock}>
-                  <button className={'moreButton'}>Подробнее</button>
-                </div>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
         <div className={classes.bottomDescription}>
           <p>
