@@ -12,5 +12,16 @@
 
 .mainLogo {
   width: 73px;
+}
 
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .header {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .header {
+    display: none;
+  }
 }

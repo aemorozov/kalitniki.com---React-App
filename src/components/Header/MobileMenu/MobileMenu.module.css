@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf7e9;
+    width: 100%;
+    height: 72px;
+}
+
+.logo {
+    flex-shrink: 0;
+    width: 56px;
+    height: 32px;
+    margin: 20px 20px 20px 16px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+    padding-top: 2px;
+}
+
+.phoneIcon,
+.burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menuOverlay {
+    position: fixed;
+    top: -110%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #eee1cd;
+    z-index: 1000;
+    transition: 0.4s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.menuOverlay.open {
+    top: 0;
+    opacity: 1;
+}
+
+.menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.nav a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Адаптивность — скрываем бургер при ширине >= 1280px */
+@media (min-width: 1280px) {
+
+    .header {
+        display: none;
+    }
+}
