@@ -6,8 +6,8 @@ import { MobileMenu } from './Header/MobileMenu/MobileMenu';
 export const Layout: FC<{ children: ReactNode }> = (props) => {
   return (
     <>
-      <Header />
       <MobileMenu />
+      <Header />
       {props.children}
       <Footer />
     </>

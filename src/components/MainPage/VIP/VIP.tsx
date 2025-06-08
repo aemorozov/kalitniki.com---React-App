@@ -75,7 +75,7 @@ export const VIP = () => {
           <div className={classes.slides}>
             {slidesData.map((slide) => {
               return (
-                <div className={classes.slidesBlock}>
+                <div className={classes.slidesBlock} key={slide.header}>
                   <Image
                     src={slide.img}
                     alt="Turin"
@@ -92,7 +92,7 @@ export const VIP = () => {
                     <ul className={classes.plusses}>
                       {slide.plusses.map((plus) => {
                         return (
-                          <li className={classes.plus}>
+                          <li className={classes.plus} key={plus}>
                             <Image
                               src={listItem}
                               className={classes.list}
