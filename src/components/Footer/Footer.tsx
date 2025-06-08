@@ -26,10 +26,10 @@ export const Footer: React.FC = () => {
               Москва, Большая Калитниковская, дом 42
             </p>
             <div className={styles.icons}>
-              <a href="#">
+              <a href="/">
                 <Image src={vk} alt="VK" width={44} height={44} />
               </a>
-              <a href="#">
+              <a href="/">
                 <Image src={loc} alt="Map" width={44} height={44} />
               </a>
             </div>
