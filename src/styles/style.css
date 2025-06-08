@@ -38,6 +38,13 @@ body {
     max-width: 1650px;
     overflow-x: hidden;
     margin: 0 auto;
+    height: fit-content;
+    min-width: 375px;
+}
+
+html.lock-scroll,
+body.lock-scroll {
+    height: 100dvh;
 }
 
 

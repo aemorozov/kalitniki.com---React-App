@@ -6,6 +6,39 @@ import leaf from '/public/img/header/Icon_container.svg';
 import turinImg from '/public/img/mainPage/vip/543150a55361764f23d8a1494d0cb30e.jpeg';
 import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
+const slidesData = [
+  {
+    img: turinImg,
+    header: 'Турин',
+    text: 'Находится в высшем мужском разряде. Лучшее место для встречи c друзьями и близкими между парениями. Небольшой и уютный уголок для отдыха и релакса...',
+    labels: ['Для встреч c друзьями', 'Обслуживание по меню', 'Спутниковое TV'],
+    plusses: [
+      'Вместимость до 6 гостей',
+      'Общая площадь 12 м2',
+      'Минимальная аренда — 2 часа'
+    ],
+    price: '2500 P/2 часа',
+    description:
+      'Оплачивается дополнительно к входному билету. После 2 часов действует поминутная тарификация',
+    button: '#'
+  },
+  {
+    img: turinImg,
+    header: 'Комфорт',
+    text: 'Находится в высшем мужском разряде. Лучшее место для встречи c друзьями и близкими между парениями. Небольшой и уютный уголок для отдыха и релакса...',
+    labels: ['Для встреч c друзьями', 'Обслуживание по меню', 'Спутниковое TV'],
+    plusses: [
+      'Вместимость до 6 гостей',
+      'Общая площадь 12 м2',
+      'Минимальная аренда — 2 часа'
+    ],
+    price: '2500 P/2 часа',
+    description:
+      'Оплачивается дополнительно к входному билету. После 2 часов действует поминутная тарификация',
+    button: '#'
+  }
+];
+
 export const VIP = () => {
   return (
     <div className={classes.classicBlock}>
@@ -40,61 +73,43 @@ export const VIP = () => {
             </li>
           </ul>
           <div className={classes.slides}>
-            <div className={classes.slidesBlock}>
-              <Image
-                src={turinImg}
-                alt="Turin"
-                className={classes.image}
-              ></Image>
-              <div className={classes.textBlock}>
-                <h3 className={classes.header}>Турин</h3>
-                <p className={classes.text}>
-                  Находится в высшем мужском разряде. Лучшее место для встречи c
-                  друзьями и близкими между парениями. Небольшой и уютный уголок
-                  для отдыха и релакса...
-                </p>
-                <div className={classes.labels}>
-                  <div className={classes.label}>Для встреч c друзьями</div>
-                  <div className={classes.label}>Обслуживание по меню</div>
-                  <div className={classes.label}>Спутниковое TV</div>
-                  <div className={classes.label}>Label</div>
-                  <div className={classes.label}>Label</div>
+            {slidesData.map((slide) => {
+              return (
+                <div className={classes.slidesBlock} key={slide.header}>
+                  <Image
+                    src={slide.img}
+                    alt="Turin"
+                    className={classes.image}
+                  ></Image>
+                  <div className={classes.textBlock}>
+                    <h3 className={classes.header}>{slide.header}</h3>
+                    <p className={classes.text}>{slide.text}</p>
+                    <div className={classes.labels}>
+                      {slide.labels.map((label) => {
+                        return <div className={classes.label}>{label}</div>;
+                      })}
+                    </div>
+                    <ul className={classes.plusses}>
+                      {slide.plusses.map((plus) => {
+                        return (
+                          <li className={classes.plus} key={plus}>
+                            <Image
+                              src={listItem}
+                              className={classes.list}
+                              alt="list element"
+                            ></Image>
+                            {plus}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    <p className={classes.price}>{slide.price}</p>
+                    <p className={classes.description}>{slide.description}</p>
+                    <button className={classes.button}>Подробнее</button>
+                  </div>
                 </div>
-                <ul className={classes.plusses}>
-                  <li className={classes.plus}>
-                    <Image
-                      src={listItem}
-                      className={classes.list}
-                      alt="list element"
-                    ></Image>
-                    Вместимость до 6 гостей
-                  </li>
-                  <li className={classes.plus}>
-                    <Image
-                      src={listItem}
-                      className={classes.list}
-                      alt="list element"
-                    ></Image>
-                    Общая площадь 12 м2
-                  </li>
-                  <li className={classes.plus}>
-                    <Image
-                      src={listItem}
-                      className={classes.list}
-                      alt="list element"
-                    ></Image>
-                    Минимальная аренда — 2 часа
-                  </li>
-                </ul>
-                <p className={classes.price}>2500 P/2 часа</p>
-                <p className={classes.description}>
-                  Оплачивается дополнительно к входному билету
-                  <br />
-                  После 2 часов действует поминутная тарификация
-                </p>
-                <button className={classes.button}>Подробнее</button>
-              </div>
-            </div>
+              );
+            })}
           </div>
           <div className={classes.bottomDescriptionVIP}>
             <p>
