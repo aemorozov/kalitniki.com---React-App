@@ -86,7 +86,11 @@ export const VIP = () => {
                     <p className={classes.text}>{slide.text}</p>
                     <div className={classes.labels}>
                       {slide.labels.map((label) => {
-                        return <div className={classes.label}>{label}</div>;
+                        return (
+                          <div className={classes.label} key={label}>
+                            {label}
+                          </div>
+                        );
                       })}
                     </div>
                     <ul className={classes.plusses}>
