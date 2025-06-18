@@ -72,10 +72,22 @@ export function MobileMenu() {
               <div className={styles.menuItem}>
                 Разряды <Image src={iconDown} alt="icon down" />
               </div>
+              <div className={styles.subMenu}>
+                <div className={styles.subMenuItem}>Высший мужской разряд</div>
+                <div className={styles.subMenuItem}>Мужской разряд</div>
+                <div className={styles.subMenuItem}>Женский разряд</div>
+              </div>
             </Link>
             <Link href="#">
               <div className={styles.menuItem}>
                 VIP-кабинеты <Image src={iconDown} alt="icon down" />
+              </div>
+              <div className={styles.subMenu}>
+                <div className={styles.subMenuItem}>Турин</div>
+                <div className={styles.subMenuItem}>Римский</div>
+                <div className={styles.subMenuItem}>Большой</div>
+                <div className={styles.subMenuItem}>Малый</div>
+                <div className={styles.subMenuItem}>Комфорт</div>
               </div>
             </Link>
             <Link href="#">
@@ -94,9 +106,50 @@ export function MobileMenu() {
           <div className={styles.contactsBlock}>
             <div className={styles.contactsData}>
               <div className={styles.phone}>+7 495 678 10 01</div>
-              <div className={styles.schedule}>
-                Режим работы: ежедневно <br />
-                09:00 — 23:00
+              <div className={styles.schedule}>Режим работы:</div>
+              <div className={styles.scheduleDays}>
+                <div className={styles.scheduleDaysLine}>
+                  <div className={styles.scheduleDaysLineDay}>Понедельник</div>
+                  <div className={styles.scheduleDaysLineTime}>
+                    11:00 — 23:00
+                  </div>
+                </div>
+                <div className={styles.scheduleDaysLine}>
+                  <div className={styles.scheduleDaysLineDay}>Вторник</div>
+                  <div className={styles.scheduleDaysLineTime}>
+                    11:00 — 23:00
+                  </div>
+                </div>
+                <div className={styles.scheduleDaysLine}>
+                  <div className={styles.scheduleDaysLineDay}>Среда</div>
+                  <div className={styles.scheduleDaysLineTime}>
+                    11:00 — 23:00
+                  </div>
+                </div>
+                <div className={styles.scheduleDaysLine}>
+                  <div className={styles.scheduleDaysLineDay}>Четверг</div>
+                  <div className={styles.scheduleDaysLineTime}>
+                    11:00 — 23:00
+                  </div>
+                </div>
+                <div className={styles.scheduleDaysLine}>
+                  <div className={styles.scheduleDaysLineDay}>Пятница</div>
+                  <div className={styles.scheduleDaysLineTime}>
+                    11:00 — 23:00
+                  </div>
+                </div>
+                <div className={styles.scheduleDaysLine}>
+                  <div className={styles.scheduleDaysLineDay}>Суббота</div>
+                  <div className={styles.scheduleDaysLineTime}>
+                    09:00 — 23:00
+                  </div>
+                </div>
+                <div className={styles.scheduleDaysLine}>
+                  <div className={styles.scheduleDaysLineDay}>Воскресенье</div>
+                  <div className={styles.scheduleDaysLineTime}>
+                    09:00 — 23:00
+                  </div>
+                </div>
               </div>
               <div className={styles.address}>
                 Москва, ул. Большая <br /> Калитниковская, дом 42

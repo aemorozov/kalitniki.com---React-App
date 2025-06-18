@@ -18,8 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 17px;
-    padding-top: 2px;
+    margin-right: 10px;
+    padding-top: 4px;
 }
 
 .phoneIcon,
@@ -77,6 +77,7 @@
     display: flex;
     flex-direction: column;
     padding: 13px 16px;
+    transition: 0.3s ease;
 }
 
 .nav a {
@@ -101,6 +102,13 @@
 .menuItem>img {
     margin-left: 8px;
     margin-bottom: 2px;
+}
+
+.subMenu {
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s ease;
 }
 
 .contactsBlock {
@@ -133,6 +141,33 @@
     vertical-align: middle;
 }
 
+.scheduleDays {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.scheduleDaysLine {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 8px;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.scheduleDaysLineDay {
+    width: 50%;
+}
+
+.scheduleDaysLineTime {
+    width: 50%;
+    text-align: end;
+}
+
 .address {
     margin-top: 15px;
     font-family: Lato;
@@ -151,13 +186,12 @@
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 24px;
     margin-bottom: 25px;
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: 0%;
     text-align: center;
     padding: 8px 13px;
     border-radius: 10px;
