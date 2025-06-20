@@ -2,7 +2,7 @@ import Link from 'next/link';
 import classes from './Menu.module.css';
 import arrowDown from '../../../img/header/IconDown.svg';
 import Image from 'next/image';
-import secondMenuItemImg from '../../../img/header/Icon_container.svg';
+import secondMenuItemImg from '/public/img/header/Icon_container.svg';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
