@@ -9,7 +9,7 @@ import ya from '/public/img/footer/ya.svg';
 import star from '/public/img/mainPage/otzuvu/star.svg';
 import woman from '/public/img/footer/woman.png';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <>
       <div className={'footerBanner'}>

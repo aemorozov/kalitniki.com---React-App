@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import styles from './MobileMenu.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,9 +13,14 @@ import ten from '/public/img/mobileMenu/ten.svg';
 import seven from '/public/img/mobileMenu/seven.svg';
 import train from '/public/img/mobileMenu/train.svg';
 import iconDown from '/public/img/header/iconDown.svg';
+import secondMenuItemImg from '/public/img/header/Icon_container.svg';
+import classNames from 'classnames';
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isRazryadyOpen, setIsRazryadyOpen] = useState(false);
+  const [isVIPOpen, setIsVIPOpen] = useState(false);
+  const router = useRouter();
 
   // Блокировка прокрутки фона при открытом меню
   useEffect(() => {
@@ -30,6 +36,16 @@ export function MobileMenu() {
       body.classList.remove('lock-scroll');
     };
   }, [isOpen]);
+
+  function isRazryadyOpenChange() {
+    isRazryadyOpen === false
+      ? setIsRazryadyOpen(true)
+      : setIsRazryadyOpen(false);
+  }
+
+  function isVIPOpenChange() {
+    isVIPOpen === false ? setIsVIPOpen(true) : setIsVIPOpen(false);
+  }
 
   return (
     <>
@@ -52,7 +68,7 @@ export function MobileMenu() {
       <div className={`${styles.menuOverlay} ${isOpen ? styles.open : ''}`}>
         <div className={styles.menuContainer}>
           <div className={styles.header}>
-            <Link href={'/'}>
+            <Link href={'/'} onClick={() => setIsOpen(false)}>
               <div className={styles.logo}>
                 <Image src={logo} alt="Калитники" width={56} height={32} />
               </div>
@@ -67,29 +83,179 @@ export function MobileMenu() {
             </div>
           </div>
 
-          <nav className={styles.nav}>
-            <Link href="#">
+          <div className={styles.nav}>
+            <div>
+              <div className={styles.menuItem} onClick={isRazryadyOpenChange}>
+                Разряды
+                <Image
+                  src={iconDown}
+                  className={classNames(
+                    styles.iconDown,
+                    isRazryadyOpen ? styles.rotated : ''
+                  )}
+                  alt="icon down"
+                />
+              </div>
+              <div
+                className={styles.subMenu}
+                style={isRazryadyOpen ? { height: 105 + 'px' } : {}}
+              >
+                <Link
+                  href={'/vysshiy-muzhskoy-razryad'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/vysshiy-muzhskoy-razryad'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Высший мужской разряд
+                </Link>
+                <Link
+                  href={'/muzhskoy-razryad'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/muzhskoy-razryad'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Мужской разряд
+                </Link>
+                <Link
+                  href={'/zhenskiy-razryad'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/zhenskiy-razryad'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Женский разряд
+                </Link>
+              </div>
+            </div>
+            <div onClick={isVIPOpenChange}>
               <div className={styles.menuItem}>
-                Разряды <Image src={iconDown} alt="icon down" />
+                VIP-кабинеты
+                <Image
+                  src={iconDown}
+                  className={classNames(
+                    styles.iconDown,
+                    isVIPOpen ? styles.rotated : ''
+                  )}
+                  alt="icon down"
+                />
               </div>
-              <div className={styles.subMenu}>
-                <div className={styles.subMenuItem}>Высший мужской разряд</div>
-                <div className={styles.subMenuItem}>Мужской разряд</div>
-                <div className={styles.subMenuItem}>Женский разряд</div>
+              <div
+                className={styles.subMenu}
+                style={isVIPOpen ? { height: 170 + 'px' } : {}}
+              >
+                <Link
+                  href={'/turin'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/turin'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Турин
+                </Link>
+                <Link
+                  href={'/rimsky'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/rimsky'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Римский
+                </Link>
+                <Link
+                  href={'/bolshoi'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/bolshoi'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Большой
+                </Link>
+                <Link
+                  href={'/malii'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/malii'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Малый
+                </Link>
+                <Link
+                  href={'/comfort'}
+                  onClick={() => setIsOpen(false)}
+                  className={classNames(
+                    styles.subMenuItem,
+                    router.pathname === '/comfort'
+                      ? styles.secondMenuActiveItem
+                      : ''
+                  )}
+                >
+                  <Image
+                    src={secondMenuItemImg}
+                    alt="secondMenuItemImg"
+                    className={styles.secondMenuItemImg}
+                  ></Image>
+                  Комфорт
+                </Link>
               </div>
-            </Link>
-            <Link href="#">
-              <div className={styles.menuItem}>
-                VIP-кабинеты <Image src={iconDown} alt="icon down" />
-              </div>
-              <div className={styles.subMenu}>
-                <div className={styles.subMenuItem}>Турин</div>
-                <div className={styles.subMenuItem}>Римский</div>
-                <div className={styles.subMenuItem}>Большой</div>
-                <div className={styles.subMenuItem}>Малый</div>
-                <div className={styles.subMenuItem}>Комфорт</div>
-              </div>
-            </Link>
+            </div>
             <Link href="#">
               <div className={styles.menuItem}>Услуги</div>
             </Link>
@@ -102,7 +268,7 @@ export function MobileMenu() {
             <Link href="#">
               <div className={styles.menuItem}>Контакты</div>
             </Link>
-          </nav>
+          </div>
           <div className={styles.contactsBlock}>
             <div className={styles.contactsData}>
               <div className={styles.phone}>+7 495 678 10 01</div>
