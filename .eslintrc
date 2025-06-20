@@ -4,7 +4,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:@next/next/recommended" // 👈 Добавлено!
+    "plugin:@next/next/recommended"
   ],
   "plugins": ["@typescript-eslint", "import", "react-hooks"],
   "parserOptions": {
@@ -26,7 +26,10 @@
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+      "next": {
+        "rootDir": "./src",
+      },
   },
   "rules": {
     "no-console": [
@@ -36,7 +39,7 @@
       }
     ],
     "react/prop-types": 0,
-    "react/display-name": "off", // 👈 Отключаем правило, вызывающее ошибку
+    "react/display-name": "off",
     "prefer-const": "error",
     "padding-line-between-statements": [
       "error",
