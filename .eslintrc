@@ -52,7 +52,8 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         "react/react-in-jsx-scope": "off",
-        "@typescript-eslint/explicit-function-return-type": "off"
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@next/next/no-html-link-for-pages": "off"
       }
     }
   ],
