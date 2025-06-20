@@ -12,7 +12,7 @@ import parking from '/public/img/mobileMenu/parking.svg';
 import ten from '/public/img/mobileMenu/ten.svg';
 import seven from '/public/img/mobileMenu/seven.svg';
 import train from '/public/img/mobileMenu/train.svg';
-import iconDown from '/public/img/header/iconDown.svg';
+import iconDown from '/public/img/header/IconDown.svg';
 import secondMenuItemImg from '/public/img/header/Icon_container.svg';
 import classNames from 'classnames';
 
