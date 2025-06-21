@@ -170,7 +170,7 @@ export function MobileMenu() {
                 );
               } else {
                 return (
-                  <Link href={el.url}>
+                  <Link href={el.url} onClick={() => setIsOpen(false)}>
                     <div className={styles.menuItem}>{el.name}</div>
                   </Link>
                 );
