@@ -128,7 +128,7 @@ export function MobileMenu() {
             {mobileMenuData?.map((el) => {
               if (el.subMenu) {
                 return (
-                  <div>
+                  <div key={el.name}>
                     <div className={styles.menuItem} onClick={el.function}>
                       {el.name}
                       <Image
@@ -147,6 +147,7 @@ export function MobileMenu() {
                       {el.subMenu?.map((el) => {
                         return (
                           <Link
+                            key={el.name}
                             href={el.url}
                             onClick={() => setIsOpen(false)}
                             className={classNames(
@@ -170,7 +171,11 @@ export function MobileMenu() {
                 );
               } else {
                 return (
-                  <Link href={el.url} onClick={() => setIsOpen(false)}>
+                  <Link
+                    href={el.url}
+                    onClick={() => setIsOpen(false)}
+                    key={el.name}
+                  >
                     <div className={styles.menuItem}>{el.name}</div>
                   </Link>
                 );
