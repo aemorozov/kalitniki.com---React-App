@@ -1,17 +1,19 @@
-import classes from './Slider.module.css';
+import styles from './Slider.module.css';
 import Image from 'next/image';
-import heroBlock1 from '../../../img/mainPage/slider/HeroBlock1.jpeg';
-import heroBlock2 from '../../../img/mainPage/slider/HeroBlock2.jpeg';
-import heroBlock3 from '../../../img/mainPage/slider/HeroBlock3.jpeg';
+import heroBlock1 from '/public/img/mainPage/slider/HeroBlock1.jpeg';
+import heroBlock2 from '/public/img/mainPage/slider/HeroBlock2.jpeg';
+import heroBlock3 from '/public/img/mainPage/slider/HeroBlock3.jpeg';
 import classNames from 'classnames';
 import { useState, useEffect } from 'react';
 
 export const Slider = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
   const images = [heroBlock1, heroBlock2, heroBlock3];
-  const imageClasses = [classes.firstImg, classes.secondImg, classes.thirdImg];
+  const imageStyles = [styles.firstImg, styles.secondImg, styles.thirdImg];
 
   useEffect(() => {
+    // const interval = '';
+
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
@@ -20,34 +22,34 @@ export const Slider = () => {
   }, [images.length]);
 
   return (
-    <div className={classes.mainBlock}>
-      <div className={classes.addLine}>
+    <div className={styles.mainBlock}>
+      <div className={styles.addLine}>
         {images.map((image, index) => (
           <div
             key={index}
-            className={classNames(classes.slide, {
-              [classes.opacity1]: index === activeIndex
+            className={classNames(styles.slide, {
+              [styles.opacity1]: index === activeIndex
             })}
           >
             <Image
               src={image}
-              className={classNames(classes.image, imageClasses[index])}
+              className={classNames(styles.image, imageStyles[index])}
               alt={`main photo ${index + 1}`}
               priority={index === activeIndex}
             ></Image>
-            <div className={classes.gradient}></div>
+            <div className={styles.gradient}></div>
           </div>
         ))}
 
-        <div className={classes.textAria}>
-          <h1 className={classes.textAriaH1}>Банный комплекс Калитники</h1>
-          <h2 className={classes.textAriaH2}>
+        <div className={styles.textAria}>
+          <h1 className={styles.textAriaH1}>Банный комплекс Калитники</h1>
+          <h2 className={styles.textAriaH2}>
             Погрузитесь в атмосферу традиционного банного парения и
             гостеприимства, мягкого пара в центре Москвы
           </h2>
-          <button className={classes.button}>Связаться с нами</button>
-          <div className={classes.textAriaPBlock}>
-            <p className={classes.textAriaP}>
+          <button className={styles.button}>Связаться с нами</button>
+          <div className={styles.textAriaPBlock}>
+            <p className={styles.textAriaP}>
               Москва, Большая Калитниковская, дом 42
             </p>
           </div>
