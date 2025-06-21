@@ -22,7 +22,49 @@ export function MobileMenu() {
   const [isVIPOpen, setIsVIPOpen] = useState(false);
   const router = useRouter();
 
-  // Блокировка прокрутки фона при открытом меню
+  const mobileMenuData = [
+    {
+      name: 'Разряды',
+      subMenu: [
+        { name: 'Высший мужской разряд', url: '/vysshiy-muzhskoy-razryad' },
+        { name: 'Мужской разряд', url: '/muzhskoy-razryad' },
+        { name: 'Женский разряд', url: '/zhenskiy-razryad' }
+      ],
+      height: 105,
+      function: isRazryadyOpenChange,
+      constant: isRazryadyOpen
+    },
+    {
+      name: 'VIP-кабинеты',
+      subMenu: [
+        { name: 'Турин', url: '/turin' },
+        { name: 'Римский', url: '/rimsky' },
+        { name: 'Большой', url: '/bolshoi' },
+        { name: 'Малый', url: '/malii' },
+        { name: 'Комфорт', url: '/comfort' }
+      ],
+      height: 170,
+      function: isVIPOpenChange,
+      constant: isVIPOpen
+    },
+    {
+      name: 'Услуги',
+      url: '/uslugi'
+    },
+    {
+      name: 'Новости и акции',
+      url: '/novosti-i-aktsii'
+    },
+    {
+      name: 'Кухня и бар',
+      url: '/kukhnya-i-bar'
+    },
+    {
+      name: 'Контакты',
+      url: '/kontakty'
+    }
+  ];
+
   useEffect(() => {
     const body = document.body;
 
@@ -82,192 +124,63 @@ export function MobileMenu() {
               </button>
             </div>
           </div>
-
           <div className={styles.nav}>
-            <div>
-              <div className={styles.menuItem} onClick={isRazryadyOpenChange}>
-                Разряды
-                <Image
-                  src={iconDown}
-                  className={classNames(
-                    styles.iconDown,
-                    isRazryadyOpen ? styles.rotated : ''
-                  )}
-                  alt="icon down"
-                />
-              </div>
-              <div
-                className={styles.subMenu}
-                style={isRazryadyOpen ? { height: 105 + 'px' } : {}}
-              >
-                <Link
-                  href={'/vysshiy-muzhskoy-razryad'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/vysshiy-muzhskoy-razryad'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Высший мужской разряд
-                </Link>
-                <Link
-                  href={'/muzhskoy-razryad'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/muzhskoy-razryad'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Мужской разряд
-                </Link>
-                <Link
-                  href={'/zhenskiy-razryad'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/zhenskiy-razryad'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Женский разряд
-                </Link>
-              </div>
-            </div>
-            <div onClick={isVIPOpenChange}>
-              <div className={styles.menuItem}>
-                VIP-кабинеты
-                <Image
-                  src={iconDown}
-                  className={classNames(
-                    styles.iconDown,
-                    isVIPOpen ? styles.rotated : ''
-                  )}
-                  alt="icon down"
-                />
-              </div>
-              <div
-                className={styles.subMenu}
-                style={isVIPOpen ? { height: 170 + 'px' } : {}}
-              >
-                <Link
-                  href={'/turin'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/turin'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Турин
-                </Link>
-                <Link
-                  href={'/rimsky'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/rimsky'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Римский
-                </Link>
-                <Link
-                  href={'/bolshoi'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/bolshoi'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Большой
-                </Link>
-                <Link
-                  href={'/malii'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/malii'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Малый
-                </Link>
-                <Link
-                  href={'/comfort'}
-                  onClick={() => setIsOpen(false)}
-                  className={classNames(
-                    styles.subMenuItem,
-                    router.pathname === '/comfort'
-                      ? styles.secondMenuActiveItem
-                      : ''
-                  )}
-                >
-                  <Image
-                    src={secondMenuItemImg}
-                    alt="secondMenuItemImg"
-                    className={styles.secondMenuItemImg}
-                  ></Image>
-                  Комфорт
-                </Link>
-              </div>
-            </div>
-            <Link href="#">
-              <div className={styles.menuItem}>Услуги</div>
-            </Link>
-            <Link href="#">
-              <div className={styles.menuItem}>Новости и акции</div>
-            </Link>
-            <Link href="#">
-              <div className={styles.menuItem}>Кухня и бар</div>
-            </Link>
-            <Link href="#">
-              <div className={styles.menuItem}>Контакты</div>
-            </Link>
+            {mobileMenuData?.map((el) => {
+              if (el.subMenu) {
+                return (
+                  <div key={el.name}>
+                    <div className={styles.menuItem} onClick={el.function}>
+                      {el.name}
+                      <Image
+                        src={iconDown}
+                        className={classNames(
+                          styles.iconDown,
+                          el.constant ? styles.rotated : ''
+                        )}
+                        alt="icon down"
+                      />
+                    </div>
+                    <div
+                      className={styles.subMenu}
+                      style={el.constant ? { height: el.height + 'px' } : {}}
+                    >
+                      {el.subMenu?.map((el) => {
+                        return (
+                          <Link
+                            key={el.name}
+                            href={el.url}
+                            onClick={() => setIsOpen(false)}
+                            className={classNames(
+                              styles.subMenuItem,
+                              router.pathname === el.url
+                                ? styles.secondMenuActiveItem
+                                : ''
+                            )}
+                          >
+                            <Image
+                              src={secondMenuItemImg}
+                              alt="secondMenuItemImg"
+                              className={styles.secondMenuItemImg}
+                            ></Image>
+                            {el.name}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              } else {
+                return (
+                  <Link
+                    href={el.url}
+                    onClick={() => setIsOpen(false)}
+                    key={el.name}
+                  >
+                    <div className={styles.menuItem}>{el.name}</div>
+                  </Link>
+                );
+              }
+            })}
           </div>
           <div className={styles.contactsBlock}>
             <div className={styles.contactsData}>
