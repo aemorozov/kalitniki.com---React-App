@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import styles from './MobileMenu.module.css';
 import Image from 'next/image';
@@ -21,6 +21,7 @@ export function MobileMenu() {
   const [isRazryadyOpen, setIsRazryadyOpen] = useState(false);
   const [isVIPOpen, setIsVIPOpen] = useState(false);
   const router = useRouter();
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const mobileMenuData = [
     {
@@ -89,6 +90,13 @@ export function MobileMenu() {
     isVIPOpen === false ? setIsVIPOpen(true) : setIsVIPOpen(false);
   }
 
+  function closeAll() {
+    scrollRef.current?.scrollTo({ top: 0 });
+    setIsOpen(false);
+    setIsRazryadyOpen(false);
+    setIsVIPOpen(false);
+  }
+
   return (
     <>
       <header className={styles.header}>
@@ -108,9 +116,15 @@ export function MobileMenu() {
       </header>
 
       <div className={`${styles.menuOverlay} ${isOpen ? styles.open : ''}`}>
-        <div className={styles.menuContainer}>
+        <div className={styles.menuContainer} ref={scrollRef}>
           <div className={styles.header}>
-            <Link href={'/'} onClick={() => setIsOpen(false)}>
+            <Link
+              href={'/'}
+              onClick={() => {
+                setIsOpen(false);
+                closeAll();
+              }}
+            >
               <div className={styles.logo}>
                 <Image src={logo} alt="Калитники" width={56} height={32} />
               </div>
@@ -149,7 +163,9 @@ export function MobileMenu() {
                           <Link
                             key={el.name}
                             href={el.url}
-                            onClick={() => setIsOpen(false)}
+                            onClick={() => {
+                              closeAll();
+                            }}
                             className={classNames(
                               styles.subMenuItem,
                               router.pathname === el.url
@@ -173,7 +189,9 @@ export function MobileMenu() {
                 return (
                   <Link
                     href={el.url}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      closeAll();
+                    }}
                     key={el.name}
                   >
                     <div className={styles.menuItem}>{el.name}</div>
