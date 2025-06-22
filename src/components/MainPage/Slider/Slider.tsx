@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import { useState, useEffect } from 'react';
 
 export const Slider = () => {
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(0);
   const images = [heroBlock1, heroBlock2, heroBlock3];
   const imageStyles = [styles.firstImg, styles.secondImg, styles.thirdImg];
 
