@@ -113,3 +113,72 @@
     margin-bottom: 25px;
     cursor: pointer;
 }
+
+@media (max-width: 1279px) {
+    .mainBlock {
+        margin-top: 15px;
+        width: fit-content;
+    }
+
+    .block {
+        width: 87vw;
+        max-width: 400px;
+        min-width: 310px;
+        margin-right: 10px;
+        height: 616px;
+    }
+
+    .forMobileScroll {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        transform: translateX(-15px);
+        padding: 0 15px;
+    }
+
+    .img,
+    .divForImg {
+        height: 200px;
+    }
+
+    .descriptionBlock {
+        padding: 12px 16px;
+        height: calc(100% - 230px);
+    }
+
+    .header {
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 0;
+    }
+
+    .scheduleDay,
+    .scheduleTime {
+        margin: 5px 0 1px 0;
+    }
+
+    .price {
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 20px;
+    }
+
+    .bottomDescription {
+        font-family: Unbounded;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .bottomDescription>p {
+        margin-top: 15px;
+    }
+}
