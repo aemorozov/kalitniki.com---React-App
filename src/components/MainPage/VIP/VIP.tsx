@@ -49,8 +49,8 @@ export const VIP = () => {
       ></Image>
       <div className={classes.contentBlockVIP}>
         <div className={classes.headers}>
-          <h2 className={classes.headerH2}>VIP-кабинеты</h2>
-          <h3 className={classes.headerH3}>
+          <h2 className={'headerH2'}>VIP-кабинеты</h2>
+          <h3 className={'headerH3'}>
             Для отдыха <br /> в компании близких
           </h3>
         </div>
