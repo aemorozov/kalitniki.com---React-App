@@ -111,11 +111,12 @@ export const Razryady = () => {
         </div>
         <div className={styles.bottomDescription}>
           <p>
-            Cвежий пар{' '}
-            <span className={styles.bottomDescriptionSpan}>на травах</span>{' '}
-            каждые{' '}
-            <span className={styles.bottomDescriptionSpan}>40 минут</span> для
-            всех гостей наших бань!
+            Каждые <span className={styles.bottomDescriptionSpan}>40</span>{' '}
+            минут — свежий{' '}
+            <span className={styles.bottomDescriptionSpan}>ароматный</span> пар
+            {window.innerWidth < 767 ? <br /> : ''}на{' '}
+            <span className={styles.bottomDescriptionSpan}>травах</span> в наших
+            парных!
           </p>
         </div>
       </div>

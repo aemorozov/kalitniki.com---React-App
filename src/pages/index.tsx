@@ -9,6 +9,7 @@ import { Promo } from '../components/MainPage/Promo/Promo';
 import { Otzuvu } from '../components/MainPage/Otzuvu/Otzuvu';
 import { FAQ } from '../components/MainPage/FAQ/FAQ';
 import { Location } from '../components/MainPage/Location/Location';
+import { VIPmobile } from '../components/MainPage/VIP/VIPmobile/VIPmobile';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Slider />
       <Razryady />
       <VIP />
+      <VIPmobile />
       <Uslugi />
       <Kyhnya />
       <Novosti />
