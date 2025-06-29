@@ -165,12 +165,13 @@
         line-height: 22px;
         text-align: center;
         width: 310px;
+        margin-top: 8px;
     }
 
     .button {
         width: 311px;
         height: 48px;
-        margin-top: 30px;
+        margin-top: 32px;
     }
 
     .textAriaP {
@@ -181,7 +182,7 @@
     }
 
     .textAriaPBlock {
-        margin-top: 27px;
+        margin-top: 25px;
     }
 
     .gradient {
