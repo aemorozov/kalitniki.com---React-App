@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './Razryady.module.css';
 
@@ -51,6 +51,15 @@ const razryadyData = [
 ];
 
 export const Razryady = () => {
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    // Проверяем, что код выполняется на клиенте
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
+
   return (
     <div className={'classicBlock'}>
       <div className={'contentBlock'}>
@@ -114,7 +123,7 @@ export const Razryady = () => {
             Каждые <span className={styles.bottomDescriptionSpan}>40</span>{' '}
             минут — свежий{' '}
             <span className={styles.bottomDescriptionSpan}>ароматный</span> пар
-            {window.innerWidth < 767 ? <br /> : ''}на{' '}
+            {windowWidth < 767 ? <br /> : ''}на{' '}
             <span className={styles.bottomDescriptionSpan}>травах</span> в наших
             парных!
           </p>
