@@ -710,13 +710,17 @@ body.lock-scroll {
 }
 
 .moreButton {
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
     width: 180px;
     height: 56px;
     border-radius: 16px;
     border: 0;
     background: var(--cherry-red-1);
     font-size: 16px;
-    font-weight: 600;
     color: #fff;
     margin-top: 10px;
     margin-bottom: 25px;

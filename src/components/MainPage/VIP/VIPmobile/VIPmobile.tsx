@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './VIPMobile.module.css';
 
@@ -82,6 +82,15 @@ const elementData = [
 ];
 
 export const VIPmobile = () => {
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    // Проверяем, что код выполняется на клиенте
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
+
   return (
     <div className={'classicBlock'}>
       <div className={'contentBlock'}>
@@ -149,7 +158,7 @@ export const VIPmobile = () => {
           <p>
             VIP-кабинеты находятся в мужском и высшем мужском разрядах. Каждый
             кабинет готовится специально к вашему визиту с заботой{' '}
-            {window.innerWidth < 767 ? <br /> : ''}и вниманием к деталям
+            {windowWidth < 767 ? <br /> : ''}и вниманием к деталям
           </p>
         </div>
       </div>
