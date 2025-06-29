@@ -7,6 +7,7 @@ import comfort from '/public/img/mainPage/vip/mobileMenu/comfort.jpg';
 import rimskii from '/public/img/mainPage/vip/mobileMenu/rimskii.jpg';
 import malii from '/public/img/mainPage/vip/mobileMenu/malii.jpg';
 import bolshoi from '/public/img/mainPage/vip/mobileMenu/bolshoi.jpg';
+import classNames from 'classnames';
 
 const elementData = [
   {
@@ -92,7 +93,7 @@ export const VIPmobile = () => {
   }, []);
 
   return (
-    <div className={'classicBlock'}>
+    <div className={classNames('classicBlock', styles.classicBlock)}>
       <div className={'contentBlock'}>
         <div className={'headers'}>
           <h2 className={'headerH2'}>5 VIP-кабинетов</h2>
