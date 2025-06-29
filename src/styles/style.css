@@ -698,10 +698,10 @@ body.lock-scroll {
     line-height: 22px;
     letter-spacing: 0%;
     text-align: center;
-    margin: 0px 8px 0 0;
+    margin: 1px 8px 8px 0;
     color: var(--gray-8);
     background-color: var(--gray-1);
-    padding: 8px 13px;
+    padding: 6px 12px;
     border-radius: 12px;
 }
 
@@ -726,6 +726,7 @@ body.lock-scroll {
 @media (max-width: 1279px) {
     .classicBlock {
         padding: 38px 0 0px 0px;
+        margin-bottom: 40px;
     }
 
     .headerH2 {
@@ -752,7 +753,7 @@ body.lock-scroll {
         line-height: 28px;
         letter-spacing: 0%;
         margin: 2px 0px;
-        max-width: 300px;
+        max-width: 350px;
     }
 
     .contentBlock {
