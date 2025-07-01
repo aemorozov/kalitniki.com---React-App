@@ -121,9 +121,7 @@
     }
 
     .block {
-        width: 87vw;
-        max-width: 400px;
-        min-width: 324px;
+        width: 324px;
         margin-right: 10px;
         height: 616px;
     }
@@ -175,7 +173,6 @@
         line-height: 24px;
         text-align: center;
         width: 300px;
-        max-width: 400px;
         margin: 0 auto;
     }
 

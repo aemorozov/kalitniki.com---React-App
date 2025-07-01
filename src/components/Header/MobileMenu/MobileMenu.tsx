@@ -39,10 +39,10 @@ export function MobileMenu() {
       name: 'VIP-кабинеты',
       subMenu: [
         { name: 'Турин', url: '/turin' },
+        { name: 'Комфорт', url: '/comfort' },
         { name: 'Римский', url: '/rimsky' },
         { name: 'Большой', url: '/bolshoi' },
-        { name: 'Малый', url: '/malii' },
-        { name: 'Комфорт', url: '/comfort' }
+        { name: 'Малый', url: '/malii' }
       ],
       height: 170,
       function: isVIPOpenChange,

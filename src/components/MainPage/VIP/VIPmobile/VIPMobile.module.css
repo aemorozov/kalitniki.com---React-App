@@ -31,6 +31,7 @@
         text-align: center;
         width: 330px;
         margin: 13px auto 0 auto;
+        color: var(--black);
     }
 
     .bottomDescriptionSpan {
