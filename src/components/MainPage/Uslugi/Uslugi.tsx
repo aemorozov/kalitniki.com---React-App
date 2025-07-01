@@ -3,10 +3,10 @@ import styles from './Uslugi.module.css';
 
 import uslugiImg3 from '/public/img/mainPage/uslugi/img3.jpeg';
 import mobileImg1 from '/public/img/mainPage/uslugi/mobileImg1.jpg';
-import mobileImg2 from '/public/img/mainPage/uslugi/mobileImg2.jpg';
-import mobileImg3 from '/public/img/mainPage/uslugi/mobileImg3.jpg';
-import mobileImg4 from '/public/img/mainPage/uslugi/mobileImg4.jpg';
-import mobileImg5 from '/public/img/mainPage/uslugi/mobileImg5.jpg';
+// import mobileImg2 from '/public/img/mainPage/uslugi/mobileImg2.jpg';
+// import mobileImg3 from '/public/img/mainPage/uslugi/mobileImg3.jpg';
+// import mobileImg4 from '/public/img/mainPage/uslugi/mobileImg4.jpg';
+// import mobileImg5 from '/public/img/mainPage/uslugi/mobileImg5.jpg';
 import listItem from '/public/img/mainPage/vip/Bullet.svg';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
