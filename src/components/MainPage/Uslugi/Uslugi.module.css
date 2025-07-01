@@ -8,6 +8,14 @@
     opacity: 1;
 }
 
+.slides {
+    height: 620px;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+
 .textBlock {
     min-width: 50%;
     width: 50%;
@@ -17,10 +25,6 @@
     background-color: #fff;
     padding: 42px;
     box-sizing: border-box;
-}
-
-.textBlock>* {
-    margin: 0;
 }
 
 .image {
@@ -35,7 +39,7 @@
 }
 
 .reverse {
-    flex-direction: row-reverse !important;
+    flex-direction: row-reverse;
 }
 
 .textBlockReverse {
@@ -47,6 +51,7 @@
     font-size: 36px;
     line-height: 44px;
     letter-spacing: 0%;
+    color: var(--black);
 }
 
 .text {
@@ -55,6 +60,7 @@
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0%;
+    color: var(--gray-9);
 }
 
 .labels {
@@ -83,6 +89,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    color: var(--gray-8);
 }
 
 .plusses {
@@ -96,6 +103,7 @@
     line-height: 24px;
     margin-bottom: 8px;
     list-style: none;
+    color: var(--black);
 }
 
 .list {
@@ -133,4 +141,86 @@
     line-height: 24px;
     text-align: center;
     margin-top: 20px;
+}
+
+@media (max-width:767px) {
+    .reverse {
+        flex-direction: column;
+    }
+
+    .slides {
+        margin-top: 15px;
+        width: 343px;
+    }
+
+    .slidesBlock {
+        height: 636px;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .textBlock {
+        width: 100%;
+        transform: translateY(-40px);
+        height: 330px;
+        padding: 23px 16px;
+    }
+
+    .header {
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0;
+    }
+
+    .text {
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 8px;
+    }
+
+    .labels {
+        width: 100%;
+    }
+
+    .label {
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    .plus {
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 4px;
+    }
+
+    .plusses {
+        margin-top: 12px;
+    }
+
+    .price {
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 18px;
+        margin-bottom: 11px;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
 }
