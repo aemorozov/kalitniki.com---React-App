@@ -1,21 +1,54 @@
 import Image from 'next/image';
 import styles from './Uslugi.module.css';
-
-import uslugiImg3 from '/public/img/mainPage/uslugi/img3.jpeg';
-import mobileImg1 from '/public/img/mainPage/uslugi/mobileImg1.jpg';
-// import mobileImg2 from '/public/img/mainPage/uslugi/mobileImg2.jpg';
-// import mobileImg3 from '/public/img/mainPage/uslugi/mobileImg3.jpg';
-// import mobileImg4 from '/public/img/mainPage/uslugi/mobileImg4.jpg';
-// import mobileImg5 from '/public/img/mainPage/uslugi/mobileImg5.jpg';
-import listItem from '/public/img/mainPage/vip/Bullet.svg';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
+import descktopImg1 from '/public/img/mainPage/uslugi/descktopImg0.jpg';
+import descktopImg2 from '/public/img/mainPage/uslugi/descktopImg1.jpg';
+import descktopImg3 from '/public/img/mainPage/uslugi/descktopImg2.jpg';
+import descktopImg4 from '/public/img/mainPage/uslugi/descktopImg3.jpg';
+import descktopImg5 from '/public/img/mainPage/uslugi/descktopImg4.jpg';
+import mobileImg1 from '/public/img/mainPage/uslugi/mobileImg1.jpg';
+import mobileImg2 from '/public/img/mainPage/uslugi/mobileImg2.jpg';
+import mobileImg3 from '/public/img/mainPage/uslugi/mobileImg3.jpg';
+import mobileImg4 from '/public/img/mainPage/uslugi/mobileImg4.jpg';
+import mobileImg5 from '/public/img/mainPage/uslugi/mobileImg5.jpg';
+import listItem from '/public/img/mainPage/vip/Bullet.svg';
+
 export const Uslugi = () => {
   const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const mobileImages = [
+    mobileImg1,
+    mobileImg2,
+    mobileImg3,
+    mobileImg4,
+    mobileImg5
+  ];
+  const desktopImages = [
+    descktopImg1,
+    descktopImg2,
+    descktopImg3,
+    descktopImg4,
+    descktopImg5
+  ];
+  const mobileScreenWidth = 768;
+  const imgCount =
+    windowWidth < mobileScreenWidth
+      ? mobileImages.length - 1
+      : desktopImages.length - 1;
 
   useEffect(() => {
-    // Проверяем, что код выполняется на клиенте
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => {
+        return prevIndex < imgCount ? prevIndex + 1 : (prevIndex = 0);
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  });
+
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       setWindowWidth(window.innerWidth);
     }
@@ -33,15 +66,39 @@ export const Uslugi = () => {
           </h3>
         </div>
         <div className={styles.slides}>
-          <div className={styles.slidesBlock + ' ' + styles.reverse}>
-            <Image
-              src={windowWidth < 767 ? mobileImg1 : uslugiImg3}
-              alt="img"
-              className={styles.image}
-            ></Image>
+          <div className={classNames(styles.slidesBlock, styles.reverse)}>
+            {windowWidth < mobileScreenWidth ? (
+              mobileImages.map((image, index) => {
+                return (
+                  <Image
+                    key={index}
+                    src={image}
+                    alt="img"
+                    className={classNames(styles.image, {
+                      [styles.opacity1]: index === activeIndex
+                    })}
+                  ></Image>
+                );
+              })
+            ) : (
+              <div className={styles.parentImageDiv}>
+                {desktopImages.map((image, index) => {
+                  return (
+                    <Image
+                      key={index}
+                      src={image}
+                      alt="img"
+                      className={classNames(styles.image, {
+                        [styles.opacity1]: index === activeIndex
+                      })}
+                    ></Image>
+                  );
+                })}
+              </div>
+            )}
             <div className={styles.textBlock + ' ' + styles.textBlockReverse}>
               <h3 className={styles.header}>Услуги для тела</h3>
-              {windowWidth < 768 ? (
+              {windowWidth < mobileScreenWidth ? (
                 <p className={styles.text}>
                   Программы, позволяющие восстановить здоровье тела, не
                   выбиваясь из плотного графика города
@@ -55,7 +112,7 @@ export const Uslugi = () => {
               )}
 
               <div className={styles.labels}>
-                {windowWidth < 768 ? (
+                {windowWidth < mobileScreenWidth ? (
                   <>
                     <div className={styles.label}>Индивидуально</div>
                     <div className={styles.label}>Профессионально</div>
@@ -80,7 +137,8 @@ export const Uslugi = () => {
                     className={styles.list}
                     alt="list element"
                   ></Image>
-                  Фирменное {windowWidth < 768 ? '' : 'контрастное'} парение
+                  Фирменное{' '}
+                  {windowWidth < mobileScreenWidth ? '' : 'контрастное'} парение
                 </li>
                 <li className={styles.plus}>
                   <Image
@@ -100,12 +158,12 @@ export const Uslugi = () => {
                 </li>
               </ul>
               <p className={styles.price}>
-                от 1500 P{windowWidth < 768 ? '' : '/2 часа'}
+                от 1500 P{windowWidth < mobileScreenWidth ? '' : '/2 часа'}
               </p>
               <p
                 className={classNames(
                   styles.description,
-                  `${windowWidth < 768 ? styles.displayNone : ''}`
+                  `${windowWidth < mobileScreenWidth ? styles.displayNone : ''}`
                 )}
               >
                 Прогреваем и наполняем жизненной энергией, снимаем напряжение
@@ -115,7 +173,7 @@ export const Uslugi = () => {
           </div>
         </div>
         <div className={classNames('bottomDescription')}>
-          {windowWidth < 768 ? (
+          {windowWidth < mobileScreenWidth ? (
             <p>
               У нас работают профессиональные <br />
               пармейстеры и мастера массажа, которые <br />

@@ -12,8 +12,6 @@ export const Slider = () => {
   const imageStyles = [styles.firstImg, styles.secondImg, styles.thirdImg];
 
   useEffect(() => {
-    // const interval = '';
-
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
