@@ -18,17 +18,22 @@
 
 .textBlock {
     min-width: 50%;
-    width: 50%;
+    width: auto;
     transform: translateX(-10%);
     height: 100%;
     border-radius: 20px;
     background-color: #fff;
-    padding: 42px;
+    padding: 22px;
     box-sizing: border-box;
 }
 
-.image {
+.parentImageDiv {
+    position: relative;
     min-width: 55%;
+}
+
+.image {
+    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
@@ -36,7 +41,14 @@
     border: 1px solid #fff;
     box-sizing: border-box;
     object-fit: cover;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+
 
 .reverse {
     flex-direction: row-reverse;
@@ -52,6 +64,7 @@
     line-height: 44px;
     letter-spacing: 0%;
     color: var(--black);
+    margin-top: 10px;
 }
 
 .text {
@@ -160,13 +173,22 @@
     .image {
         width: 100%;
         height: auto;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
+
+
 
     .textBlock {
         width: 100%;
-        transform: translateY(-40px);
+        transform: none;
         height: 330px;
         padding: 23px 16px;
+        margin-top: 200px;
+        z-index: 2;
     }
 
     .header {
@@ -223,4 +245,8 @@
         display: none;
     }
 
+}
+
+.opacity1 {
+    opacity: 1;
 }

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import uslugiImg1 from '/public/img/mainPage/uslugi/img1.jpeg';
-import uslugiImg2 from '/public/img/mainPage/uslugi/img2.jpeg';
+import uslugiImg1 from '/public/img/mainPage/uslugi/descktopImg0.jpg';
+import uslugiImg2 from '/public/img/mainPage/uslugi/descktopImg1.jpg';
 import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 export const Kyhnya = () => {
