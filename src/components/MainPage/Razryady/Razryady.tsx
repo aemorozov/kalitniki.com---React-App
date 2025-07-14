@@ -54,7 +54,6 @@ export const Razryady = () => {
   const [windowWidth, setWindowWidth] = useState<number>(0);
 
   useEffect(() => {
-    // Проверяем, что код выполняется на клиенте
     if (typeof window !== 'undefined') {
       setWindowWidth(window.innerWidth);
     }
@@ -123,8 +122,9 @@ export const Razryady = () => {
             Каждые <span className={styles.bottomDescriptionSpan}>40</span>{' '}
             минут — свежий{' '}
             <span className={styles.bottomDescriptionSpan}>ароматный</span> пар
-            {windowWidth < 767 ? <br /> : ''}на{' '}
-            <span className={styles.bottomDescriptionSpan}>травах</span> в наших
+            {windowWidth < 480 ? <br /> : ''} на
+            <span className={styles.bottomDescriptionSpan}> травах</span>
+            {windowWidth < 768 && windowWidth > 480 ? <br /> : ''} в наших
             парных!
           </p>
         </div>

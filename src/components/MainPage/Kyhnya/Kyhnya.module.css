@@ -1,0 +1,50 @@
+.kyhnya {
+    padding-top: 126px;
+}
+
+.header {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.text {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.plusses {
+    margin-top: 24px;
+    padding-left: 0;
+}
+
+.button {
+    width: 180px;
+    height: 56px;
+    border-radius: 16px;
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    background-color: var(--cherry-red-1);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 20px;
+    bottom: 32px;
+    position: absolute;
+}
+
+.bottomDescription {
+    width: 880px;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}

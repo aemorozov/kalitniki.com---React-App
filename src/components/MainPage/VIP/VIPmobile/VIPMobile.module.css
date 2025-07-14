@@ -2,7 +2,7 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
     .classicBlock {
         display: block;
@@ -106,7 +106,7 @@
         overflow-x: auto;
         overflow-y: hidden;
         transform: translateX(-15px);
-        padding: 0 15px;
+        padding: 0 15px 10px 15px;
     }
 
     .img,

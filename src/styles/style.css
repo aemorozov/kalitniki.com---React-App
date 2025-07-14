@@ -68,9 +68,9 @@ body.lock-scroll {
 .headerH2 {
     font-family: Lato;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0%;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 26px;
     color: var(--black);
     margin: 0;
 }
@@ -80,7 +80,7 @@ body.lock-scroll {
     display: inline-block;
     font-size: 18px;
     color: var(--beige-4);
-    margin-right: 10px;
+    margin-right: 17px;
     transform: translateY(-2px);
 }
 
@@ -91,6 +91,10 @@ body.lock-scroll {
     margin: 11px 0px;
     letter-spacing: 0.06rem;
     line-height: 55px;
+}
+
+.headerH3>span {
+    color: var(--green-2);
 }
 
 .contentBlock {
@@ -181,7 +185,7 @@ body.lock-scroll {
     height: 100%;
     border-radius: 20px;
     background-color: #fff;
-    padding: 42px;
+    padding: 30px;
     box-sizing: border-box;
     min-width: 50%;
     transform: translateX(10%);
@@ -200,7 +204,7 @@ body.lock-scroll {
 }
 
 .text {
-    margin-top: 20px;
+    margin-top: 6px;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -278,12 +282,14 @@ body.lock-scroll {
     padding-left: 20px;
     background-color: var(--cherry-red-1);
     color: #fff;
+    font-family: Lato;
     font-weight: 600;
+    font-style: SemiBold;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
     margin-top: 20px;
-    bottom: 42px;
+    bottom: 35px;
     position: absolute;
 }
 
@@ -307,9 +313,9 @@ body.lock-scroll {
 }
 
 .threeColumns {
-    margin-top: 35px;
+    margin-top: 20px;
     width: 100%;
-    height: 550px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -321,7 +327,7 @@ body.lock-scroll {
     border-radius: 20px;
     background-color: #fff;
     object-fit: cover;
-    height: 550px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -351,7 +357,7 @@ body.lock-scroll {
 /* Промо блок */
 
 .promo {
-    padding: 120px 0 0 0;
+    padding: 160px 0 0 0;
     text-align: center;
     max-width: 1440px;
     margin: 0 auto;
@@ -372,16 +378,16 @@ body.lock-scroll {
 
 .promo-banner {
     position: relative;
-    margin-top: 50px;
+    margin-top: 35px;
     overflow: hidden;
-    height: 360px;
+    height: 600px;
 }
 
 .promo-bg {
-    width: 150%;
+    width: 100%;
     height: auto;
     display: block;
-    transform: translateX(-20%) translateY(-70%);
+    /* transform: translateX(-20%) translateY(-70%); */
 }
 
 .promo-text {
@@ -397,7 +403,7 @@ body.lock-scroll {
     line-height: 26px;
     letter-spacing: 0%;
     text-align: center;
-    padding-top: 20px;
+    height: 220px;
 }
 
 .promo-logo {
@@ -406,7 +412,14 @@ body.lock-scroll {
 }
 
 .promo-p {
-    margin-top: 16px;
+    margin-top: 26px;
+    font-family: Lato;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: var(--beige-1);
 }
 
 /* Отзывы */
@@ -705,7 +718,7 @@ body.lock-scroll {
 .moreButton {
     font-family: Lato;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     text-align: center;
     width: 180px;
@@ -713,14 +726,17 @@ body.lock-scroll {
     border-radius: 16px;
     border: 0;
     background: var(--cherry-red-1);
-    font-size: 16px;
     color: #fff;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
+.uslugi {
+    padding-top: 110px;
+}
+
+@media (max-width: 480px) {
     .classicBlock {
         padding: 38px 0 0px 0px;
         margin-bottom: 40px;

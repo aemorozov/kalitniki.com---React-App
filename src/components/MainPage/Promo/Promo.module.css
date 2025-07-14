@@ -1,0 +1,26 @@
+.headers {
+    margin: 0 auto;
+}
+
+.headerH2 {
+    font-family: Lato;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.headerH2::before {
+    content: '';
+}
+
+.leaf {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+}
