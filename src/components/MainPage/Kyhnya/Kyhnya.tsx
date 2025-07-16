@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import styles from './Kyhnya.module.css';
 
 import uslugiImg1 from '/public/img/mainPage/uslugi/descktopImg0.jpg';
 import uslugiImg2 from '/public/img/mainPage/uslugi/descktopImg1.jpg';
@@ -6,10 +7,10 @@ import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 export const Kyhnya = () => {
   return (
-    <section className={'classicBlock  kyhnya - Posle aromatnoi parilki'}>
+    <section className={'classicBlock' + ' ' + styles.kyhnya}>
       <div className={'contentBlock'}>
         <div className={'headers'}>
-          <h2 className={'headerH2'}>Кухня</h2>
+          <h2 className={'headerH2'}>Кухня и бар</h2>
           <h3 className={'headerH3'}>
             После <br />
             ароматной парилки
@@ -32,13 +33,14 @@ export const Kyhnya = () => {
           </div>
           <div className={'column'}>
             <div className={'textBlock littleTextBlock'}>
-              <h3 className={'header'}>Кухня и бар </h3>
-              <p className={'text'}>
+              <h3 className={styles.header}>Кухня и бар </h3>
+              <p className={styles.text}>
                 Большой выбор холодных закусок, напитков, мясных и рыбных блюд,
-                домашних настоек
+                домашних настоек собственного приготовления. Пельмени, вареники
+                и манты ручной лепки не оставят вас равнодушными
               </p>
 
-              <ul className={'plusses'}>
+              <ul className={styles.plusses}>
                 <li className={'plus'}>
                   <Image
                     src={listItem}
@@ -80,12 +82,12 @@ export const Kyhnya = () => {
                   Сезонное меню
                 </li>
               </ul>
-              <button className={'button'}>Подробнее</button>
+              <button className={styles.button}>Подробнее</button>
             </div>
           </div>
         </div>
       </div>
-      <div className={'bottomDescription'}>
+      <div className={styles.bottomDescription}>
         <p>
           Кафе находится в лобби на первом этаже. Здесь можно подождать компанию
           перед отдыхом в бане, расслабиться и подкрепиться после процедур,

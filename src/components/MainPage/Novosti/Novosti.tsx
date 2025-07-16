@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import classNames from 'classnames';
+import styles from './Novosti.module.css';
 
 import novostiImg1 from '/public/img/mainPage/novosti/img1.jpeg';
 import novostiImg2 from '/public/img/mainPage/novosti/img2.jpeg';
@@ -32,21 +34,21 @@ export const Novosti = () => {
             ></Image>
           </div>
           <div className={'column'}>
-            <div className={'textBlock littleTextBlock'}>
-              <h3 className={'header'}>Новости и акции</h3>
+            <div className={classNames(styles.textBlock, 'littleTextBlock')}>
+              <h3 className={styles.header}>Новости и акции</h3>
               <p className={'text'}>
-                Большой выбор холодных закусок, напитков, мясных и рыбных блюд,
-                домашних настоек
+                Мы регулярно радуем гостей специальными предложениями. Вы
+                получите билет и шанс выиграть приятный подарок
               </p>
 
-              <ul className={'plusses'}>
+              <ul className={styles.plusses}>
                 <li className={'plus'}>
                   <Image
                     src={listItem}
                     className={'list'}
                     alt="list element"
                   ></Image>
-                  Скидка именинникам
+                  50% скидка в будни до 15:00
                 </li>
                 <li className={'plus'}>
                   <Image
@@ -54,7 +56,7 @@ export const Novosti = () => {
                     className={'list'}
                     alt="list element"
                   ></Image>
-                  Подарочные сертификаты
+                  20% скидка и подарки на день рождения
                 </li>
                 <li className={'plus'}>
                   <Image
@@ -62,7 +64,7 @@ export const Novosti = () => {
                     className={'list'}
                     alt="list element"
                   ></Image>
-                  Сбитень на травах новому каждому
+                  Сбитень на травах новому гостю
                 </li>
                 <li className={'plus'}>
                   <Image
@@ -70,7 +72,15 @@ export const Novosti = () => {
                     className={'list'}
                     alt="list element"
                   ></Image>
-                  50 % в будни до 14:00
+                  Детям до 7 лет бесплатно
+                </li>
+                <li className={'plus'}>
+                  <Image
+                    src={listItem}
+                    className={'list'}
+                    alt="list element"
+                  ></Image>
+                  Всегда сезонное меню
                 </li>
                 <li className={'plus'}>
                   <Image

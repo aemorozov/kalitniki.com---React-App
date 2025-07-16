@@ -2,13 +2,13 @@
     display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 481px) {
 
     .classicBlock {
         display: block;
         width: 100%;
         background-color: var(--beige-1);
-        padding: 100px 0 25px 0;
+        padding: 120px 0 25px 0;
         position: relative;
         max-width: 1440px;
         margin: 0 auto;
@@ -58,9 +58,9 @@
     .backgroundImageVIP {
         position: absolute;
         transform: scale(-1, 1);
-        right: -170px;
-        top: -35px;
-        height: 993px;
+        right: -165px;
+        top: -60px;
+        height: 1100px;
         width: auto;
     }
 
@@ -74,7 +74,7 @@
         padding: 5px;
         justify-content: space-between;
         box-sizing: border-box;
-        margin-top: 40px;
+        margin-top: 8px;
     }
 
     .name {
@@ -106,7 +106,7 @@
     }
 
     .slides {
-        height: 620px;
+        height: 610px;
         width: 100%;
         margin-top: 20px;
         position: relative;
@@ -159,7 +159,7 @@
         height: 100%;
         border-radius: 20px;
         background-color: #fff;
-        padding: 42px;
+        padding: 32px 35px 32px 32px;
         box-sizing: border-box;
     }
 
@@ -170,12 +170,12 @@
     .header {
         font-weight: 700;
         font-size: 36px;
-        line-height: 44px;
         letter-spacing: 0%;
+        margin-top: 4px;
     }
 
     .text {
-        margin-top: 20px;
+        margin-top: 8px;
         font-weight: 400;
         font-size: 18px;
         line-height: 24px;
@@ -240,7 +240,8 @@
         font-size: 16px;
         line-height: 22px;
         color: var(--gray-8);
-        margin-top: 8px;
+        margin-top: 0px;
+        width: 400px;
     }
 
     .button {
@@ -257,12 +258,12 @@
         font-size: 18px;
         line-height: 24px;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .bottomDescriptionVIP {
         width: 900px;
-        margin: 86px auto;
+        margin: 24px auto;
         text-align: center;
         font-weight: 400;
         font-size: 20px;

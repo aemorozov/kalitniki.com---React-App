@@ -55,9 +55,7 @@ export const Uslugi = () => {
   }, []);
 
   return (
-    <section
-      className={'classicBlock Uslugi - Dlya zdorovya i vosstanovleniya'}
-    >
+    <section className={'classicBlock' + ' ' + 'uslugi'}>
       <div className={'contentBlock'}>
         <div className={'headers'}>
           <h2 className={'headerH2'}>Услуги</h2>
@@ -160,19 +158,17 @@ export const Uslugi = () => {
               <p className={styles.price}>
                 от 1500 P{windowWidth < mobileScreenWidth ? '' : '/2 часа'}
               </p>
-              <p
-                className={classNames(
-                  styles.description,
-                  `${windowWidth < mobileScreenWidth ? styles.displayNone : ''}`
-                )}
-              >
-                Прогреваем и наполняем жизненной энергией, снимаем напряжение
-              </p>
+
               <button className={'moreButton'}>Подробнее</button>
             </div>
           </div>
         </div>
-        <div className={classNames('bottomDescription')}>
+        <div
+          className={classNames(
+            'bottomDescription',
+            styles.bottomDescriptionUslugi
+          )}
+        >
           {windowWidth < mobileScreenWidth ? (
             <p>
               У нас работают профессиональные <br />
