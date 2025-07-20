@@ -434,7 +434,7 @@ body.lock-scroll {
 .otzuvu,
 .do-vsctrechi {
     padding-top: 85px;
-    height: 954px;
+    height: 900px;
     box-sizing: border-box;
     background-color: var(--beige-2);
     width: 100%;
@@ -490,12 +490,11 @@ body.lock-scroll {
     background-color: #fff;
     width: 448px;
     height: fit-content;
-    min-height: 380px;
-    max-height: 600px;
-    margin: 110px 10px 0 5px;
+    margin: 80px 10px 0 5px;
     border-radius: 20px;
-    padding: 42px;
+    padding: 32px;
     box-sizing: border-box;
+    height: 400px;
 }
 
 .galary {
@@ -532,16 +531,43 @@ body.lock-scroll {
     border: none;
 }
 
+.rightAndLeftSides {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rightSide {
+    align-items: flex-start !important;
+    font-family: Lato;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+.rightSide>* {
+    margin: 0;
+}
+
+.marginFix {
+    margin-left: 3px;
+    display: inline-block;
+    transform: translateY(-4px);
+}
+
 .otzuv-nameAndDate {
-    margin: 0 0 0px 12px;
+    margin: 0;
+    transform: translateX(-3px);
 }
 
 .otzuv-name {
     font-family: Lato;
     font-weight: 600;
-    font-size: 26px;
-    line-height: 32px;
-    letter-spacing: 0%;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 26px;
     color: var(--black);
 }
 
@@ -552,54 +578,50 @@ body.lock-scroll {
     line-height: 22px;
     letter-spacing: 0%;
     color: var(--gray-8);
-    margin-top: 8px;
+    margin-top: 4px;
+}
+
+.otzuv-logo {
+    transform: translateX(-19px) translateY(33px);
 }
 
 .otzuv-zvezdu {
-    margin-top: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-.otzuv-zvezdu>* {
+/* .otzuv-zvezdu>* {
     margin-right: 4px;
-}
+} */
 
 .otzuv-text {
     font-family: Lato;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    letter-spacing: 0%;
     color: var(--black);
-    max-height: 160px;
-    height: fit-content;
+    height: 170px;
     overflow: hidden;
 }
 
 .otzuv-text>* {
-    margin: 8px 0 0 0;
+    margin: 16px 0 0 0;
 }
 
 .otzuv-button {
-    width: 141px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    border: none;
-    background-color: var(--green-2);
-    color: #fff;
+    color: var(--beige-5);
     font-family: Lato;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0%;
-    text-align: center;
-    margin-top: 24px;
+    width: fit-content;
 }
 
 .after-slider {
-    margin: 50px 0 0 0;
+    margin: 45px 0 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
