@@ -1,9 +1,14 @@
 // components/Location.tsx
 import React from 'react';
 import classes from './Location.module.css';
-import map from '/public/img/mainPage/map/map.png';
+import map from '/public/img/mainPage/map/map2.png';
 import Image from 'next/image';
 import listItem from '/public/img/mainPage/vip/Bullet.svg';
+
+import ten from '/public/img/mobileMenu/ten.svg';
+import train from '/public/img/mobileMenu/train.svg';
+import seven from '/public/img/mobileMenu/seven.svg';
+import eight from '/public/img/mobileMenu/eight.svg';
 
 export const Location = () => {
   return (
@@ -17,11 +22,13 @@ export const Location = () => {
           <div className={classes.slidesBlock}>
             <Image src={map} alt="map" className={classes.image}></Image>
             <div className={classes.textBlock}>
-              <h3 className={classes.header}>Большая Калитниковская, дом 42</h3>
+              <h3 className={classes.header}>
+                Москва, Большая Калитниковская, дом 42
+              </h3>
               <p className={classes.text}>
-                Удобно добираться на личном и общественном транспорте, мы
-                находимся между садовым кольцом и ТТК, рядом 2 станции метро и 2
-                диаметра...
+                Удобно добираться на личном и общественном транспорте. Мы
+                находимся между садовым кольцом и ТТК, рядом 3 станции метро и
+                платформа Калитники МЦД
               </p>
               <div className={classes.labels}>
                 <div className={classes.label}>Бесплатная парковка</div>
@@ -31,7 +38,7 @@ export const Location = () => {
               <ul className={classes.plusses}>
                 <li className={classes.plus}>
                   <Image
-                    src={listItem}
+                    src={ten}
                     className={classes.list}
                     alt="list element"
                   ></Image>
@@ -39,7 +46,7 @@ export const Location = () => {
                 </li>
                 <li className={classes.plus}>
                   <Image
-                    src={listItem}
+                    src={eight}
                     className={classes.list}
                     alt="list element"
                   ></Image>
@@ -47,7 +54,7 @@ export const Location = () => {
                 </li>
                 <li className={classes.plus}>
                   <Image
-                    src={listItem}
+                    src={seven}
                     className={classes.list}
                     alt="list element"
                   ></Image>
@@ -55,18 +62,15 @@ export const Location = () => {
                 </li>
                 <li className={classes.plus}>
                   <Image
-                    src={listItem}
+                    src={train}
                     className={classes.list}
                     alt="list element"
                   ></Image>
                   Платформа Калитники, 13 мин
                 </li>
               </ul>
-              <p className={classes.description}>
-                Откройте ваш навигатор и найдите оптимальный <br />
-                для вас маршрут
-              </p>
-              <button className={classes.button}>Проложить маршрут</button>
+
+              <button className={classes.button}>Показать на карте</button>
             </div>
           </div>
         </div>
