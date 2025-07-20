@@ -1,39 +1,35 @@
-// components/FAQItem.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './FAQ.module.css';
+import Image from 'next/image';
+
+import shape from '/public/img/mainPage/fiq/Shape.svg';
+import classNames from 'classnames';
 
 interface FAQItemProps {
-  question: string;
+  element: { question: string; answer: string };
 }
 
-const FAQItem: React.FC<FAQItemProps> = ({ question }) => {
+const FAQItem: React.FC<FAQItemProps> = ({ element }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (isOpen && contentRef.current) {
-      setHeight(contentRef.current.scrollHeight);
-    } else {
-      setHeight(0);
-    }
-  }, [isOpen]);
 
   return (
-    <div className={styles.item}>
-      <div className={styles.questionRow} onClick={() => setIsOpen(!isOpen)}>
-        <span>{question}</span>
-        <span className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>
-          ⌄
-        </span>
-      </div>
-
-      <div className={styles.answerWrapper} style={{ height: `${height}px` }}>
-        <div ref={contentRef} className={styles.answer}>
-          Ответ на вопрос появится здесь.
+    <>
+      <div className={styles.item} onClick={() => setIsOpen(!isOpen)}>
+        <div className={styles.questionRow}>
+          <div className={styles.question}>{element.question}</div>
+          <div className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}>
+            <Image src={shape} alt="shape" className={styles.shape} />
+          </div>
+        </div>
+        <div
+          ref={contentRef}
+          className={classNames(styles.answer, isOpen ? styles.open : '')}
+        >
+          {element.answer}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
