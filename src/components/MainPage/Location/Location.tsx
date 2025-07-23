@@ -3,7 +3,6 @@ import React from 'react';
 import classes from './Location.module.css';
 import map from '/public/img/mainPage/map/map2.png';
 import Image from 'next/image';
-import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 import ten from '/public/img/mobileMenu/ten.svg';
 import train from '/public/img/mobileMenu/train.svg';
