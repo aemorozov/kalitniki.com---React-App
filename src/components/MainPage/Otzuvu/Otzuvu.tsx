@@ -161,7 +161,7 @@ export const Otzuvu = () => {
           <div className={'otzuvu-blocks'}>
             {data.map((el) => {
               return (
-                <div className={'otzuv'}>
+                <div className={'otzuv'} key={el.name}>
                   <div className={'rightAndLeftSides'}>
                     <div className={classNames('otzuv-title', 'leftSide')}>
                       <div className={'otzuv-photoNameAndDate'}>
@@ -196,7 +196,11 @@ export const Otzuvu = () => {
                     <p className={style.textP}>Понравилось:</p>
                     <div className={style.tags}>
                       {el.tags.map((tag) => {
-                        return <div className={style.tag}>{tag}</div>;
+                        return (
+                          <div className={style.tag} key={tag}>
+                            {tag}
+                          </div>
+                        );
                       })}
                     </div>
                   </div>
@@ -219,7 +223,7 @@ export const Otzuvu = () => {
                 {data.map((el, index) => {
                   if (index < 5) {
                     return (
-                      <div className={'otzuv-photo-el'}>
+                      <div className={'otzuv-photo-el'} key={el.name}>
                         <Image
                           src={el.photo}
                           alt={el.name}
