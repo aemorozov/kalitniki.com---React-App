@@ -39,8 +39,8 @@ export const FAQ = () => (
       </div>
       <div className={styles.container}>
         <div className={styles.accordion}>
-          {faqData.map((element, index) => (
-            <FAQItem key={index} element={element} />
+          {faqData.map((element) => (
+            <FAQItem key={element.answer} element={element} />
           ))}
         </div>
       </div>

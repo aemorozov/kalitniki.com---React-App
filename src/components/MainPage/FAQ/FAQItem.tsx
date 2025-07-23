@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import styles from './FAQ.module.css';
 import Image from 'next/image';
 
-import shape from '/public/img/mainPage/fiq/Shape.svg';
+import shape from '/public/img/mainPage/faq/Shape.svg';
 import classNames from 'classnames';
 
 interface FAQItemProps {
