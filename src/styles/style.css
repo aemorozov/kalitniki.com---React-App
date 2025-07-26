@@ -447,7 +447,6 @@ body.lock-scroll {
     max-width: 1440px;
     margin: 0 auto;
     transform: translateY(-70px);
-    overflow: hidden;
 }
 
 .buttons {
@@ -483,9 +482,20 @@ body.lock-scroll {
 .do-vsctrechi-blocks {
     display: flex;
     flex-direction: row;
-    min-width: 100%;
+    width: 100vw;
+    max-width: 1440px;
     overflow-x: auto;
     gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    transform: translateX(-30px);
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.otzuvu-blocks::-webkit-scrollbar {
+    display: none;
 }
 
 .otzuv {

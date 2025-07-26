@@ -1,4 +1,3 @@
-// components/Location.tsx
 import React from 'react';
 import classes from './Location.module.css';
 import map from '/public/img/mainPage/map/map2.png';
