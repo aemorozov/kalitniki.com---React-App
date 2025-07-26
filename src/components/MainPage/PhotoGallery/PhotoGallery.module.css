@@ -50,9 +50,19 @@
 .doVsctrechiBlocks {
     display: flex;
     flex-direction: row;
-    min-width: 100%;
+    width: 100vw;
+    max-width: 1440px;
     overflow-x: auto;
-    gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    transform: translateX(-30px);
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.doVsctrechiBlocks::-webkit-scrollbar {
+    display: none;
 }
 
 .otzuv {
@@ -75,4 +85,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
 }
