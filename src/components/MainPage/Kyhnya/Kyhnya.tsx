@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import styles from './Kyhnya.module.css';
 
-import uslugiImg1 from '/public/img/mainPage/uslugi/descktopImg0.jpg';
-import uslugiImg2 from '/public/img/mainPage/uslugi/descktopImg1.jpg';
+import uslugiImg1 from '/public/img/mainPage/kykhnya/event.jpg';
+import uslugiImg2 from '/public/img/mainPage/kykhnya/event2.jpg';
 import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 export const Kyhnya = () => {
@@ -21,14 +21,14 @@ export const Kyhnya = () => {
             <Image
               src={uslugiImg1}
               alt="Uslugi1"
-              className={'uslugiImg'}
+              className={styles.img}
             ></Image>
           </div>
           <div className={'column'}>
             <Image
               src={uslugiImg2}
               alt="Uslugi2"
-              className={'uslugiImg'}
+              className={styles.img}
             ></Image>
           </div>
           <div className={'column'}>
