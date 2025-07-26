@@ -143,7 +143,7 @@ export const Otzuvu = () => {
         <div className={'headers'}>
           <h2 className={'headerH2'}>Отзывы гостей</h2>
           <h3 className={'headerH3'}>
-            Атмосфера
+            Атмосфера,
             <br />
             ароматный пар, кухня
           </h3>

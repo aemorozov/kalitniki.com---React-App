@@ -3,11 +3,11 @@ import styles from './Uslugi.module.css';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
-import descktopImg1 from '/public/img/mainPage/uslugi/descktopImg0.jpg';
-import descktopImg2 from '/public/img/mainPage/uslugi/descktopImg1.jpg';
-import descktopImg3 from '/public/img/mainPage/uslugi/descktopImg2.jpg';
-import descktopImg4 from '/public/img/mainPage/uslugi/descktopImg3.jpg';
-import descktopImg5 from '/public/img/mainPage/uslugi/descktopImg4.jpg';
+import descktopImg1 from '/public/img/mainPage/uslugi/Photo.jpg';
+import descktopImg2 from '/public/img/mainPage/uslugi/Photo-1.jpg';
+import descktopImg3 from '/public/img/mainPage/uslugi/Photo-2.jpg';
+import descktopImg4 from '/public/img/mainPage/uslugi/Photo-3.jpg';
+import descktopImg5 from '/public/img/mainPage/uslugi/Photo-4.jpg';
 import mobileImg1 from '/public/img/mainPage/uslugi/mobileImg1.jpg';
 import mobileImg2 from '/public/img/mainPage/uslugi/mobileImg2.jpg';
 import mobileImg3 from '/public/img/mainPage/uslugi/mobileImg3.jpg';
