@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import style from './Otzuvu.module.css';
+import { useRef } from 'react';
 
 import EvgeniiS from '/public/img/mainPage/otzuvu/EvgeniiS.jpg';
 import SnegS from '/public/img/mainPage/otzuvu/SnegS.jpg';
@@ -136,8 +137,22 @@ const data = [
 ];
 
 export const Otzuvu = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemRef = useRef<HTMLDivElement>(null);
+
+  function handleScroll(event: React.MouseEvent<HTMLImageElement>) {
+    if (containerRef.current && itemRef.current) {
+      const target = event.target as HTMLElement;
+      const scrollAmount = itemRef.current.offsetWidth + 15 || 463;
+      const side = target.className === 'toLeft' ? -scrollAmount : scrollAmount;
+      containerRef.current.scrollBy({
+        left: side,
+        behavior: 'smooth'
+      });
+    }
+  }
+
   return (
-    // <section className={'background-otzuvu'}>
     <div className={'classicBlock  otzuvu'}>
       <div className={'contentBlock'}>
         <div className={'headers'}>
@@ -151,17 +166,26 @@ export const Otzuvu = () => {
         <div className={'otzuvu-slider'}>
           <div className={'buttons'}>
             <div className={'left-button'}>
-              <Image src={chevron} alt="chevron" className={'toLeft'}></Image>
+              <Image
+                src={chevron}
+                alt="chevron"
+                className={'toLeft'}
+                onClick={handleScroll}
+              ></Image>
             </div>
             <div className={'right-button'}>
-              {' '}
-              <Image src={chevron} alt="chevron" className={'toRight'}></Image>
+              <Image
+                src={chevron}
+                alt="chevron"
+                className={'toRight'}
+                onClick={handleScroll}
+              />
             </div>
           </div>
-          <div className={'otzuvu-blocks'}>
+          <div className={'otzuvu-blocks'} ref={containerRef}>
             {data.map((el) => {
               return (
-                <div className={'otzuv'} key={el.name}>
+                <div className={'otzuv'} key={el.name} ref={itemRef}>
                   <div className={'rightAndLeftSides'}>
                     <div className={classNames('otzuv-title', 'leftSide')}>
                       <div className={'otzuv-photoNameAndDate'}>
@@ -245,6 +269,5 @@ export const Otzuvu = () => {
         </div>
       </div>
     </div>
-    // </section>
   );
 };

@@ -457,6 +457,7 @@ body.lock-scroll {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
 }
 
 .left-button,
@@ -472,6 +473,7 @@ body.lock-scroll {
     border-radius: 16px;
     font-size: 32px;
     color: var(--black);
+    cursor: pointer;
 }
 
 .toRight {
@@ -488,7 +490,7 @@ body.lock-scroll {
     gap: 10px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    transform: translateX(-30px);
+    transform: translateX(-28px);
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;

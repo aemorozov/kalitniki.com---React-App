@@ -41,6 +41,12 @@
     border-radius: 16px;
     font-size: 32px;
     color: var(--black);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.toLeft {
+    transform: rotate(0);
 }
 
 .toRight {
@@ -55,7 +61,7 @@
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    transform: translateX(-30px);
+    transform: translateX(-28px);
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
