@@ -473,6 +473,12 @@ body.lock-scroll {
     font-size: 32px;
     color: var(--black);
     cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.left-button:active,
+.right-button:active {
+    transform: translateY(3px);
 }
 
 .toRight {
