@@ -434,7 +434,6 @@ body.lock-scroll {
 .otzuvu,
 .do-vsctrechi {
     padding-top: 85px;
-    height: 900px;
     box-sizing: border-box;
     background-color: var(--beige-2);
     width: 100%;
@@ -508,7 +507,10 @@ body.lock-scroll {
     border-radius: 20px;
     padding: 32px;
     box-sizing: border-box;
-    height: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .galary {
@@ -617,8 +619,9 @@ body.lock-scroll {
     font-size: 16px;
     line-height: 22px;
     color: var(--black);
-    height: 170px;
+    max-height: 170px;
     overflow: hidden;
+    transition: max-height 0.4s ease;
 }
 
 .otzuv-text>* {
