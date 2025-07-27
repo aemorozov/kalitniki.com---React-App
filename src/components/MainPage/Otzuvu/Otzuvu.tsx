@@ -20,6 +20,7 @@ import chevron from '/public/img/mainPage/otzuvu/chevron.svg';
 import ya from '/public/img/mainPage/otzuvu/ya.svg';
 import star from '/public/img/mainPage/otzuvu/star.svg';
 import classNames from 'classnames';
+import Link from 'next/link';
 
 const data = [
   {
@@ -153,8 +154,6 @@ const data = [
 export const Otzuvu = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRef = useRef<HTMLDivElement>(null);
-
-  const refs = useRef([]);
 
   function openComment(event: React.MouseEvent<HTMLImageElement>) {
     const button = event.currentTarget as HTMLDivElement;
@@ -308,10 +307,16 @@ export const Otzuvu = () => {
                 })}
               </div>
               <div className={'count'}>
-                <p>2276 отзывов</p>
+                <p>2559 отзывов</p>
               </div>
-              <div className={'link'}>
-                <p>На Яндекс картах</p>
+              <div>
+                <Link
+                  className="link"
+                  href="https://yandex.ru/profile/1125145003?lang=ru"
+                  target="_blank"
+                >
+                  На Яндекс картах
+                </Link>
               </div>
             </div>
           </div>
