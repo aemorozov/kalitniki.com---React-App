@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import style from './Otzuvu.module.css';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import EvgeniiS from '/public/img/mainPage/otzuvu/EvgeniiS.jpg';
 import SnegS from '/public/img/mainPage/otzuvu/SnegS.jpg';
