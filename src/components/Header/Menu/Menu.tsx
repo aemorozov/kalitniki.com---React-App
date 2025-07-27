@@ -1,106 +1,53 @@
-import Link from 'next/link';
-import classes from './Menu.module.css';
-import arrowDown from '../../../img/header/IconDown.svg';
-import Image from 'next/image';
-import secondMenuItemImg from '/public/img/header/Icon_container.svg';
-import { useState } from 'react';
-import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { menu } from '../../../constants/menu';
+import arrowDown from '../../../img/header/IconDown.svg';
+import classes from './Menu.module.css';
+import secondMenuItemImg from '/public/img/header/Icon_container.svg';
 
 export const Menu = () => {
-  const router = useRouter();
-
-  const [openSubMenu, isOpenSubMenu] = useState('');
-  const [addWidthMainItem, isAddWidthMainItem] = useState('');
-
-  // Наведение курсора на пункт меню
-  const handleMouseEnter = (e: string) => {
-    isOpenSubMenu(e);
-    isAddWidthMainItem(classes.hoverFirstItem);
-  };
-
-  // Убираем курсор с пункта меню
-  const handleMouseLeave = (e: string) => {
-    isOpenSubMenu(e);
-    isAddWidthMainItem('');
-  };
-
-  const pages = [
-    {
-      title: 'Разряды',
-      url: 'razryadi',
-      children: [
-        { title: 'Высший мужской разряд', url: 'vysshiy-muzhskoy-razryad' },
-        { title: 'Мужской разряд', url: 'muzhskoy-razryad' },
-        { title: 'Женский разряд', url: 'zhenskiy-razryad' }
-      ]
-    },
-    { title: 'VIP-Кабинеты', url: 'vip-kabinety' },
-    { title: 'Услуги', url: 'uslugi' },
-    { title: 'Новости и акции', url: 'novosti-i-aktsii' },
-    { title: 'Кухня и бар', url: 'kukhnya-i-bar' },
-    { title: 'Контакты', url: 'kontakty' }
-  ];
+  const { pathname } = useRouter();
 
   return (
     <ul className={classes.mainBlock}>
-      {pages.map((el) => {
+      {menu.map(({ name, subMenu, url }) => {
         // Если есть у пункта меню есть субменю, делаем особые стили и галочку
-        if (el.children) {
+        if (subMenu) {
+          const isSubMenuItemOpened = subMenu.some(
+            ({ url }) => url === pathname
+          );
+
           return (
-            <div key={el.title}>
-              <li className={classes.li}>
-                <Link
-                  href={el.url}
-                  className={classNames(
-                    classes.menuItem,
-                    addWidthMainItem,
-
-                    // Сравниваем путь для подсветки пункта меню
-                    router.pathname === '/' + el.url && classes.activeItem,
-                    el.children.find(
-                      (el) => '/' + el.url === router.pathname
-                    ) && classes.arrowActive
-                  )}
-                  // Открываем и закрываем субменю
-                  onMouseEnter={() =>
-                    handleMouseEnter(classes.containerSecondMenuOpen)
-                  }
-                  onMouseLeave={() => handleMouseLeave('')}
-                >
-                  {el.title}
-                  <Image
-                    src={arrowDown}
-                    className={classNames(
-                      classes.arrowDown,
-                      router.pathname === '/' + el.url && classes.arrowActive,
-                      el.children.find(
-                        (el) => '/' + el.url === router.pathname
-                      ) && classes.arrowActive
-                    )}
-                    alt="Arrow down"
-                  ></Image>
-                </Link>
-              </li>
-
+            <li
+              key={name}
+              className={classNames(
+                classes.menuItem,
+                isSubMenuItemOpened && classes.activeItem
+              )}
+            >
+              {name}
+              <Image
+                src={arrowDown}
+                className={classNames(
+                  classes.arrowDown,
+                  isSubMenuItemOpened && classes.arrowActive
+                )}
+                alt="Arrow down"
+              />
               {/* Субменю  */}
-              <div
-                className={classes.containerSecondMenu + ' ' + openSubMenu}
-                onMouseEnter={() =>
-                  handleMouseEnter(classes.containerSecondMenuOpen)
-                }
-                onMouseLeave={() => handleMouseLeave('')}
-              >
+              <div className={classes.subMenuContainer}>
                 <div className={classes.mainBlockSecondMenu}>
                   {/* Проходим по пунктам субменю */}
-                  {el.children.map((el) => {
+                  {subMenu.map((subMenuItem) => {
                     return (
                       <Link
-                        key={el.title}
-                        href={el.url}
+                        key={subMenuItem.name}
+                        href={subMenuItem.url}
                         className={classNames(
-                          classes.menuItemSecondMenu,
-                          router.pathname === '/' + el.url && classes.activeItem
+                          classes.subMenuItem,
+                          pathname === subMenuItem.url && classes.activeItem
                         )}
                       >
                         <Image
@@ -108,30 +55,30 @@ export const Menu = () => {
                           alt="secondMenuItemImg"
                           className={classNames(
                             classes.secondMenuItemImg,
-                            router.pathname === '/' + el.url &&
+                            pathname === subMenuItem.url &&
                               classes.activeSecondMenuItemImg
                           )}
-                        ></Image>
-                        {el.title}
+                        />
+                        {subMenuItem.name}
                       </Link>
                     );
                   })}
                 </div>
               </div>
-            </div>
+            </li>
           );
         }
 
         return (
-          <li className={classes.li} key={el.title}>
+          <li className={classes.menuItem} key={name}>
             <Link
-              href={el.url}
+              href={url}
               className={classNames(
                 classes.menuItem,
-                router.pathname === '/' + el.url && classes.activeItem
+                pathname === url && classes.activeItem
               )}
             >
-              {el.title}
+              {name}
             </Link>
           </li>
         );
