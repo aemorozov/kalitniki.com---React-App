@@ -184,7 +184,11 @@ export const Otzuvu = () => {
     if (containerRef.current && itemRef.current) {
       const target = event.target as HTMLElement;
       const scrollAmount = itemRef.current.offsetWidth + 15 || 463;
-      const side = target.className === 'toLeft' ? -scrollAmount : scrollAmount;
+      console.log(target.className);
+      const side =
+        target.className == 'left-button' || 'toLeft'
+          ? -scrollAmount
+          : scrollAmount;
       containerRef.current.scrollBy({
         left: side,
         behavior: 'smooth'
@@ -205,25 +209,15 @@ export const Otzuvu = () => {
         </div>
         <div className={'otzuvu-slider'}>
           <div className={'buttons'}>
-            <div className={'left-button'}>
-              <Image
-                src={chevron}
-                alt="chevron"
-                className={'toLeft'}
-                onClick={handleScroll}
-              ></Image>
+            <div className={'left-button'} onClick={handleScroll}>
+              <Image src={chevron} alt="chevron" className={'toLeft'}></Image>
             </div>
-            <div className={'right-button'}>
-              <Image
-                src={chevron}
-                alt="chevron"
-                className={'toRight'}
-                onClick={handleScroll}
-              />
+            <div className={'right-button'} onClick={handleScroll}>
+              <Image src={chevron} alt="chevron" className={'toRight'} />
             </div>
           </div>
           <div className={'otzuvu-blocks'} ref={containerRef}>
-            {data.map((el, index) => {
+            {data.map((el) => {
               return (
                 <div className={'otzuv'} key={el.name} ref={itemRef}>
                   <div>
