@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import styles from './PhotoGallery.module.css';
+import { useRef } from 'react';
+
 import chevron from '/public/img/mainPage/otzuvu/chevron.svg';
 import galleryImg1 from '/public/img/mainPage/fotogalereya/Photo.jpg';
 import galleryImg2 from '/public/img/mainPage/fotogalereya/Photo-1.jpg';
@@ -24,31 +26,49 @@ import galleryImg20 from '/public/img/mainPage/fotogalereya/Photo-19.jpg';
 import galleryImg21 from '/public/img/mainPage/fotogalereya/Photo-20.jpg';
 import galleryImg22 from '/public/img/mainPage/fotogalereya/Photo-21.jpg';
 
+const imgs = [
+  galleryImg1,
+  galleryImg2,
+  galleryImg3,
+  galleryImg4,
+  galleryImg5,
+  galleryImg6,
+  galleryImg7,
+  galleryImg8,
+  galleryImg9,
+  galleryImg10,
+  galleryImg11,
+  galleryImg12,
+  galleryImg13,
+  galleryImg14,
+  galleryImg15,
+  galleryImg16,
+  galleryImg17,
+  galleryImg18,
+  galleryImg19,
+  galleryImg20,
+  galleryImg21,
+  galleryImg22
+];
+
 export const PhotoGallery = () => {
-  const imgs = [
-    galleryImg1,
-    galleryImg2,
-    galleryImg3,
-    galleryImg4,
-    galleryImg5,
-    galleryImg6,
-    galleryImg7,
-    galleryImg8,
-    galleryImg9,
-    galleryImg10,
-    galleryImg11,
-    galleryImg12,
-    galleryImg13,
-    galleryImg14,
-    galleryImg15,
-    galleryImg16,
-    galleryImg17,
-    galleryImg18,
-    galleryImg19,
-    galleryImg20,
-    galleryImg21,
-    galleryImg22
-  ];
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemRef = useRef<HTMLDivElement>(null);
+
+  function handleScroll(event: React.MouseEvent<HTMLImageElement>) {
+    if (containerRef.current && itemRef.current) {
+      const target = event.target as HTMLElement;
+      const scrollAmount = itemRef.current.offsetWidth + 15 || 463;
+      const side = target.classList.contains(styles.toLeft)
+        ? -scrollAmount
+        : scrollAmount;
+      console.log(target.classList);
+      containerRef.current.scrollBy({
+        left: side,
+        behavior: 'smooth'
+      });
+    }
+  }
 
   return (
     <section className={'classicBlock' + ' ' + styles.doVsctrechi}>
@@ -67,6 +87,7 @@ export const PhotoGallery = () => {
                 src={chevron}
                 alt="chevron"
                 className={styles.toLeft}
+                onClick={handleScroll}
               ></Image>
             </div>
             <div className={styles.rightButton}>
@@ -74,13 +95,18 @@ export const PhotoGallery = () => {
                 src={chevron}
                 alt="chevron"
                 className={styles.toRight}
+                onClick={handleScroll}
               ></Image>
             </div>
           </div>
-          <div className={styles.doVsctrechiBlocks}>
+          <div className={styles.doVsctrechiBlocks} ref={containerRef}>
             {imgs.map((img, index) => {
               return (
-                <div className={styles.otzuv + ' ' + styles.galary} key={index}>
+                <div
+                  className={styles.otzuv + ' ' + styles.galary}
+                  key={index}
+                  ref={itemRef}
+                >
                   <Image
                     src={img}
                     alt={index.toString()}
