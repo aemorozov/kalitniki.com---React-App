@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './PhotoGallery.module.css';
 import { useRef } from 'react';
+import classNames from 'classnames';
 
 import chevron from '/public/img/mainPage/otzuvu/chevron.svg';
 import galleryImg1 from '/public/img/mainPage/fotogalereya/Photo.jpg';
@@ -62,7 +63,6 @@ export const PhotoGallery = () => {
       const side = target.classList.contains(styles.toLeft)
         ? -scrollAmount
         : scrollAmount;
-      console.log(target.classList);
       containerRef.current.scrollBy({
         left: side,
         behavior: 'smooth'
@@ -82,20 +82,21 @@ export const PhotoGallery = () => {
         </div>
         <div className={'do-vsctrechi-slider'}>
           <div className={styles.buttons}>
-            <div className={styles.leftButton}>
+            <div
+              className={classNames(styles.leftButton, styles.toLeft)}
+              onClick={handleScroll}
+            >
               <Image
                 src={chevron}
                 alt="chevron"
                 className={styles.toLeft}
-                onClick={handleScroll}
               ></Image>
             </div>
-            <div className={styles.rightButton}>
+            <div className={styles.rightButton} onClick={handleScroll}>
               <Image
                 src={chevron}
                 alt="chevron"
                 className={styles.toRight}
-                onClick={handleScroll}
               ></Image>
             </div>
           </div>

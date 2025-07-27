@@ -184,11 +184,9 @@ export const Otzuvu = () => {
     if (containerRef.current && itemRef.current) {
       const target = event.target as HTMLElement;
       const scrollAmount = itemRef.current.offsetWidth + 15 || 463;
-      console.log(target.className);
-      const side =
-        target.className == 'left-button' || 'toLeft'
-          ? -scrollAmount
-          : scrollAmount;
+      const side = target.className.includes('toLeft')
+        ? -scrollAmount
+        : scrollAmount;
       containerRef.current.scrollBy({
         left: side,
         behavior: 'smooth'
@@ -209,7 +207,10 @@ export const Otzuvu = () => {
         </div>
         <div className={'otzuvu-slider'}>
           <div className={'buttons'}>
-            <div className={'left-button'} onClick={handleScroll}>
+            <div
+              className={classNames('left-button', 'toLeft')}
+              onClick={handleScroll}
+            >
               <Image src={chevron} alt="chevron" className={'toLeft'}></Image>
             </div>
             <div className={'right-button'} onClick={handleScroll}>
