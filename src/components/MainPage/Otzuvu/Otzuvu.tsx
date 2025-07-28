@@ -181,7 +181,9 @@ export const Otzuvu = () => {
     if (containerRef.current && itemRef.current) {
       const target = event.target as HTMLElement;
       const scrollAmount = itemRef.current.offsetWidth + 15 || 463;
-      const side = target.className === 'toLeft' ? -scrollAmount : scrollAmount;
+      const side = target.className.includes('toLeft')
+        ? -scrollAmount
+        : scrollAmount;
       containerRef.current.scrollBy({
         left: side,
         behavior: 'smooth'
@@ -202,7 +204,10 @@ export const Otzuvu = () => {
         </div>
         <div className={'otzuvu-slider'}>
           <div className={'buttons'}>
-            <div className={'left-button'}>
+            <div
+              className={classNames('left-button', 'toLeft')}
+              onClick={handleScroll}
+            >
               <img
                 src="/img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
@@ -210,7 +215,7 @@ export const Otzuvu = () => {
                 onClick={handleScroll}
               />
             </div>
-            <div className={'right-button'}>
+            <div className={'right-button'} onClick={handleScroll}>
               <img
                 src="/img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
@@ -220,7 +225,7 @@ export const Otzuvu = () => {
             </div>
           </div>
           <div className={'otzuvu-blocks'} ref={containerRef}>
-            {data.map((el, index) => {
+            {data.map((el) => {
               return (
                 <div className={'otzuv'} key={el.name} ref={itemRef}>
                   <div>

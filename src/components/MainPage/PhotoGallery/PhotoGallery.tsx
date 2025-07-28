@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 import { useRef } from 'react';
 import styles from './PhotoGallery.module.css';
@@ -61,7 +62,6 @@ export const PhotoGallery = () => {
       const side = target.classList.contains(styles.toLeft)
         ? -scrollAmount
         : scrollAmount;
-      console.log(target.classList);
       containerRef.current.scrollBy({
         left: side,
         behavior: 'smooth'
@@ -81,7 +81,10 @@ export const PhotoGallery = () => {
         </div>
         <div className={'do-vsctrechi-slider'}>
           <div className={styles.buttons}>
-            <div className={styles.leftButton}>
+            <div
+              className={classNames(styles.leftButton, styles.toLeft)}
+              onClick={handleScroll}
+            >
               <img
                 src="img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
@@ -91,7 +94,7 @@ export const PhotoGallery = () => {
                 height="24"
               />
             </div>
-            <div className={styles.rightButton}>
+            <div className={styles.rightButton} onClick={handleScroll}>
               <img
                 src="img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"

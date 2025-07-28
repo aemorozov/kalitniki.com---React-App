@@ -43,6 +43,12 @@
     color: var(--black);
     z-index: 1;
     cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.leftButton:active,
+.rightButton:active {
+    transform: translateY(3px);
 }
 
 .toLeft {
