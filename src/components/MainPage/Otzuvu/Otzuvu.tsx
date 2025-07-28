@@ -1,26 +1,23 @@
-import Image from 'next/image';
-import style from './Otzuvu.module.css';
-import { useRef } from 'react';
-
-import EvgeniiS from '/public/img/mainPage/otzuvu/EvgeniiS.jpg';
-import SnegS from '/public/img/mainPage/otzuvu/SnegS.jpg';
-import EvgeniiB from '/public/img/mainPage/otzuvu/EvgeniiB.jpg';
-import AndreiK from '/public/img/mainPage/otzuvu/AndreiK.jpg';
-import MikhailR from '/public/img/mainPage/otzuvu/MikhailR.jpg';
-import GeorgiiB from '/public/img/mainPage/otzuvu/GeorgiiB.jpg';
-import MaksimL from '/public/img/mainPage/otzuvu/MaksimL.jpg';
-import EgorK from '/public/img/mainPage/otzuvu/EgorK.jpg';
-import BorisSH from '/public/img/mainPage/otzuvu/BorisSH.jpg';
-import SergeiK from '/public/img/mainPage/otzuvu/SergeiK.jpg';
-import AntonR from '/public/img/mainPage/otzuvu/AntonR.jpg';
-import Irina from '/public/img/mainPage/otzuvu/Irina.jpg';
-import AlekseiSH from '/public/img/mainPage/otzuvu/AlekseiSH.jpg';
-import AntonE from '/public/img/mainPage/otzuvu/AntonE.jpg';
-import chevron from '/public/img/mainPage/otzuvu/chevron.svg';
-import ya from '/public/img/mainPage/otzuvu/ya.svg';
-import star from '/public/img/mainPage/otzuvu/star.svg';
 import classNames from 'classnames';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
+import style from './Otzuvu.module.css';
+
+import AlekseiSH from '/public/img/mainPage/otzuvu/AlekseiSH.jpg';
+import AndreiK from '/public/img/mainPage/otzuvu/AndreiK.jpg';
+import AntonE from '/public/img/mainPage/otzuvu/AntonE.jpg';
+import AntonR from '/public/img/mainPage/otzuvu/AntonR.jpg';
+import BorisSH from '/public/img/mainPage/otzuvu/BorisSH.jpg';
+import EgorK from '/public/img/mainPage/otzuvu/EgorK.jpg';
+import EvgeniiB from '/public/img/mainPage/otzuvu/EvgeniiB.jpg';
+import EvgeniiS from '/public/img/mainPage/otzuvu/EvgeniiS.jpg';
+import GeorgiiB from '/public/img/mainPage/otzuvu/GeorgiiB.jpg';
+import Irina from '/public/img/mainPage/otzuvu/Irina.jpg';
+import MaksimL from '/public/img/mainPage/otzuvu/MaksimL.jpg';
+import MikhailR from '/public/img/mainPage/otzuvu/MikhailR.jpg';
+import SergeiK from '/public/img/mainPage/otzuvu/SergeiK.jpg';
+import SnegS from '/public/img/mainPage/otzuvu/SnegS.jpg';
 
 const data = [
   {
@@ -206,16 +203,16 @@ export const Otzuvu = () => {
         <div className={'otzuvu-slider'}>
           <div className={'buttons'}>
             <div className={'left-button'}>
-              <Image
-                src={chevron}
+              <img
+                src="/img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={'toLeft'}
                 onClick={handleScroll}
-              ></Image>
+              />
             </div>
             <div className={'right-button'}>
-              <Image
-                src={chevron}
+              <img
+                src="/img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={'toRight'}
                 onClick={handleScroll}
@@ -234,12 +231,12 @@ export const Otzuvu = () => {
                             src={el.photo}
                             alt="otzuv001"
                             className={'otzuv-photo not-border'}
-                          ></Image>
-                          <Image
-                            src={ya}
-                            alt={'ya'}
+                          />
+                          <img
+                            src="/img/mainPage/otzuvu/ya.svg"
+                            alt="ya"
                             className={'otzuv-logo'}
-                          ></Image>
+                          />
                           <div className={'otzuv-nameAndDate'}>
                             <div className={'otzuv-name'}>{el.name}</div>
                             <div className={'otzuv-date'}>{el.date}</div>
@@ -249,7 +246,10 @@ export const Otzuvu = () => {
                           className={classNames('otzuv-zvezdu', 'rightSide')}
                         >
                           <p>
-                            <Image src={star} alt="star"></Image>
+                            <img
+                              src="/img/mainPage/otzuvu/star.svg"
+                              alt="star"
+                            />
                             <span className={'marginFix'}>5,0</span>
                           </p>
                         </div>
@@ -300,7 +300,7 @@ export const Otzuvu = () => {
                           src={el.photo}
                           alt={el.name}
                           className={'otzuv-photo'}
-                        ></Image>
+                        />
                       </div>
                     );
                   }

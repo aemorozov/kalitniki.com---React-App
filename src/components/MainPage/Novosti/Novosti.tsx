@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import classNames from 'classnames';
+import Image from 'next/image';
 import styles from './Novosti.module.css';
 
 import novostiImg1 from '/public/img/mainPage/novosti/img1.jpeg';
 import novostiImg2 from '/public/img/mainPage/novosti/img2.jpeg';
-import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 export const Novosti = () => {
   return (
@@ -43,51 +42,51 @@ export const Novosti = () => {
 
               <ul className={styles.plusses}>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   50% скидка в будни до 15:00
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   20% скидка и подарки на день рождения
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Сбитень на травах новому гостю
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Детям до 7 лет бесплатно
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Всегда сезонное меню
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Мы дарим подарки
                 </li>
               </ul>

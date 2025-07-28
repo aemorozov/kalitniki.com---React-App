@@ -1,127 +1,90 @@
-import React from 'react';
-import styles from './Footer.module.css';
 import Image from 'next/image';
-import footerImg from '/public/img/footer/banner.jpg';
-import logo from '/public/img/header/Logo.svg';
-import vk from '/public/img/footer/vk.svg';
-import loc from '/public/img/footer/location.svg';
-import ya from '/public/img/footer/ya.svg';
-import star from '/public/img/mainPage/otzuvu/star.svg';
+import Link from 'next/link';
+import { bottomMenu } from '../../constants/menu';
+import styles from './Footer.module.css';
+import footerImg from '/public/img/footer/banner.png';
 import woman from '/public/img/footer/woman.png';
 
 export const Footer = () => {
   return (
     <>
-      <div className={'footerBanner'}>
-        <div className={styles.footerBannerBackground}>
-          <Image src={footerImg} alt="footer banner" />
-        </div>
+      <div className="footerBanner">
+        <Image src={footerImg} alt="footer banner" width={1440} height={300} />
       </div>
       <footer className={styles.footer}>
-        <div className={styles.top}>
+        <div className={styles.content}>
           <div className={styles.logoSection}>
-            <Image src={logo} alt="Калитники" className={styles.logo} />
-            <p className={styles.littleHeader}>Банный комплекс </p>
+            <img
+              src="/img/header/Logo.svg"
+              alt="Калитники"
+              className={styles.logo}
+              width="82"
+              height="49"
+            />
+            <p className={styles.littleHeader}>Банный комплекс</p>
             <p className={styles.littleText}>
-              Москва, Большая Калитниковская, дом 42
+              Москва, Большая Калитниковская, дом 42
             </p>
             <div className={styles.icons}>
               <a href="/">
-                <Image src={vk} alt="VK" width={44} height={44} />
+                <img
+                  src="/img/footer/vk.svg"
+                  alt="VK"
+                  className={styles.icon}
+                  width="48"
+                  height="48"
+                />
               </a>
               <a href="/">
-                <Image src={loc} alt="Map" width={44} height={44} />
+                <img
+                  src="/img/footer/location.svg"
+                  alt="Map"
+                  className={styles.icon}
+                  width="48"
+                  height="48"
+                />
               </a>
             </div>
           </div>
           <div className={styles.rows}>
-            <div className={styles.row}>
-              <div className={styles.box}>
-                <h4 className={styles.littleHeader}>Разряды</h4>
-                <ul>
-                  <li>Высший мужской разряд</li>
-                  <li>Мужской разряд</li>
-                  <li>Женский разряд</li>
+            {bottomMenu.map(({ name, subMenu }) => (
+              <div className={styles.box} key={name}>
+                <h4 className={styles.menuHeader}>{name}</h4>
+                <ul className={styles.menus}>
+                  {subMenu?.map(({ name, url, isContact }) => (
+                    <li key={url}>
+                      {isContact && <a href={url}>{name}</a>}
+                      {!isContact && <Link href={url}>{name}</Link>}
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div className={styles.box}>
-                <h4 className={styles.littleHeader}>О Калитниках</h4>
-                <ul>
-                  <li>Новости</li>
-                  <li>Акции</li>
-                  <li>Сертификаты</li>
-                </ul>
-              </div>
-              <div className={styles.box}>
-                <h4 className={styles.littleHeader}>Контакты</h4>
-                <ul>
-                  <li>+7 (495) 678 10 01</li>
-                  <li>email@kalitniki.com</li>
-                </ul>
-              </div>
-            </div>
-            <div className={styles.row}>
-              <div className={styles.box}>
-                <h4 className={styles.littleHeader}>Кабинеты</h4>
-                <ul>
-                  <li>Комфорт</li>
-                  <li>Римский</li>
-                  <li>Турин</li>
-                  <li>Большой</li>
-                  <li>Малый</li>
-                </ul>
-              </div>
+            ))}
 
-              <div className={styles.box}>
-                <h4 className={styles.littleHeader}>Услуги</h4>
-                <ul>
-                  <li>Парения</li>
-                  <li>Кухня и бар</li>
-                  <li>Массажи</li>
-                  <li>Вкусный пар</li>
-                </ul>
-              </div>
-              <div className={styles.rating}>
-                <h4 className={styles.littleHeader}>Хорошее место</h4>
-                <p>Выбор пользователей</p>
-                <div className={styles.yandex}>
-                  <Image src={ya} alt="Yandex" width={24} height={24} />
-                  <div className={styles.five}>5.0</div>
-                  <div>
-                    <div className={styles.stars}>
-                      <Image
-                        src={star}
+            <div className={styles.rating}>
+              <h4 className={styles.menuHeader}>Хорошее место</h4>
+              <p>Выбор пользователей</p>
+              <div className={styles.yandex}>
+                <img
+                  src="/img/footer/ya.svg"
+                  alt="Yandex"
+                  width="24"
+                  height="24"
+                />
+                <div className={styles.five}>5.0</div>
+                <div>
+                  <div className={styles.stars}>
+                    {[...new Array(5)].map((_, index) => (
+                      <img
+                        src="/img/mainPage/otzuvu/star.svg"
                         alt="star"
-                        width={16}
-                        height={16}
-                      ></Image>
-                      <Image
-                        src={star}
-                        alt="star"
-                        width={16}
-                        height={16}
-                      ></Image>
-                      <Image
-                        src={star}
-                        alt="star"
-                        width={16}
-                        height={16}
-                      ></Image>
-                      <Image
-                        src={star}
-                        alt="star"
-                        width={16}
-                        height={16}
-                      ></Image>
-                      <Image
-                        src={star}
-                        alt="star"
-                        width={16}
-                        height={16}
-                      ></Image>
-                    </div>
-                    <div className={styles.count}>2276 отзывов</div>
+                        width="16"
+                        height="16"
+                        key={index}
+                      />
+                    ))}
                   </div>
+                  <div className={styles.count}>2276 отзывов</div>
                 </div>
               </div>
             </div>

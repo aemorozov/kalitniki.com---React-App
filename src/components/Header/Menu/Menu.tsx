@@ -1,18 +1,17 @@
 import classNames from 'classnames';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { menu } from '../../../constants/menu';
-import arrowDown from '../../../img/header/IconDown.svg';
+import { topMenu } from '../../../constants/menu';
+import ArrowDown from '../../../img/header/IconDown.svg';
+import Leaf from '../../../img/header/Icon_container.svg';
 import classes from './Menu.module.css';
-import secondMenuItemImg from '/public/img/header/Icon_container.svg';
 
 export const Menu = () => {
-  const { pathname } = useRouter();
+  const { pathname, push } = useRouter();
 
   return (
     <ul className={classes.mainBlock}>
-      {menu.map(({ name, subMenu, url }) => {
+      {topMenu.map(({ name, subMenu, url }) => {
         // Если есть у пункта меню есть субменю, делаем особые стили и галочку
         if (subMenu) {
           const isSubMenuItemOpened = subMenu.some(
@@ -28,14 +27,7 @@ export const Menu = () => {
               )}
             >
               {name}
-              <Image
-                src={arrowDown}
-                className={classNames(
-                  classes.arrowDown,
-                  isSubMenuItemOpened && classes.arrowActive
-                )}
-                alt="Arrow down"
-              />
+              <ArrowDown className={classes.arrowDown} alt="Arrow down" />
               {/* Субменю  */}
               <div className={classes.subMenuContainer}>
                 <div className={classes.mainBlockSecondMenu}>
@@ -50,14 +42,9 @@ export const Menu = () => {
                           pathname === subMenuItem.url && classes.activeItem
                         )}
                       >
-                        <Image
-                          src={secondMenuItemImg}
+                        <Leaf
                           alt="secondMenuItemImg"
-                          className={classNames(
-                            classes.secondMenuItemImg,
-                            pathname === subMenuItem.url &&
-                              classes.activeSecondMenuItemImg
-                          )}
+                          className={classNames(classes.secondMenuItemImg)}
                         />
                         {subMenuItem.name}
                       </Link>
@@ -70,11 +57,11 @@ export const Menu = () => {
         }
 
         return (
-          <li className={classes.menuItem} key={name}>
+          <li className={classes.menuItem} key={name} onClick={() => push(url)}>
             <Link
               href={url}
               className={classNames(
-                classes.menuItem,
+                classes.menuItemLink,
                 pathname === url && classes.activeItem
               )}
             >

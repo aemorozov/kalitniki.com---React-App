@@ -1,9 +1,6 @@
-import React, { useState, useRef } from 'react';
-import styles from './FAQ.module.css';
-import Image from 'next/image';
-
-import shape from '/public/img/mainPage/faq/Shape.svg';
 import classNames from 'classnames';
+import React, { useRef, useState } from 'react';
+import styles from './FAQ.module.css';
 
 interface FAQItemProps {
   element: { question: string; answer: string };
@@ -19,7 +16,11 @@ const FAQItem: React.FC<FAQItemProps> = ({ element }) => {
         <div className={styles.questionRow}>
           <div className={styles.question}>{element.question}</div>
           <div className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}>
-            <Image src={shape} alt="shape" className={styles.shape} />
+            <img
+              src="/img/mainPage/faq/Shape.svg"
+              alt="shape"
+              className={styles.shape}
+            />
           </div>
         </div>
         <div

@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import styles from './Kyhnya.module.css';
-
 import uslugiImg1 from '/public/img/mainPage/kykhnya/event.jpg';
 import uslugiImg2 from '/public/img/mainPage/kykhnya/event2.jpg';
-import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 export const Kyhnya = () => {
   return (
@@ -42,43 +40,43 @@ export const Kyhnya = () => {
 
               <ul className={styles.plusses}>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Блюда на мангале
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Домашние настойки
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Лепим сами
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Свежее разливное пиво
                 </li>
                 <li className={'plus'}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={'list'}
                     alt="list element"
-                  ></Image>
+                  />
                   Сезонное меню
                 </li>
               </ul>

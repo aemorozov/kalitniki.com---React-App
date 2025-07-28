@@ -1,20 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import styles from './MobileMenu.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import logo from '/public/img/header/Logo.svg';
-import phone from '/public/img/mobileMenu/phone.svg';
-import burger from '/public/img/mobileMenu/burger.svg';
-import close from '/public/img/mobileMenu/close.svg';
-import geo from '/public/img/mobileMenu/geo.svg';
-import parking from '/public/img/mobileMenu/parking.svg';
-import ten from '/public/img/mobileMenu/ten.svg';
-import seven from '/public/img/mobileMenu/seven.svg';
-import train from '/public/img/mobileMenu/train.svg';
-import iconDown from '/public/img/header/IconDown.svg';
-import secondMenuItemImg from '/public/img/header/Icon_container.svg';
 import classNames from 'classnames';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useRef, useState } from 'react';
+import styles from './MobileMenu.module.css';
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,15 +90,30 @@ export function MobileMenu() {
       <header className={styles.header}>
         <Link href={'/'}>
           <div className={styles.logo}>
-            <Image src={logo} alt="Калитники" width={56} height={32} />
+            <img
+              src="/img/header/Logo.svg"
+              alt="Калитники"
+              width={56}
+              height={32}
+            />
           </div>
         </Link>
         <div className={styles.icons}>
           <a href="tel:+79999999999" className={styles.phoneIcon}>
-            <Image src={phone} alt="phone" width={32} height={32} />
+            <img
+              src="/img/mobileMenu/phone.svg"
+              alt="phone"
+              width={32}
+              height={32}
+            />
           </a>
           <button onClick={() => setIsOpen(true)} className={styles.burger}>
-            <Image src={burger} alt="burger" width={32} height={32} />
+            <img
+              src="/img/mobileMenu/burger.svg"
+              alt="burger"
+              width={32}
+              height={32}
+            />
           </button>
         </div>
       </header>
@@ -126,15 +129,30 @@ export function MobileMenu() {
               }}
             >
               <div className={styles.logo}>
-                <Image src={logo} alt="Калитники" width={56} height={32} />
+                <img
+                  src="/img/header/Logo.svg"
+                  alt="Калитники"
+                  width={56}
+                  height={32}
+                />
               </div>
             </Link>
             <div className={styles.icons}>
               <a href="tel:+79999999999" className={styles.phoneIcon}>
-                <Image src={phone} alt="phone" width={32} height={32} />
+                <img
+                  src="/img/mobileMenu/phone.svg"
+                  alt="phone"
+                  width={32}
+                  height={32}
+                />
               </a>
               <button onClick={() => setIsOpen(false)} className={styles.close}>
-                <Image src={close} alt="close" width={32} height={32} />
+                <img
+                  src="/img/mobileMenu/close.svg"
+                  alt="close"
+                  width={32}
+                  height={32}
+                />
               </button>
             </div>
           </div>
@@ -145,8 +163,8 @@ export function MobileMenu() {
                   <div key={el.name}>
                     <div className={styles.menuItem} onClick={el.function}>
                       {el.name}
-                      <Image
-                        src={iconDown}
+                      <img
+                        src="/img/header/IconDown.svg"
                         className={classNames(
                           styles.iconDown,
                           el.constant ? styles.rotated : ''
@@ -173,11 +191,11 @@ export function MobileMenu() {
                                 : ''
                             )}
                           >
-                            <Image
-                              src={secondMenuItemImg}
+                            <img
+                              src="/img/header/Icon_container.svg"
                               alt="secondMenuItemImg"
                               className={styles.secondMenuItemImg}
-                            ></Image>
+                            />
                             {el.name}
                           </Link>
                         );
@@ -255,23 +273,23 @@ export function MobileMenu() {
             <button className={styles.mapLink}>Показать на карте</button>
             <div className={styles.plusses}>
               <div className={styles.plus}>
-                <Image src={geo} alt="geo" />
+                <img src="/img/mobileMenu/geo.svg" alt="geo" />
                 <span>Рядом ТТК</span>
               </div>
               <div className={styles.plus}>
-                <Image src={parking} alt="parking" />
+                <img src="/img/mobileMenu/parking.svg" alt="parking" />
                 <span>Своя парковка</span>
               </div>
               <div className={styles.plus}>
-                <Image src={ten} alt="geo" />
+                <img src="/img/mobileMenu/ten.svg" alt="geo" />
                 <span>Пролетарская</span>
               </div>
               <div className={styles.plus}>
-                <Image src={seven} alt="geo" />
+                <img src="/img/mobileMenu/seven.svg" alt="geo" />
                 <span>Таганская</span>
               </div>
               <div className={styles.plus}>
-                <Image src={train} alt="geo" />
+                <img src="/img/mobileMenu/train.svg" alt="geo" />
                 <span>Платформа Калитники</span>
               </div>
             </div>

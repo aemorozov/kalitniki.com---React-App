@@ -1,19 +1,18 @@
-import Image from 'next/image';
-import styles from './Uslugi.module.css';
-import { useEffect, useState } from 'react';
 import classNames from 'classnames';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import styles from './Uslugi.module.css';
 
-import descktopImg1 from '/public/img/mainPage/uslugi/Photo.jpg';
 import descktopImg2 from '/public/img/mainPage/uslugi/Photo-1.jpg';
 import descktopImg3 from '/public/img/mainPage/uslugi/Photo-2.jpg';
 import descktopImg4 from '/public/img/mainPage/uslugi/Photo-3.jpg';
 import descktopImg5 from '/public/img/mainPage/uslugi/Photo-4.jpg';
+import descktopImg1 from '/public/img/mainPage/uslugi/Photo.jpg';
 import mobileImg1 from '/public/img/mainPage/uslugi/mobileImg1.jpg';
 import mobileImg2 from '/public/img/mainPage/uslugi/mobileImg2.jpg';
 import mobileImg3 from '/public/img/mainPage/uslugi/mobileImg3.jpg';
 import mobileImg4 from '/public/img/mainPage/uslugi/mobileImg4.jpg';
 import mobileImg5 from '/public/img/mainPage/uslugi/mobileImg5.jpg';
-import listItem from '/public/img/mainPage/vip/Bullet.svg';
 
 export const Uslugi = () => {
   const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -130,28 +129,28 @@ export const Uslugi = () => {
               </div>
               <ul className={styles.plusses}>
                 <li className={styles.plus}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={styles.list}
                     alt="list element"
-                  ></Image>
+                  />
                   Фирменное{' '}
                   {windowWidth < mobileScreenWidth ? '' : 'контрастное'} парение
                 </li>
                 <li className={styles.plus}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={styles.list}
                     alt="list element"
-                  ></Image>
+                  />
                   Оздоровительные процедуры
                 </li>
                 <li className={styles.plus}>
-                  <Image
-                    src={listItem}
+                  <img
+                    src="/img/mainPage/vip/Bullet.svg"
                     className={styles.list}
                     alt="list element"
-                  ></Image>
+                  />
                   Уход по телу
                 </li>
               </ul>

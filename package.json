@@ -39,6 +39,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
     "@babel/plugin-proposal-optional-chaining": "^7.13.12",
     "@commitlint/config-conventional": "^12.1.1",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^26.0.22",

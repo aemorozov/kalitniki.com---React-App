@@ -1,19 +1,16 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { Menu } from './Menu';
 import { ContactsZone } from './ContactsZone';
 import classes from './Header.module.css';
-import logo from '/public/img/header/Logo.svg';
+import { Menu } from './Menu';
 
 export const Header = () => {
   return (
     <div className={classes.header}>
       <Link href={'/'}>
-        <Image
-          src={logo}
+        <img
+          src="/img/header/Logo.svg"
           alt="Калитниковские бани лого"
           // className={classes.mainLogo}
-          priority
         />
       </Link>
       <Menu />
