@@ -1,184 +1,184 @@
 .container {
-    width: 100%;
-    margin: 35px auto;
+  width: 100%;
+  margin: 35px auto;
 }
 
 .mapBlock {
-    margin-top: 83px;
+  margin-top: 83px;
 }
 
 .slides {
-    height: 500px;
-    width: 100%;
-    margin-top: 20px;
-    position: relative;
-    box-sizing: border-box;
+  height: 500px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .slidesBlock {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: #fff;
-    transition: 0.3s ease;
-    opacity: 1;
-    display: flex;
-    flex-direction: row-reverse;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: 0.3s ease;
+  opacity: 1;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .slidesBlockLeft {
-    transform: translateX(-130%);
-    opacity: 0;
+  transform: translateX(-130%);
+  opacity: 0;
 }
 
 .slidesBlockRight {
-    transform: translateX(130%);
-    opacity: 0;
+  transform: translateX(130%);
+  opacity: 0;
 }
 
 .image {
-    width: 55%;
-    height: 100%;
-    border-radius: 20px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
+  width: 55%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
 }
 
 .textBlock {
-    width: 50%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: #fff;
-    padding: 36px 22px;
-    box-sizing: border-box;
-    min-width: 50%;
-    transform: translateX(10%);
-    position: relative;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 36px 22px;
+  box-sizing: border-box;
+  min-width: 50%;
+  transform: translateX(10%);
+  position: relative;
 }
 
-.textBlock>* {
-    margin: 0;
+.textBlock > * {
+  margin: 0;
 }
 
 .header {
-    font-family: Lato;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 26px;
-    line-height: 32px;
+  font-family: Lato;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 26px;
+  line-height: 32px;
 }
 
 .text {
-    margin-top: 10px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0%;
-    color: var(--gray-9);
-    width: 88%;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--gray-9);
+  width: 88%;
 }
 
 .labels {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 650px;
-    margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 650px;
+  margin-top: 16px;
 }
 
 .label {
-    height: 34px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    padding-top: 6px;
-    padding-right: 12px;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    background-color: var(--gray-1);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-right: 4px;
-    margin-bottom: 10px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+  height: 34px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  background-color: var(--gray-1);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-right: 4px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .plusses {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-top: 10px;
 }
 
 .plus {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 5px;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: start;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
 }
 
 .list {
-    margin: 0 10px 3px 0;
-    width: 24px;
-    height: 24px;
+  margin: 0 10px 3px 0;
+  width: 24px;
+  height: 24px;
 }
 
 .price {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    color: var(--green-2);
-    margin-top: 25px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--green-2);
+  margin-top: 25px;
 }
 
 .description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--gray-8);
-    margin-top: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--gray-8);
+  margin-top: 28px;
 }
 
 .button {
-    position: absolute;
-    bottom: 35px;
-    width: fit-content;
-    height: 56px;
-    border-radius: 16px;
-    padding-top: 16px;
-    padding-right: 20px;
-    padding-bottom: 16px;
-    padding-left: 20px;
-    background-color: var(--cherry-red-1);
-    color: #fff;
-    font-family: Lato;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    margin-top: 20px;
+  position: absolute;
+  bottom: 35px;
+  width: fit-content;
+  height: 56px;
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  background-color: var(--cherry-red-1);
+  color: #fff;
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .bottomDescription {
-    width: 900px;
-    margin: 26px auto;
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
-    margin-top: 25px;
-    margin-bottom: 75px;
+  width: 900px;
+  margin: 26px auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 25px;
+  margin-bottom: 75px;
 }
 
 .bottomDescriptionSpan {
-    color: var(--green-2);
+  color: var(--green-2);
 }

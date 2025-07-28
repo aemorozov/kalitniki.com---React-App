@@ -1,19 +1,9 @@
-import Image from 'next/image';
-import styles from './PhotoGallery.module.css';
-import { useRef } from 'react';
 import classNames from 'classnames';
+import Image from 'next/image';
+import { useRef } from 'react';
+import styles from './PhotoGallery.module.css';
 
-import chevron from '/public/img/mainPage/otzuvu/chevron.svg';
-import galleryImg1 from '/public/img/mainPage/fotogalereya/Photo.jpg';
 import galleryImg2 from '/public/img/mainPage/fotogalereya/Photo-1.jpg';
-import galleryImg3 from '/public/img/mainPage/fotogalereya/Photo-2.jpg';
-import galleryImg4 from '/public/img/mainPage/fotogalereya/Photo-3.jpg';
-import galleryImg5 from '/public/img/mainPage/fotogalereya/Photo-4.jpg';
-import galleryImg6 from '/public/img/mainPage/fotogalereya/Photo-5.jpg';
-import galleryImg7 from '/public/img/mainPage/fotogalereya/Photo-6.jpg';
-import galleryImg8 from '/public/img/mainPage/fotogalereya/Photo-7.jpg';
-import galleryImg9 from '/public/img/mainPage/fotogalereya/Photo-8.jpg';
-import galleryImg10 from '/public/img/mainPage/fotogalereya/Photo-9.jpg';
 import galleryImg11 from '/public/img/mainPage/fotogalereya/Photo-10.jpg';
 import galleryImg12 from '/public/img/mainPage/fotogalereya/Photo-11.jpg';
 import galleryImg13 from '/public/img/mainPage/fotogalereya/Photo-12.jpg';
@@ -24,8 +14,17 @@ import galleryImg17 from '/public/img/mainPage/fotogalereya/Photo-16.jpg';
 import galleryImg18 from '/public/img/mainPage/fotogalereya/Photo-17.jpg';
 import galleryImg19 from '/public/img/mainPage/fotogalereya/Photo-18.jpg';
 import galleryImg20 from '/public/img/mainPage/fotogalereya/Photo-19.jpg';
+import galleryImg3 from '/public/img/mainPage/fotogalereya/Photo-2.jpg';
 import galleryImg21 from '/public/img/mainPage/fotogalereya/Photo-20.jpg';
 import galleryImg22 from '/public/img/mainPage/fotogalereya/Photo-21.jpg';
+import galleryImg4 from '/public/img/mainPage/fotogalereya/Photo-3.jpg';
+import galleryImg5 from '/public/img/mainPage/fotogalereya/Photo-4.jpg';
+import galleryImg6 from '/public/img/mainPage/fotogalereya/Photo-5.jpg';
+import galleryImg7 from '/public/img/mainPage/fotogalereya/Photo-6.jpg';
+import galleryImg8 from '/public/img/mainPage/fotogalereya/Photo-7.jpg';
+import galleryImg9 from '/public/img/mainPage/fotogalereya/Photo-8.jpg';
+import galleryImg10 from '/public/img/mainPage/fotogalereya/Photo-9.jpg';
+import galleryImg1 from '/public/img/mainPage/fotogalereya/Photo.jpg';
 
 const imgs = [
   galleryImg1,
@@ -86,18 +85,24 @@ export const PhotoGallery = () => {
               className={classNames(styles.leftButton, styles.toLeft)}
               onClick={handleScroll}
             >
-              <Image
-                src={chevron}
+              <img
+                src="img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={styles.toLeft}
-              ></Image>
+                onClick={handleScroll}
+                width="24"
+                height="24"
+              />
             </div>
             <div className={styles.rightButton} onClick={handleScroll}>
-              <Image
-                src={chevron}
+              <img
+                src="img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={styles.toRight}
-              ></Image>
+                onClick={handleScroll}
+                width="24"
+                height="24"
+              />
             </div>
           </div>
           <div className={styles.doVsctrechiBlocks} ref={containerRef}>
@@ -112,6 +117,8 @@ export const PhotoGallery = () => {
                     src={img}
                     alt={index.toString()}
                     className={styles.img}
+                    width={448}
+                    height={448}
                   />
                 </div>
               );

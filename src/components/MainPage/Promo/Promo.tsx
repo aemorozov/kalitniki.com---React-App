@@ -1,17 +1,18 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 import styles from './Promo.module.css';
-import classNames from 'classnames';
-
 import promo from '/public/img/mainPage/promo/background.jpg';
-import logo from '/public/img/mainPage/promo/logo.svg';
-import leaf from '/public/img/header/Icon_container.svg';
 
 export const Promo = () => {
   return (
     <section className={'promo'}>
       <div className={classNames('headers', styles.headers)}>
         <h2 className={classNames('headerH2', styles.headerH2)}>
-          <Image src={leaf} alt="leaf" className={styles.leaf} />
+          <img
+            src="/img/header/Icon_container.svg"
+            alt="leaf"
+            className={styles.leaf}
+          />
           Для настоящего отдыха и расслабления
         </h2>
         <h3 className={'headerH3'}>
@@ -23,7 +24,11 @@ export const Promo = () => {
         <div className={'promo-overlay'}>
           <Image src={promo} alt="Калитники фон" className="promo-bg" />
           <div className="promo-text">
-            <Image src={logo} alt="Калитники" className="promo-logo" />
+            <img
+              src="/img/mainPage/promo/logo.svg"
+              alt="Калитники"
+              className="promo-logo"
+            />
             <p className={'promo-p'}>
               Мягким паром, раскалённым жаром, чудесным ароматом трав, <br />
               сухим листом дубовым, прохладой зимнего леса — <br />

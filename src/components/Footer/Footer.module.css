@@ -1,150 +1,145 @@
-.logo {
-    width: 82px;
-    height: auto;
-}
-
 .footer {
-    background: #FAF7EF;
-    padding: 40px 20px 20px;
-    font-family: sans-serif;
-    color: #222;
-    border-radius: 40px 40px 0 0;
-    color: var(--gray-8);
-    font-size: 16px;
-    margin-top: -40px;
-    z-index: 10;
-    position: relative;
-    overflow: hidden;
-    max-width: 1440px;
-    margin: -40px auto 0 auto;
+  background: #f6f1e5;
+  padding: 64px 32px 124px 32px;
+  font-family: sans-serif;
+  color: #222;
+  border-radius: 40px 40px 0 0;
+  color: var(--gray-8);
+  font-size: 16px;
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.footerBannerBackground {
-    background-color: var(--beige-2);
-}
-
-.top {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin: 0 auto;
-    width: 100%;
-    margin-bottom: 30px;
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .logoSection {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 82px;
+  height: auto;
 }
 
 .littleHeader {
-    font-family: Lato;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 26px;
-    letter-spacing: 0%;
-    color: var(--black);
-    margin-bottom: 0;
-    margin-top: 35px;
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: var(--black);
+  margin-top: 40px;
+  margin-bottom: 8px;
 }
 
 .littleText {
-    margin-top: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .icons {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
 }
 
 .rows {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 78px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 90px;
+  row-gap: 40px;
+  column-gap: 130px;
 }
 
-.rows>div {
-    display: flex;
-    min-width: 120px;
-    gap: 100px;
+.menuHeader {
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: var(--black);
+  margin: 0;
 }
 
-.rows ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.rows li {
-    margin-top: 14px;
-    margin-bottom: 6px;
+.menus {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .yandex {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 4px;
-}
-
-.box,
-.rating {
-    width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
 }
 
 .bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    margin-top: 30px;
-    color: var(--black);
-    height: 120px;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 30px;
+  color: var(--black);
+  height: 120px;
+  align-items: flex-start;
 }
 
 .count {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .five {
-    font-family: Lato;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 26px;
-    color: var(--black);
-    margin-top: 5px;
-    margin-right: 10px;
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--black);
+  margin-top: 5px;
+  margin-right: 10px;
 }
 
 .stars {
-    height: 16px;
+  height: 16px;
 }
 
 .woman {
-    position: absolute;
-    bottom: -330px;
-    right: -100px;
-    transform: scale(0.75);
+  position: absolute;
+  bottom: -330px;
+  right: -100px;
+  transform: scale(0.75);
 }
 
 /* Responsive */
 @media (min-width: 768px) {
-    .top {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .logoSection {
-        max-width: 260px;
-    }
+  .logoSection {
+    max-width: 260px;
+  }
 
-    .bottom {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import classes from './VIP.module.css';
 
-import vipBackImg from '/public/img/mainPage/vip/d4d5a7239e7aac5883c5d8bea7488137.png';
-import leaf from '/public/img/header/Icon_container.svg';
+import Image from 'next/image';
 import turinImg from '/public/img/mainPage/vip/543150a55361764f23d8a1494d0cb30e.jpeg';
-import listItem from '/public/img/mainPage/vip/Bullet.svg';
+import vipBackImg from '/public/img/mainPage/vip/d4d5a7239e7aac5883c5d8bea7488137.png';
 
 const slidesData = [
   {
@@ -45,7 +43,7 @@ export const VIP = () => {
         src={vipBackImg}
         alt="Woman"
         className={classes.backgroundImageVIP}
-      ></Image>
+      />
       <div className={classes.contentBlockVIP}>
         <div className={classes.headers}>
           <h2 className={'headerH2'}>VIP-кабинеты</h2>
@@ -56,19 +54,44 @@ export const VIP = () => {
         <div className={classes.contentBlock}>
           <ul className={classes.names}>
             <li className={classes.name + ' ' + classes.nameActive}>
-              <Image src={leaf} alt="text" className={classes.leaf} /> Турин
+              <img
+                src="/img/header/Icon_container.svg"
+                alt="text"
+                className={classes.leaf}
+              />{' '}
+              Турин
             </li>
             <li className={classes.name}>
-              <Image src={leaf} alt="text" className={classes.leaf} /> Комфорт
+              <img
+                src="/img/header/Icon_container.svg"
+                alt="text"
+                className={classes.leaf}
+              />{' '}
+              Комфорт
             </li>
             <li className={classes.name}>
-              <Image src={leaf} alt="text" className={classes.leaf} /> Римский
+              <img
+                src="/img/header/Icon_container.svg"
+                alt="text"
+                className={classes.leaf}
+              />{' '}
+              Римский
             </li>
             <li className={classes.name}>
-              <Image src={leaf} alt="text" className={classes.leaf} /> Большой
+              <img
+                src="/img/header/Icon_container.svg"
+                alt="text"
+                className={classes.leaf}
+              />{' '}
+              Большой
             </li>
             <li className={classes.name}>
-              <Image src={leaf} alt="text" className={classes.leaf} /> Малый
+              <img
+                src="/img/header/Icon_container.svg"
+                alt="text"
+                className={classes.leaf}
+              />{' '}
+              Малый
             </li>
           </ul>
           <div className={classes.slides}>
@@ -96,11 +119,11 @@ export const VIP = () => {
                       {slide.plusses.map((plus) => {
                         return (
                           <li className={classes.plus} key={plus}>
-                            <Image
-                              src={listItem}
+                            <img
+                              src="/img/mainPage/vip/Bullet.svg"
                               className={classes.list}
                               alt="list element"
-                            ></Image>
+                            />
                             {plus}
                           </li>
                         );

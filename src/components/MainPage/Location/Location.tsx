@@ -1,12 +1,6 @@
-import React from 'react';
+import Image from 'next/image';
 import classes from './Location.module.css';
 import map from '/public/img/mainPage/map/map2.png';
-import Image from 'next/image';
-
-import ten from '/public/img/mobileMenu/ten.svg';
-import train from '/public/img/mobileMenu/train.svg';
-import seven from '/public/img/mobileMenu/seven.svg';
-import eight from '/public/img/mobileMenu/eight.svg';
 
 export const Location = () => {
   return (
@@ -35,35 +29,35 @@ export const Location = () => {
               </div>
               <ul className={classes.plusses}>
                 <li className={classes.plus}>
-                  <Image
-                    src={ten}
+                  <img
+                    src="/img/mobileMenu/ten.svg"
                     className={classes.list}
                     alt="list element"
-                  ></Image>
+                  />
                   Пролетарская, 21 мин
                 </li>
                 <li className={classes.plus}>
-                  <Image
-                    src={eight}
+                  <img
+                    src="/img/mobileMenu/eight.svg"
                     className={classes.list}
                     alt="list element"
-                  ></Image>
+                  />
                   Марксистская, 23 мин
                 </li>
                 <li className={classes.plus}>
-                  <Image
-                    src={seven}
+                  <img
+                    src="/img/mobileMenu/seven.svg"
                     className={classes.list}
                     alt="list element"
-                  ></Image>
+                  />
                   Таганская, 21 мин
                 </li>
                 <li className={classes.plus}>
-                  <Image
-                    src={train}
+                  <img
+                    src="/img/mobileMenu/train.svg"
                     className={classes.list}
                     alt="list element"
-                  ></Image>
+                  />
                   Платформа Калитники, 13 мин
                 </li>
               </ul>

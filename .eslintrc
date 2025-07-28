@@ -57,7 +57,8 @@
         "react/react-in-jsx-scope": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
         "@next/next/no-html-link-for-pages": "off",
-        "@next/next/no-img-element": "off"
+        "@next/next/no-img-element": "off",
+        "no-irregular-whitespace": "off"
       }
     }
   ],

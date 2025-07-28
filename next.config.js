@@ -1,11 +1,14 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const withLinaria = require('next-linaria');
-
-// module.exports = withLinaria({});
-
 module.exports = {
-    compiler: {
-        // Enables the styled-components SWC transform
-        styledComponents: true
-    }
-}
+  compiler: {
+    styledComponents: true
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack']
+    });
+
+    return config;
+  }
+};
