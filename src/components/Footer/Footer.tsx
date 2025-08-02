@@ -1,17 +1,19 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { bottomMenu } from '../../constants/menu';
 import Location from '../../img/footer/location.svg';
 import VK from '../../img/footer/vk.svg';
 import styles from './Footer.module.css';
-import footerImg from '/public/img/footer/banner.png';
-import woman from '/public/img/footer/woman.png';
 
 export const Footer = () => {
   return (
     <>
       <div className="footerBanner">
-        <Image src={footerImg} alt="footer banner" width={1440} height={300} />
+        <img
+          src="/img/footer/banner.avif"
+          alt="footer banner"
+          width={1440}
+          height={300}
+        />
       </div>
       <footer className={styles.footer}>
         <div className={styles.content}>
@@ -77,7 +79,7 @@ export const Footer = () => {
 
             <div className={styles.rating}>
               <h4 className={styles.menuHeader}>Хорошее место</h4>
-              <p>Выбор пользователей</p>
+              <p className={styles.textChoice}>Выбор пользователей</p>
               <div className={styles.yandex}>
                 <img
                   src="/img/footer/ya.svg"
@@ -105,14 +107,11 @@ export const Footer = () => {
           </div>
         </div>
         <hr className={styles.hr} />
-        <div className={styles.bottom}>
-          <span>Все права защищены</span>
-          <span>© {new Date().getFullYear()} Калитниковские бани</span>
-          <div className={styles.woman}>
-            <Image src={woman} alt="woman" className={styles.woman} />
-          </div>
-        </div>
       </footer>
+      <div className={styles.bottom}>
+        <span>Все права защищены</span>
+        <span>© {new Date().getFullYear()} Калитниковские бани</span>
+      </div>
     </>
   );
 };
