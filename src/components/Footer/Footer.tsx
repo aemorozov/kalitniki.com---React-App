@@ -27,7 +27,9 @@ export const Footer = () => {
             />
             <p className={styles.littleHeader}>Банный комплекс</p>
             <p className={styles.littleText}>
-              Москва, Большая Калитниковская, дом 42
+              Москва,
+              <br />
+              Большая Калитниковская, дом 42
             </p>
             <div className={styles.icons}>
               <a
