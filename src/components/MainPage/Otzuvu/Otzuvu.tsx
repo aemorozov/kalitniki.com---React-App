@@ -177,18 +177,25 @@ export const Otzuvu = () => {
     }
   }
 
-  function handleScroll(event: React.MouseEvent<HTMLImageElement>) {
-    if (containerRef.current && itemRef.current) {
-      const target = event.target as HTMLElement;
-      const scrollAmount = itemRef.current.offsetWidth + 15 || 463;
-      const side = target.className.includes('toLeft')
-        ? -scrollAmount
-        : scrollAmount;
-      containerRef.current.scrollBy({
-        left: side,
-        behavior: 'smooth'
-      });
+  function handleScroll(direction: 'left' | 'right') {
+    if (!containerRef.current || !itemRef.current) {
+      return;
     }
+
+    const container = containerRef.current;
+
+    const cardWidth =
+      itemRef.current.offsetWidth +
+      parseFloat(getComputedStyle(container).gap || '0');
+    const visibleWidth = container.offsetWidth;
+
+    const cardsPerView = Math.floor(visibleWidth / cardWidth);
+    const scrollAmount = cardWidth * cardsPerView;
+
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
   }
 
   return (
@@ -206,28 +213,34 @@ export const Otzuvu = () => {
           <div className={'buttons'}>
             <div
               className={classNames('left-button', 'toLeft')}
-              onClick={handleScroll}
+              onClick={() => handleScroll('left')}
             >
               <img
                 src="/img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={'toLeft'}
-                onClick={handleScroll}
               />
             </div>
-            <div className={'right-button'} onClick={handleScroll}>
+            <div
+              className={'right-button'}
+              onClick={() => handleScroll('right')}
+            >
               <img
                 src="/img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={'toRight'}
-                onClick={handleScroll}
               />
             </div>
           </div>
           <div className={'otzuvu-blocks'} ref={containerRef}>
-            {data.map((el) => {
+            <div className={style.snapPlaceHolder} />
+            {data.map((el, index) => {
               return (
-                <div className={'otzuv'} key={el.name} ref={itemRef}>
+                <div
+                  className={'otzuv'}
+                  key={el.name}
+                  ref={index === 0 ? itemRef : undefined}
+                >
                   <div>
                     <div className={'rightAndLeftSides'}>
                       <div className={classNames('otzuv-title', 'leftSide')}>
