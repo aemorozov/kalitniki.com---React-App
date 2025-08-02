@@ -1,263 +1,253 @@
 .slidesBlock {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: #fff;
-    transition: 0.3s ease;
-    opacity: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: 0.3s ease;
+  opacity: 1;
 }
 
 .slides {
-    height: 558px;
-    width: 100%;
-    margin-top: 20px;
-    position: relative;
-    box-sizing: border-box;
+  height: 558px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .textBlock {
-    min-width: 50%;
-    width: auto;
-    transform: translateX(-10%);
-    height: 100%;
-    border-radius: 20px;
-    background-color: #fff;
-    padding: 32px;
-    box-sizing: border-box;
+  min-width: 50%;
+  width: auto;
+  transform: translateX(-10%);
+  height: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 32px;
+  box-sizing: border-box;
 }
 
 .parentImageDiv {
-    position: relative;
-    min-width: 55%;
+  position: relative;
+  min-width: 55%;
 }
 
 .image {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.textBlockReverse {
+  transform: translateX(10%);
+}
+
+.header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  color: var(--black);
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.text {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--gray-9);
+}
+
+.labels {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 450px;
+  margin-top: 16px;
+}
+
+.label {
+  height: 34px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  background-color: var(--gray-1);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--gray-8);
+}
+
+.plusses {
+  margin-top: 14px;
+  padding-left: 0;
+}
+
+.plus {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  list-style: none;
+  color: var(--black);
+}
+
+.list {
+  margin: 0 10px 3px 0;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--green-2);
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--gray-8);
+  margin-top: 8px;
+}
+
+.button {
+  width: 180px;
+  height: 56px;
+  border-radius: 16px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  background-color: var(--cherry-red-1);
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bottomDescriptionUslugi {
+  width: 800px;
+  margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+  .reverse {
+    flex-direction: column;
+  }
+
+  .slides {
+    margin-top: 15px;
+    width: 343px;
+    -webkit-box-shadow: 0px 0px 10px 7px rgba(34, 60, 80, 0.06);
+    -moz-box-shadow: 0px 0px 10px 7px rgba(34, 60, 80, 0.06);
+    box-shadow: 0px 0px 10px 7px rgba(34, 60, 80, 0.06);
     border-radius: 20px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
-    object-fit: cover;
-    transition: 0.5s ease-in-out;
+  }
+
+  .slidesBlock {
+    height: 636px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
     opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
-}
+    z-index: 1;
+  }
 
+  .textBlock {
+    width: 100%;
+    transform: none;
+    height: 330px;
+    padding: 23px 16px;
+    margin-top: 200px;
+    z-index: 2;
+  }
 
-
-.reverse {
-    flex-direction: row-reverse;
-}
-
-.textBlockReverse {
-    transform: translateX(10%);
-}
-
-.header {
+  .header {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    letter-spacing: 0%;
-    color: var(--black);
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+  }
 
-.text {
-    margin-top: 5px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0%;
-    color: var(--gray-9);
-}
-
-.labels {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 450px;
-    margin-top: 16px;
-}
-
-.label {
-    height: 34px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    padding-top: 6px;
-    padding-right: 12px;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    background-color: var(--gray-1);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-right: 8px;
-    margin-bottom: 8px;
+  .text {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: var(--gray-8);
-}
-
-.plusses {
-    margin-top: 14px;
-    padding-left: 0;
-}
-
-.plus {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 8px;
-    list-style: none;
-    color: var(--black);
-}
-
-.list {
-    margin: 0 10px 3px 0;
-}
-
-.price {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    color: var(--green-2);
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
-
-.description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--gray-8);
     margin-top: 8px;
-}
+  }
 
-.button {
-    width: 180px;
-    height: 56px;
-    border-radius: 16px;
-    padding-top: 16px;
-    padding-right: 20px;
-    padding-bottom: 16px;
-    padding-left: 20px;
-    background-color: var(--cherry-red-1);
-    color: #fff;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    margin-top: 20px;
-}
+  .labels {
+    width: 100%;
+  }
 
-.bottomDescriptionUslugi {
-    width: 800px;
-    margin-top: 25px;
-}
+  .label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
 
-@media (max-width:480px) {
-    .reverse {
-        flex-direction: column;
-    }
+  .plus {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
 
-    .slides {
-        margin-top: 15px;
-        width: 343px;
-        -webkit-box-shadow: 0px 0px 10px 7px rgba(34, 60, 80, 0.06);
-        -moz-box-shadow: 0px 0px 10px 7px rgba(34, 60, 80, 0.06);
-        box-shadow: 0px 0px 10px 7px rgba(34, 60, 80, 0.06);
-        border-radius: 20px;
-    }
+  .plusses {
+    margin-top: 12px;
+  }
 
-    .slidesBlock {
-        height: 636px;
-    }
+  .price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 18px;
+    margin-bottom: 11px;
+  }
 
-    .image {
-        width: 100%;
-        height: auto;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-
-
-    .textBlock {
-        width: 100%;
-        transform: none;
-        height: 330px;
-        padding: 23px 16px;
-        margin-top: 200px;
-        z-index: 2;
-    }
-
-    .header {
-        font-family: Lato;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        margin: 0;
-    }
-
-    .text {
-        font-family: Lato;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        margin-top: 8px;
-    }
-
-    .labels {
-        width: 100%;
-    }
-
-    .label {
-        font-family: Lato;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        margin-right: 10px;
-        margin-bottom: 5px;
-    }
-
-    .plus {
-        font-family: Lato;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 4px;
-    }
-
-    .plusses {
-        margin-top: 12px;
-    }
-
-    .price {
-        font-family: Lato;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        margin-top: 18px;
-        margin-bottom: 11px;
-    }
-
-    .displayNone {
-        display: none;
-    }
-
+  .displayNone {
+    display: none;
+  }
 }
 
 .opacity1 {
-    opacity: 1;
+  opacity: 1;
 }

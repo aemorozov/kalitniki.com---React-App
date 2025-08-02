@@ -1,192 +1,196 @@
 .mainBlock {
-    width: 100%;
-    height: 668px;
-    background: var(--green-2);
-    position: sticky;
-    margin: 0 auto;
+  width: 100%;
+  height: 668px;
+  background: var(--green-2);
+  position: sticky;
+  margin: 0 auto;
 }
 
 .addLine {
-    width: 100%;
-    height: 648px;
-    margin: 0;
-    background: var(--green-2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    z-index: -1;
+  width: 100%;
+  height: 648px;
+  margin: 0;
+  background: var(--green-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-
 .firstImg {
-    transform: translateY(-170px);
+  transform: translateY(-170px);
 }
 
 .secondImg {
-    transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 
 .slide {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: auto;
-    transition: opacity 1.5s ease-out;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 1.5s ease-out;
 }
 
 .opacity1 {
-    opacity: 1;
+  opacity: 1;
 }
 
-
 .gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.1) 80%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(0, 0, 0, 0.1) 80%
+  );
 }
 
 .textAria {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    color: aliceblue;
-    font-family: "Unbounded", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  color: aliceblue;
+  font-family: 'Unbounded', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .textAriaH1 {
-    font-weight: 500;
-    font-size: 64px;
-    display: block;
-    width: 732px;
-    text-align: center;
-    color: var(--beige-1);
-    margin-top: 170px;
-    line-height: 62px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 64px;
+  display: block;
+  width: 732px;
+  text-align: center;
+  color: var(--beige-1);
+  margin-top: 170px;
+  line-height: 62px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .textAriaH2 {
-    font-family: "Lato", serif;
-    font-weight: 400;
-    font-size: 20px;
-    display: block;
-    width: 550px;
-    text-align: center;
-    color: var(--beige-1);
+  font-family: 'Lato', serif;
+  font-weight: 400;
+  font-size: 20px;
+  display: block;
+  width: 550px;
+  text-align: center;
+  color: var(--beige-1);
 }
 
 .button {
-    width: 200px;
-    height: 56px;
-    background-color: var(--beige-1);
-    border: 0;
-    border-radius: 16px;
-    box-sizing: border-box;
-    font-family: "Lato", serif;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--black);
-    margin-top: 30px;
-    cursor: pointer;
-    padding: 0 20px;
+  width: 200px;
+  height: 56px;
+  background-color: var(--beige-1);
+  border: 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  font-family: 'Lato', serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+  margin-top: 30px;
+  cursor: pointer;
+  padding: 0 20px;
 }
 
 .textAriaPBlock {
-    width: 550px;
-    margin-top: 34px;
+  width: 550px;
+  margin-top: 34px;
 }
 
 .textAriaP {
-    font-family: "Lato", serif;
-    font-weight: 200;
-    font-size: 18px;
-    text-align: center;
-    color: var(--beige-1);
-    margin: 1px;
+  font-family: 'Lato', serif;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: center;
+  color: var(--beige-1);
+  margin: 1px;
 }
 
 @media (max-width: 1279px) {
-    .mainBlock {
-        height: 470px;
-    }
+  .mainBlock {
+    height: 470px;
+  }
 
-    .addLine {
-        height: 458px;
-    }
+  .addLine {
+    height: 458px;
+  }
 
-    .textAriaH1 {
-        font-family: Unbounded;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 32px;
-        text-align: center;
-        width: 370px;
-        margin-top: 96px;
-    }
+  .textAriaH1 {
+    font-family: Unbounded;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    text-align: center;
+    width: 370px;
+    margin-top: 96px;
+  }
 
-    .firstImg {
-        transform: scale(1.8) translateY(-60px) translateX(40px);
-    }
+  .firstImg {
+    transform: scale(1.8) translateY(-60px) translateX(40px);
+  }
 
-    .secondImg {
-        transform: scale(1.5) translateY(-70px) translateX(-30px);
-    }
+  .secondImg {
+    transform: scale(1.5) translateY(-70px) translateX(-30px);
+  }
 
-    .thirdImg {
-        transform: scale(2) translateY(20px) translateX(90px);
-    }
+  .thirdImg {
+    transform: scale(2) translateY(20px) translateX(90px);
+  }
 
-    .textAriaH2 {
-        font-family: Lato;
-        font-size: 16px;
-        line-height: 22px;
-        text-align: center;
-        width: 310px;
-        margin-top: 8px;
-    }
+  .textAriaH2 {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    width: 310px;
+    margin-top: 8px;
+  }
 
-    .button {
-        width: 311px;
-        height: 48px;
-        margin-top: 32px;
-    }
+  .button {
+    width: 311px;
+    height: 48px;
+    margin-top: 32px;
+  }
 
-    .textAriaP {
-        font-family: Lato;
-        font-size: 14px;
-        line-height: 18px;
-        text-align: center;
-    }
+  .textAriaP {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
 
-    .textAriaPBlock {
-        margin-top: 25px;
-    }
+  .textAriaPBlock {
+    margin-top: 25px;
+  }
 
-    .gradient {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.15) 90%);
-    }
+  .gradient {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 10%,
+      rgba(0, 0, 0, 0.15) 90%
+    );
+  }
 }

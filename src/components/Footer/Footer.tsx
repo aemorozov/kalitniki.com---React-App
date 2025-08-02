@@ -26,7 +26,7 @@ export const Footer = () => {
               Москва, Большая Калитниковская, дом 42
             </p>
             <div className={styles.icons}>
-              <a href="/">
+              <a href="https://vk.com/kalitnikovskie" target="_blank">
                 <img
                   src="/img/footer/vk.svg"
                   alt="VK"
@@ -35,7 +35,7 @@ export const Footer = () => {
                   height="48"
                 />
               </a>
-              <a href="/">
+              <a href="https://yandex.ru/maps/-/CHX~ED-1" target="_blank">
                 <img
                   src="/img/footer/location.svg"
                   alt="Map"
@@ -53,7 +53,11 @@ export const Footer = () => {
                 <ul className={styles.menus}>
                   {subMenu?.map(({ name, url, isContact }) => (
                     <li key={url}>
-                      {isContact && <a href={url}>{name}</a>}
+                      {isContact && (
+                        <a href={url} className={styles.link}>
+                          {name}
+                        </a>
+                      )}
                       {!isContact && <Link href={url}>{name}</Link>}
                     </li>
                   ))}

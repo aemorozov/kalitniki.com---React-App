@@ -1,167 +1,160 @@
 .classicBlock {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 480px) {
+  .classicBlock {
+    display: block;
+    width: 100%;
+    background-color: var(--beige-1);
+    padding: 40px 0 25px 0;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
-    .classicBlock {
-        display: block;
-        width: 100%;
-        background-color: var(--beige-1);
-        padding: 40px 0 25px 0;
-        position: relative;
-        max-width: 1440px;
-        margin: 0 auto;
-    }
+  .mainBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
 
-    .mainBlock {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 40px;
-    }
+  .bottomDescription {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 330px;
+    margin: 13px auto 0 auto;
+    color: var(--black);
+  }
 
-    .bottomDescription {
-        font-family: Lato;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 18px;
-        letter-spacing: 0%;
-        text-align: center;
-        width: 330px;
-        margin: 13px auto 0 auto;
-        color: var(--black);
-    }
+  .bottomDescriptionSpan {
+    color: var(--green-2);
+  }
 
-    .bottomDescriptionSpan {
-        color: var(--green-2);
-    }
+  .divForImg {
+    width: 100%;
+    height: 256px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
 
-    .divForImg {
-        width: 100%;
-        height: 256px;
-        border-radius: 20px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
+  .img {
+    width: 100%;
+    object-fit: cover;
+  }
 
-    .img {
-        width: 100%;
-        object-fit: cover;
-    }
+  .header {
+    font-size: 26px;
+    margin-top: 14px;
+    margin-bottom: 15px;
+  }
 
-    .header {
-        font-size: 26px;
-        margin-top: 14px;
-        margin-bottom: 15px;
-    }
+  .price {
+    margin-bottom: 4px;
+    color: var(--green-2);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
 
-    .price {
-        margin-bottom: 4px;
-        color: var(--green-2);
-        font-family: Lato;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        margin-top: 20px;
-    }
+  .priceDescription {
+    margin-top: 0px;
+  }
 
-    .priceDescription {
-        margin-top: 0px;
-    }
+  .moreButton {
+    width: 180px;
+    height: 56px;
+    border-radius: 16px;
+    border: 0;
+    background: var(--cherry-red-1);
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
 
-    .moreButton {
-        width: 180px;
-        height: 56px;
-        border-radius: 16px;
-        border: 0;
-        background: var(--cherry-red-1);
-        font-size: 18px;
-        font-weight: 600;
-        color: #fff;
-        margin-top: 10px;
-        margin-bottom: 25px;
-        cursor: pointer;
-    }
+  .mainBlock {
+    margin-top: 15px;
+    width: fit-content;
+  }
 
+  .block {
+    width: 325px;
+    margin-right: 10px;
+    height: 620px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
 
-    .mainBlock {
-        margin-top: 15px;
-        width: fit-content;
-    }
+  .forMobileScroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transform: translateX(-15px);
+    padding: 0 15px 10px 15px;
+  }
 
-    .block {
-        width: 325px;
-        margin-right: 10px;
-        height: 620px;
-        background-color: #fff;
-        border-radius: 20px;
-    }
+  .img,
+  .divForImg {
+    height: 240px;
+  }
 
-    .forMobileScroll {
-        width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        transform: translateX(-15px);
-        padding: 0 15px 10px 15px;
-    }
+  .descriptionBlock {
+    padding: 20px 16px 12px 16px;
+    transform: translateY(-40px);
+    background: #fff;
+    border-radius: 20px;
+  }
 
-    .img,
-    .divForImg {
-        height: 240px;
-    }
+  .header {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+  }
 
-    .descriptionBlock {
-        padding: 20px 16px 12px 16px;
-        transform: translateY(-40px);
-        background: #fff;
-        border-radius: 20px;
-    }
-
-    .header {
-        font-family: Lato;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        margin-top: 0;
-    }
-
-    /* 
+  /* 
     .bottomDescription>p {
         margin-top: 15px;
     } */
 
-    .plusses {
-        margin-top: 4px;
-    }
+  .plusses {
+    margin-top: 4px;
+  }
 
-    .plus::before {
-        content: '•';
-        display: inline-block;
-        font-size: 22px;
-        color: var(--beige-4);
-        margin-right: 4px;
-        transform: translateY(2px);
-    }
+  .plus::before {
+    content: '•';
+    display: inline-block;
+    font-size: 22px;
+    color: var(--beige-4);
+    margin-right: 4px;
+    transform: translateY(2px);
+  }
 
-    .plus {
-        font-family: Lato;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 1px;
-    }
+  .plus {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 1px;
+  }
 
-    .description {
-        width: 95%;
-        font-family: Lato;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 12px;
-        color: var(--gray-8);
-    }
+  .description {
+    width: 95%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 12px;
+    color: var(--gray-8);
+  }
 }

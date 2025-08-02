@@ -61,7 +61,6 @@
 }
 
 .header {
-  font-family: Lato;
   font-weight: 700;
   font-style: Bold;
   font-size: 26px;
@@ -160,7 +159,6 @@
   padding-left: 20px;
   background-color: var(--cherry-red-1);
   color: #fff;
-  font-family: Lato;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
