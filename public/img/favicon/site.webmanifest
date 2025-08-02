@@ -1,0 +1,22 @@
+{
+  "name": "Калитниковские бани",
+  "short_name": "Калитники",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F1E5",
+  "theme_color": "#ffffff",
+  "description": "Банный комплекс в Москве: залы, парение, массаж, кафе и бассейн",
+  "icons": [
+    {
+      "src": "/img/favicon/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/favicon/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "ru-RU"
+}
