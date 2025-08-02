@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { bottomMenu } from '../../constants/menu';
+import Location from '../../img/footer/location.svg';
+import VK from '../../img/footer/vk.svg';
 import styles from './Footer.module.css';
 import footerImg from '/public/img/footer/banner.png';
 import woman from '/public/img/footer/woman.png';
@@ -26,22 +28,26 @@ export const Footer = () => {
               Москва, Большая Калитниковская, дом 42
             </p>
             <div className={styles.icons}>
-              <a href="https://vk.com/kalitnikovskie" target="_blank">
-                <img
-                  src="/img/footer/vk.svg"
-                  alt="VK"
+              <a
+                href="https://vk.com/kalitnikovskie"
+                target="_blank"
+                title="Калитниковские бани во Вконтакте"
+                className={styles.iconLink}
+              >
+                <VK
+                  alt="Калитниковские бани во Вконтакте"
                   className={styles.icon}
-                  width="48"
-                  height="48"
                 />
               </a>
-              <a href="https://yandex.ru/maps/-/CHX~ED-1" target="_blank">
-                <img
-                  src="/img/footer/location.svg"
-                  alt="Map"
+              <a
+                href="https://yandex.ru/maps/-/CHX~ED-1"
+                target="_blank"
+                title="Калитниковские бани на Яндекс-картах"
+                className={styles.iconLink}
+              >
+                <Location
+                  alt="Калитниковские бани на Яндекс-картах"
                   className={styles.icon}
-                  width="48"
-                  height="48"
                 />
               </a>
             </div>
@@ -58,7 +64,11 @@ export const Footer = () => {
                           {name}
                         </a>
                       )}
-                      {!isContact && <Link href={url}>{name}</Link>}
+                      {!isContact && (
+                        <Link href={url} className={styles.link}>
+                          {name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
