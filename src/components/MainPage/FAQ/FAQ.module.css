@@ -36,11 +36,10 @@
 .arrow {
   width: 16px;
   height: 9px;
-  transition: transform 0.3s ease;
 }
 
 .arrowOpen {
-  transform: rotate(180deg);
+  transform: scaleY(-1);
 }
 
 .answerWrapper {
@@ -53,7 +52,6 @@
   font-size: 16px;
   line-height: 22px;
   color: var(--gray-8);
-  width: 920px;
   margin-top: 15px;
   transition: 0.3s ease-in-out;
   overflow: hidden;
@@ -67,6 +65,7 @@
 .shape {
   width: 16px;
   height: 9px;
+  transition: transform 0.3s ease;
 }
 
 .open {

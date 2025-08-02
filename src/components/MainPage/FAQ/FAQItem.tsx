@@ -15,11 +15,11 @@ const FAQItem: React.FC<FAQItemProps> = ({ element }) => {
       <div className={styles.item} onClick={() => setIsOpen(!isOpen)}>
         <div className={styles.questionRow}>
           <div className={styles.question}>{element.question}</div>
-          <div className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}>
+          <div className={styles.arrow}>
             <img
               src="/img/mainPage/faq/Shape.svg"
               alt="shape"
-              className={styles.shape}
+              className={classNames(styles.shape, isOpen && styles.arrowOpen)}
             />
           </div>
         </div>
