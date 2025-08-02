@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRef } from 'react';
 import style from './Otzuvu.module.css';
 
+import { reviewsCount } from '../../../constants/shared';
 import AlekseiSH from '/public/img/mainPage/otzuvu/AlekseiSH.jpg';
 import AndreiK from '/public/img/mainPage/otzuvu/AndreiK.jpg';
 import AntonE from '/public/img/mainPage/otzuvu/AntonE.jpg';
@@ -325,7 +326,7 @@ export const Otzuvu = () => {
                 })}
               </div>
               <div className={'count'}>
-                <p>2559 отзывов</p>
+                <p>{reviewsCount} отзывов</p>
               </div>
               <div>
                 <Link
