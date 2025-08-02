@@ -104,10 +104,10 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <hr />
+        <hr className={styles.hr} />
         <div className={styles.bottom}>
           <span>Все права защищены</span>
-          <span>©2024 Калитниковские бани</span>
+          <span>© {new Date().getFullYear()} Калитниковские бани</span>
           <div className={styles.woman}>
             <Image src={woman} alt="woman" className={styles.woman} />
           </div>

@@ -1,35 +1,48 @@
 .mainBlock {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
-.phoneNumber,
-.geoPoint {
-    height: 44px;
-    background-color: var(--green-2);
-    border-radius: 12px;
-    color: var(--white);
-    display: flex;
-    align-items: center;
+.icon {
+  height: 44px;
+  width: 44px;
 }
 
 .phoneNumber {
-    width: 182px;
+  width: fit-content;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  padding: 0 14px;
+  box-sizing: border-box;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--green-5);
+  border-radius: 12px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s;
 }
 
-.phoneNumber> :first-child {
-    margin-right: 6px;
-    margin-left: 10px;
+.phoneNumber:hover {
+  background-color: var(--green-4);
 }
 
 .geoPoint {
-    margin-left: 8px;
-    width: 44px;
-    justify-content: center;
+  margin-left: 8px;
+  width: 44px;
+  justify-content: center;
 }
 
-.span {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 2px;
+.iconLink {
+  color: var(--green-5);
+  transition: color 0.3s;
+}
+
+.iconLink:hover {
+  color: var(--green-4);
 }

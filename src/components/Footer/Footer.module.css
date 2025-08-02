@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .logoSection {
@@ -121,25 +121,22 @@
   position: absolute;
   bottom: -330px;
   right: -100px;
-  transform: scale(0.75);
+  transform: scale(0.8);
 }
 
 .link,
 .link:visited {
   color: var(--black);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color 0.3s, border-color 0.3s;
+  transition: color 0.3s;
 }
 
 .link:hover {
   color: var(--beige-5);
-  border-bottom: 1px solid var(--beige-5);
 }
 
 .link:active {
   color: var(--beige-6);
-  border-bottom: 1px solid var(--beige-6);
 }
 
 .iconLink {
@@ -149,6 +146,12 @@
 
 .iconLink:hover {
   color: var(--green-4);
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid var(--gray-10);
+  margin: 0;
 }
 
 /* Responsive */
