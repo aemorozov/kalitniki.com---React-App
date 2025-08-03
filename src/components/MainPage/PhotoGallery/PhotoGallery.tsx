@@ -55,18 +55,22 @@ export const PhotoGallery = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRef = useRef<HTMLDivElement>(null);
 
-  function handleScroll(event: React.MouseEvent<HTMLImageElement>) {
-    if (containerRef.current && itemRef.current) {
-      const target = event.target as HTMLElement;
-      const scrollAmount = itemRef.current.offsetWidth + 15 || 463;
-      const side = target.classList.contains(styles.toLeft)
-        ? -scrollAmount
-        : scrollAmount;
-      containerRef.current.scrollBy({
-        left: side,
-        behavior: 'smooth'
-      });
+  function handleScroll(direction: 'left' | 'right') {
+    if (!containerRef.current || !itemRef.current) {
+      return;
     }
+    const container = containerRef.current;
+
+    const cardWidth = itemRef.current.offsetWidth;
+    const visibleWidth = container.offsetWidth;
+
+    const cardsPerView = Math.floor(visibleWidth / cardWidth);
+    const scrollAmount = cardWidth * cardsPerView;
+
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
   }
 
   return (
@@ -83,35 +87,37 @@ export const PhotoGallery = () => {
           <div className={styles.buttons}>
             <div
               className={classNames(styles.leftButton, styles.toLeft)}
-              onClick={handleScroll}
+              onClick={() => handleScroll('left')}
             >
               <img
                 src="img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={styles.toLeft}
-                onClick={handleScroll}
                 width="24"
                 height="24"
               />
             </div>
-            <div className={styles.rightButton} onClick={handleScroll}>
+            <div
+              className={styles.rightButton}
+              onClick={() => handleScroll('right')}
+            >
               <img
                 src="img/mainPage/otzuvu/chevron.svg"
                 alt="chevron"
                 className={styles.toRight}
-                onClick={handleScroll}
                 width="24"
                 height="24"
               />
             </div>
           </div>
           <div className={styles.doVsctrechiBlocks} ref={containerRef}>
+            <div className={styles.snapPlaceHolder} />
             {imgs.map((img, index) => {
               return (
                 <div
                   className={styles.otzuv + ' ' + styles.galary}
                   key={index}
-                  ref={itemRef}
+                  ref={index === 0 ? itemRef : undefined}
                 >
                   <Image
                     src={img}

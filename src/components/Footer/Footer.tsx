@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { bottomMenu } from '../../constants/menu';
+import { reviewsCount } from '../../constants/shared';
 import Location from '../../img/footer/location.svg';
 import VK from '../../img/footer/vk.svg';
 import styles from './Footer.module.css';
@@ -102,7 +103,7 @@ export const Footer = () => {
                       />
                     ))}
                   </div>
-                  <div className={styles.count}>2276 отзывов</div>
+                  <div className={styles.count}>{reviewsCount} отзывов</div>
                 </div>
               </div>
             </div>
