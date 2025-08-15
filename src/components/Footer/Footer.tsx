@@ -30,7 +30,7 @@ export const Footer = () => {
             <p className={styles.littleText}>
               Москва,
               <br />
-              Большая Калитниковская, дом 42
+              Большая Калитниковская, дом 42
             </p>
             <div className={styles.icons}>
               <a
