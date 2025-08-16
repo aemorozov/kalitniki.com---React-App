@@ -27,14 +27,14 @@ export const Kyhnya = () => {
           </h3>
         </div>
         <div className={'threeColumns'}>
-          <div className={classNames(styles.column, styles.moobileDisplayNone)}>
+          <div className={classNames(styles.column, styles.mobileDisplayNone)}>
             <Image
               src={uslugiImg1}
               alt="Uslugi1"
               className={styles.img}
             ></Image>
           </div>
-          <div className={classNames(styles.column, styles.moobileDisplayNone)}>
+          <div className={classNames(styles.column, styles.mobileDisplayNone)}>
             <Image
               src={uslugiImg2}
               alt="Uslugi2"
