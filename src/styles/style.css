@@ -88,7 +88,7 @@ body.lock-scroll {
   line-height: 55px;
 }
 
-.headerH3 > span {
+.headerH3>span {
   color: var(--green-2);
 }
 
@@ -185,7 +185,7 @@ body.lock-scroll {
   position: relative;
 }
 
-.textBlock > * {
+.textBlock>* {
   margin: 0;
 }
 
@@ -562,7 +562,7 @@ body.lock-scroll {
   color: var(--black);
 }
 
-.rightSide > * {
+.rightSide>* {
   margin: 0;
 }
 
@@ -620,7 +620,7 @@ body.lock-scroll {
   transition: max-height 0.4s ease;
 }
 
-.otzuv-text > * {
+.otzuv-text>* {
   margin: 16px 0 0 0;
 }
 
