@@ -124,10 +124,13 @@
     margin-top: 0;
   }
 
-  /* 
-    .bottomDescription>p {
-        margin-top: 15px;
-    } */
+  .bottomDescription {
+    margin-top: 0;
+  }
+
+  .bottomDescription>p {
+    margin-top: 5px;
+  }
 
   .plusses {
     margin-top: 4px;

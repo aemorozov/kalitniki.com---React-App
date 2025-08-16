@@ -174,8 +174,8 @@
     margin: 0 auto;
   }
 
-  .bottomDescription > p {
-    margin-top: 15px;
+  .bottomDescription>p {
+    margin-top: 5px;
   }
 
   .moreButton {
