@@ -19,8 +19,8 @@ const novostiData = [
     ],
     button: '##'
   },
-  { img: { novostiImg1 } },
-  { img: { novostiImg2 } }
+  { img: novostiImg1 },
+  { img: novostiImg2 }
 ];
 
 export const Novosti = () => {
@@ -35,82 +35,46 @@ export const Novosti = () => {
             событий и акций
           </h3>
         </div>
-        <div className={'threeColumns reverse'}>
-          <div className={'column'}>
-            <Image
-              src={novostiImg2}
-              alt="novostiImg2"
-              className={'uslugiImg novostiImgFix'}
-            ></Image>
-          </div>
-          <div className={'column'}>
-            <Image
-              src={novostiImg1}
-              alt="novostiImg1"
-              className={'uslugiImg '}
-            ></Image>
-          </div>
-          <div className={'column'}>
-            <div className={classNames(styles.textBlock, 'littleTextBlock')}>
-              <h3 className={styles.header}>Новости и акции</h3>
-              <p className={'text'}>
-                Мы регулярно радуем гостей специальными предложениями. Вы
-                получите билет и шанс выиграть приятный подарок
-              </p>
-
-              <ul className={styles.plusses}>
-                <li className={'plus'}>
-                  <img
-                    src="/img/mainPage/vip/Bullet.svg"
-                    className={'list'}
-                    alt="list element"
-                  />
-                  50% скидка в будни до 15:00
-                </li>
-                <li className={'plus'}>
-                  <img
-                    src="/img/mainPage/vip/Bullet.svg"
-                    className={'list'}
-                    alt="list element"
-                  />
-                  20% скидка и подарки на день рождения
-                </li>
-                <li className={'plus'}>
-                  <img
-                    src="/img/mainPage/vip/Bullet.svg"
-                    className={'list'}
-                    alt="list element"
-                  />
-                  Сбитень на травах новому гостю
-                </li>
-                <li className={'plus'}>
-                  <img
-                    src="/img/mainPage/vip/Bullet.svg"
-                    className={'list'}
-                    alt="list element"
-                  />
-                  Детям до 7 лет бесплатно
-                </li>
-                <li className={'plus'}>
-                  <img
-                    src="/img/mainPage/vip/Bullet.svg"
-                    className={'list'}
-                    alt="list element"
-                  />
-                  Всегда сезонное меню
-                </li>
-                <li className={'plus'}>
-                  <img
-                    src="/img/mainPage/vip/Bullet.svg"
-                    className={'list'}
-                    alt="list element"
-                  />
-                  Мы дарим подарки
-                </li>
-              </ul>
-              <button className={'button'}>Подробнее</button>
-            </div>
-          </div>
+        <div className={'threeColumns'}>
+          {novostiData.map((element, index) => {
+            if (element.img) {
+              return (
+                <div className={'column'} key={index}>
+                  <Image
+                    src={element.img}
+                    alt={index.toString()}
+                    className={'uslugiImg novostiImgFix'}
+                  ></Image>
+                </div>
+              );
+            } else {
+              return (
+                <div className={'column'} key={element.header}>
+                  <div
+                    className={classNames(styles.textBlock, 'littleTextBlock')}
+                  >
+                    <h3 className={styles.header}>{element.header}</h3>
+                    <p className={'text'}>{element.text}</p>
+                    <ul className={styles.plusses}>
+                      {element.plusses.map((plus) => {
+                        return (
+                          <li className={'plus'} key={index}>
+                            <img
+                              src="/img/mainPage/vip/Bullet.svg"
+                              className={'list'}
+                              alt="list element"
+                            />
+                            {plus}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    <button className={'button'}>Подробнее</button>
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     </section>
