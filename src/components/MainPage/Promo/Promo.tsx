@@ -5,7 +5,7 @@ import promo from '/public/img/mainPage/promo/background.jpg';
 
 export const Promo = () => {
   return (
-    <section className={'promo'}>
+    <section className={styles.promo}>
       <div className={classNames('headers', styles.headers)}>
         <h2 className={classNames('headerH2', styles.headerH2)}>
           <img

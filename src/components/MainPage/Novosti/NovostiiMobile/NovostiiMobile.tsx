@@ -19,8 +19,8 @@ const novostiData = [
     ],
     button: '##'
   },
-  { img: novostiImg1 },
-  { img: novostiImg2 }
+  { img: novostiImg1, key: 'img1' },
+  { img: novostiImg2, key: 'img2' }
 ];
 
 export const NovostiiMobile = () => {
@@ -40,7 +40,7 @@ export const NovostiiMobile = () => {
             {novostiData.map((element) => {
               if (element.img) {
                 return (
-                  <div className={styles.block} key={element.header}>
+                  <div className={styles.block} key={element.key}>
                     <Image src={element.img} alt="img" className={styles.img} />
                   </div>
                 );

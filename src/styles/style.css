@@ -371,7 +371,6 @@ body.lock-scroll {
 
 .promo-content h2 span {
   color: var(--green-2);
-  /* Цвет под второй цвет текста */
 }
 
 .promo-banner {
@@ -385,7 +384,6 @@ body.lock-scroll {
   width: 100%;
   height: auto;
   display: block;
-  /* transform: translateX(-20%) translateY(-70%); */
 }
 
 .promo-text {
@@ -804,7 +802,6 @@ body.lock-scroll {
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
-    letter-spacing: 0%;
     margin: 2px 0px;
     max-width: 350px;
   }

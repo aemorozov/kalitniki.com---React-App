@@ -11,6 +11,7 @@ import { FAQ } from '../components/MainPage/FAQ/FAQ';
 import { Location } from '../components/MainPage/Location/Location';
 import { VIPmobile } from '../components/MainPage/VIP/VIPmobile/VIPmobile';
 import { NovostiiMobile } from '../components/MainPage/Novosti/NovostiiMobile/NovostiiMobile';
+import { PromoMobile } from '../components/MainPage/Promo/PromoMobile/PromoMobile';
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
       <Kyhnya />
       <NovostiiMobile />
       <Novosti />
+      <PromoMobile />
       <Promo />
       <Otzuvu />
       <FAQ />

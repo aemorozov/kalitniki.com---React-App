@@ -1,0 +1,109 @@
+.promo {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .promo {
+    padding: 40px 0 0 0;
+    display: block;
+  }
+
+  .headers {
+    margin: 0 auto;
+  }
+
+  .headerH2 {
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .headerH2::before {
+    content: '';
+  }
+
+  .leaf {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .headerH2 {
+    font-family: Lato;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .headerH3 {
+    color: var(--black);
+    font-family: Unbounded;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .headerH3>span {
+    color: var(--green-2);
+  }
+
+  .promoBanner {
+    margin-top: 15px;
+    overflow: hidden;
+    height: 342px;
+  }
+
+  .promoOverlay {
+    height: 100%;
+    position: relative;
+  }
+
+  .promoBg {
+    width: 100vw;
+    min-width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .promoLogo {
+    margin-bottom: 0px;
+    max-width: 100px;
+  }
+
+  .promoP {
+    font-family: Lato;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--beige-1);
+    width: 80vw;
+  }
+
+  .promoText {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: center;
+    height: 220px;
+  }
+}

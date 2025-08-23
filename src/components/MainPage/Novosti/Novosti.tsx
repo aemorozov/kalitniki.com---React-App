@@ -56,7 +56,7 @@ export const Novosti = () => {
                     <h3 className={styles.header}>{element.header}</h3>
                     <p className={'text'}>{element.text}</p>
                     <ul className={styles.plusses}>
-                      {element.plusses.map((plus) => {
+                      {element.plusses.map((plus, index) => {
                         return (
                           <li className={'plus'} key={index}>
                             <img
