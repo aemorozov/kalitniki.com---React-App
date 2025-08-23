@@ -54,7 +54,7 @@ export const Uslugi = () => {
   }, []);
 
   return (
-    <section className={'classicBlock' + ' ' + 'uslugi'}>
+    <section className={'classicBlock uslugi'}>
       <div className={'contentBlock'}>
         <div className={'headers'}>
           <h2 className={'headerH2'}>Услуги</h2>

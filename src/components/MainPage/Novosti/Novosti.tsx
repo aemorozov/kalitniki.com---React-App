@@ -5,9 +5,27 @@ import styles from './Novosti.module.css';
 import novostiImg1 from '/public/img/mainPage/novosti/img1.jpeg';
 import novostiImg2 from '/public/img/mainPage/novosti/img2.jpeg';
 
+const novostiData = [
+  {
+    header: 'Новости и акции',
+    text: 'Мы регулярно радуем гостей специальными предложениями. Вы получите билет и шанс выиграть приятный подарок',
+    plusses: [
+      '50% скидка в будни до 15:00',
+      '20% скидка и подарки на день рождения',
+      'Сбитень на травах новому гостю',
+      'Детям до 7 лет бесплатно',
+      'Всегда сезонное меню',
+      'Мы дарим подарки'
+    ],
+    button: '##'
+  },
+  { img: { novostiImg1 } },
+  { img: { novostiImg2 } }
+];
+
 export const Novosti = () => {
   return (
-    <section className={'classicBlock  novosti i akcii'}>
+    <section className={'classicBlock novosti'}>
       <div className={'contentBlock'}>
         <div className={'headers'}>
           <h2 className={'headerH2'}>Новости и акции</h2>

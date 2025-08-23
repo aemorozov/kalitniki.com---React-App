@@ -341,6 +341,12 @@ body.lock-scroll {
   margin-top: 80px;
 }
 
+@media screen and (max-width: 480px) {
+  .novosti {
+    margin-top: 0;
+  }
+}
+
 .novostiImgFix {
   height: 150%;
   transform: translateX(0%) translateY(-8%);
@@ -771,6 +777,10 @@ body.lock-scroll {
   .classicBlock {
     padding: 38px 0 0px 0px;
     margin-bottom: 40px;
+  }
+
+  .novosti {
+    display: none;
   }
 
   .headerH2 {
