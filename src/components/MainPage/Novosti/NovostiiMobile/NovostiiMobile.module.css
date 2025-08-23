@@ -111,9 +111,9 @@
 
   .img,
   .divForImg {
+    min-width: 100%;
     width: auto;
     height: 100%;
-    scale: 1.3;
   }
 
   .descriptionBlock {
